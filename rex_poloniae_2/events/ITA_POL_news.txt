@@ -1,0 +1,48 @@
+add_namespace = ITA_POL_news
+
+#Italy Seeks Reconciliation With Poland
+news_event = {
+	id = ITA_POL_news.1
+	title = ITA_POL_news.1.t
+	desc = ITA_POL_news.1.d
+	picture = GFX_news_event_polish_army
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			OR = {
+				tag = ITA
+				tag = POL
+			}
+		}
+	}
+
+	option = {
+		name = ITA_POL_news.1.a
+		trigger = {
+			is_in_faction_with = ITA
+		}
+	}
+
+	option = {
+		name = ITA_POL_news.1.b
+		trigger = {
+			has_war_with = ITA
+		}
+	}
+
+	option = {
+		name = ITA_POL_news.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = ITA
+					has_war_with = ITA
+				}
+			}
+		}
+	}
+}

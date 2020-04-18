@@ -1,0 +1,106 @@
+add_namespace = POL_king_dies
+
+country_event = {
+    id = POL_king_dies.1
+    title = POL_king_dies.1.t
+    desc = POL_king_dies.1.d
+    picture = GFX_news_event_generic_funeral
+ 
+    mean_time_to_happen = {
+        days = 9
+	}
+
+    trigger = {
+        tag = POL 
+        date > 1937.10.1
+		date < 1937.10.31
+		
+        NOT = {
+            has_country_flag = POL_king_dies
+        }
+    }
+
+    option = { 
+        name = POL_king_dies.1.a
+        kill_country_leader = yes
+        create_country_leader = {
+           
+			name = "Stanisław IV Poniatowski"
+			desc = "POLITICS_IGNACY_MOSCICKI_DESC"
+			picture = "Portrait_Germany_Generic_3.dds"
+			expire = "1965.1.1"
+			ideology = oligarchism
+			traits = {
+				#
+			}
+
+        }
+        set_country_flag = POL_king_dies
+        ai_chance = { factor = 100 }
+		news_event = { hours = 6 id = POL_king_dies_news.1 } #event to trigger the news
+    }
+}
+
+add_namespace = POL_king_dies_news
+
+news_event = {
+	id = POL_king_dies_news.1
+	title = POL_king_dies_news.1.t
+	desc = POL_king_dies_news.1.d
+	picture = GFX_news_event_generic_funeral
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { tag = POL }
+	}
+	
+	option = {
+		name = POL_king_dies_news.1.a
+		trigger = { tag = SOV	} #This is the option that will appear to the soviets
+	}
+	option = {
+		name = POL_king_dies_news.1.b
+		trigger = { 
+			OR = {
+			tag = GER #This is the option that will appear to germany,italy and japan
+			tag = ITA
+			tag = JAP
+			}
+		}
+	}
+	option = {
+		name = POL_king_dies_news.1.c 
+		trigger = { 
+			OR = {
+			tag = ENG #This is the option that will appear to the uk,france or the us
+			tag = FRA
+			tag = USA
+			tag = UKR
+			tag = LIB
+			tag = EST
+			tag = LAT
+			}
+		}
+	}
+	option = {
+		name = POL_king_dies_news.1.e
+		trigger = {	
+			NOT = {
+				tag = USA #This is the option that will appear to anyone who was not mentioned above
+				tag = ENG
+				tag = GER
+				tag = SOV
+				tag = FRA
+				tag = ITA
+				tag = JAP
+				tag = UKR
+			    tag = LIB
+				tag = EST
+				tag = LAT
+			}
+		}
+	}
+}

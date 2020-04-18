@@ -1,0 +1,75 @@
+RUS_historical = {
+	name = "Russian historical plan"
+	desc = ""
+
+	enable = {
+		original_tag = SOV
+		has_completed_focus = SOV_new_republic
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = RUS_AI_RANDOM_DEMOCRATIC 
+			has_game_rule = {
+				rule = SOV_ai_behavior
+				option = DEMOCRATIC 
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		RUS_army_effort		
+		RUS_industrial_effort	
+		RUS_political_effort		
+		RUS_equipment_effort
+		RUS_anti_fascist_diplomacy
+		RUS_production_effort
+		RUS_construction_effort 
+		RUS_doctrine_effort
+		RUS_aviation_effort
+		RUS_naval_effort
+		RUS_liberty_ethos
+		RUS_construction_effort_2
+		RUS_production_effort_2
+		RUS_neutrality_focus
+		RUS_infrastructure_effort
+		RUS_fighter_focus
+		RUS_large_navy
+		RUS_deterrence
+		RUS_equipment_effort_2
+		RUS_mechanization_effort
+		RUS_infrastructure_effort_2
+		RUS_extra_tech_slot		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

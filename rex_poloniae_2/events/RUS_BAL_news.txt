@@ -1,0 +1,49 @@
+add_namespace = RUS_BAL_news
+
+#Russia Seeks Reconciliation With Baltic countries
+news_event = {
+	id = RUS_BAL_news.1
+	title = RUS_BAL_news.1.t
+	desc = RUS_BAL_news.1.d
+	picture = GFX_news_event_french_parade
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			OR = {
+				tag = RUS
+				tag = EST
+				tag = LAT
+			}
+		}
+	}
+
+	option = {
+		name = RUS_BAL_news.1.a
+		trigger = {
+			is_in_faction_with = RUS
+		}
+	}
+
+	option = {
+		name = RUS_BAL_news.1.b
+		trigger = {
+			has_war_with = RUS
+		}
+	}
+
+	option = {
+		name = RUS_BAL_news.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = RUS
+					has_war_with = RUS
+				}
+			}
+		}
+	}
+}

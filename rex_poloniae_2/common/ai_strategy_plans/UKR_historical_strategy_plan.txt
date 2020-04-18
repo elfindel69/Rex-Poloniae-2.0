@@ -1,0 +1,76 @@
+UKR_historical = {
+	name = "Ukrainian historical plan"
+	desc = ""
+
+	enable = {
+		original_tag = UKR
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = UKR_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = UKR_AI_RANDOM_NEUTRALITY_HISTORICAL 
+			has_game_rule = {
+				rule = UKR_ai_behavior
+				option = DEMOCRATIC_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		UKR_army_effort		
+		UKR_industrial_effort	
+		UKR_political_effort		
+		UKR_equipment_effort
+		UKR_poland_friend
+		UKR_production_effort
+		UKR_construction_effort 
+		UKR_doctrine_effort
+		UKR_aviation_effort
+		UKR_naval_effort
+		UKR_monarchy_rise
+		UKR_liberty_ethos
+		UKR_construction_effort_2
+		UKR_production_effort_2
+		UKR_neutrality_focus
+		UKR_infrastructure_effort
+		UKR_fighter_focus
+		UKR_large_navy
+		UKR_monarchism
+		UKR_deterrence
+		UKR_equipment_effort_2
+		UKR_mechanization_effort
+		UKR_infrastructure_effort_2
+		UKR_extra_tech_slot		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
