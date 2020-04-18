@@ -29,7 +29,7 @@ country_event = {
 			desc = "POLITICS_IGNACY_MOSCICKI_DESC"
 			picture = "Portrait_Germany_Generic_3.dds"
 			expire = "1965.1.1"
-			ideology = oligarchism
+			ideology = paternalism
 			traits = {
 				#
 			}

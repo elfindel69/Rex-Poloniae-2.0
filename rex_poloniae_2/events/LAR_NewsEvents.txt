@@ -302,6 +302,7 @@ news_event = {
 			NOT = { tag = SPB }
 			NOT = { original_tag = SPR }
 			has_government = neutrality
+			has_government = monarchist
 		}
 	}
 	option = {
@@ -311,6 +312,7 @@ news_event = {
 			NOT = { tag = SPB }
 			NOT = { original_tag = SPR }
 			NOT = { has_government = neutrality }
+			NOT = { has_government = monarchist }
 		}
 	}
 	option = {
@@ -1411,6 +1413,7 @@ news_event = {
 		name = lar_news.9.a #unaligned
 		trigger = {
 			has_government = neutrality
+			has_government = monarchist
 		}
 	}
 	option = {

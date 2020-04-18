@@ -96,6 +96,7 @@ news_event = {
 		name = POL_ITA_faction_news.1.e
 		trigger = {
 			has_government = neutrality
+			has_government = monarchist
 			OR = {
 				tag = ITA
 			}
