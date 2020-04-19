@@ -89,6 +89,7 @@
  JAP_communism_party:0 "Nihon Kyosan-to"
  JAP_democratic_party:0 "Rikken Minseito"
  JAP_fascism_party:0 "Taisei Yokusankai"
+ JAP_monarchist_party:0 "Nihon Teikokukan"
  JAP_neutrality_party_kodoha_long:0 "Kodoha Faction"
  JAP_neutrality_party_kodoha:0 "Kodoha Faction"
  USA_communism_party:0 "Communist Party USA"
@@ -461,8 +462,10 @@
  ELS_fascism_party_long:0 "Partido Nacional 'Pro-Patria'"
  GUA_democratic_party:0 "PLP"
  GUA_democratic_party_long:0 "Progressive Liberal Party"
- SIA_neutrality_party:0 "Khana Ratsadon"
- SIA_neutrality_party_long:0 "Khana Ratsadon"
+ SIA_neutrality_party:0 "Khana Ratsadon (N)"
+ SIA_neutrality_party_long:0 "Khana Ratsadon - Neutrality" 
+ SIA_monarchist_party:0 "Khana Ratsadon (M)"
+ SIA_monarchist_party_long:0 "Khana Ratsadon - Monarchists"
  URG_democratic_party:0 "Colorado"
  URG_democratic_party_long:0 "Partido Colorado"
  URG_communism_party:0 "PCU"
@@ -523,6 +526,8 @@
  PAN_communism_party_long:0 "Partido del Pueblo de Panamá"
  PHI_fascism_party:0 "Ganap"
  PHI_fascism_party_long:0 "Ganap Party"
+ PHI_monarchist_party:0 "RPP"
+ PHI_monarchist_party_long:0 "Royalist Party of the Philippines"
  PHI_democratic_party:0 "NP"
  PHI_democratic_party_long:0 "Partido Nacionalista"
  PHI_communism_party:0 "PKP"
@@ -561,7 +566,8 @@
  KOR_communism_party:0 "WPK"
  KOR_communism_party_long:0 "Worker's Party of Korea"
  KOR_democratic_party:0 "Liberal Party"
- KOR_neutrality_party:0 "Yi Dynasty"
+ KOR_neutrality_party:0 "Yi Dynasty (N)"
+ KOR_monarchist_party:0 "Yi Dynasty (M)"
  KOR_fascism_party:0 "NDPC"
  KOR_fascism_party_long:0 "National Defense Policy Committee"
  ICE_democratic_party:1 "Framsóknarflokkurinn"
@@ -604,6 +610,7 @@
  ISR_neutrality_party:0 "Central Council"
  ISR_monarchist_party:0 "Royalist Party of Israel"
  VIN_fascism_party:0 "Vietnamese Restoration League" #or Reformation Society   
+ VIN_monarchist_party:0 "Vietnamese Royalist Party"
  VIN_democratic_party:0 "Can Lao Party" #formed in early 50s
  VIN_communism_party:0 "Communist Party of Vietnam" #Viet Minh was more important in early years
  VIN_neutrality_party:0 "Viêt Nam Quoc Dân Đang"
@@ -611,6 +618,7 @@
  CAM_democratic_party:0 "Democratic Party" #formed in 1946 
  CAM_communism_party:0 "Communist Party of Kampuchea" # aka Khmer Communist Party or a different party Krom Pracheachon aka Krom
  CAM_neutrality_party:0 "Sangkum Reastr Niyum" # or just Sangkum 1955, democratic but right leaning and anti communist
+ CAM_monarchist_party:0 "Royalist Party of Cambodia"
  INS_fascism_party:0 "New Order" #inspired by right wingers from 1960s
  INS_democratic_party:0 "PNI" #Indonesian National Party founded by Sukarno
  INS_communism_party:0 "PKI" #Partai Komunis Indonesia
@@ -619,11 +627,13 @@
  MAL_fascism_party:0 "Panoceanic Unionists"
  MAL_democratic_party:0 "United Malays National Organisation" #or UMNO or PEKEMBAR
  MAL_communism_party:0 "Malayan Communist Party" #or MCP
+ MAL_monarchist_party:0 "Malayan Royalist Party"
  MAL_neutrality_party:0 "Kesatuan Melayu Muda" #or KMM 
  LAO_fascism_party:0 "Tribal Centralization Party"
  LAO_democratic_party:0 "Democratic Party"
  LAO_communism_party:0 "Pathet Lao"
  LAO_neutrality_party:0 "Royalists"
+ LAO_monarchist_party:0 "Royal House of Laos"
  MNT_fascism_party:0 "Greens"
  MNT_democratic_party:0 "Democracy League"
  MNT_communism_party:0 "Communist Party of Montenegro" #or KPCG

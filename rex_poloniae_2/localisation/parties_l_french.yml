@@ -104,6 +104,7 @@
  JAP_neutrality_party:0 "Parti non-aligné"
  JAP_neutrality_party_kodoha_long:0 "Faction Kōdōha"
  JAP_neutrality_party_kodoha:0 "Faction Kōdōha"
+ JAP_monarchist_party:0 "Nihon Teikokukan"
  USA_communism_party:0 "CPUSA"
  USA_communism_party_long:0 "Parti communiste des États-Unis"
  USA_democratic_party:0 "Parti démocrate"
@@ -503,8 +504,10 @@
  GUA_fascism_party:0 "Parti fasciste"
  GUA_communism_party:0 "Parti communiste"
  GUA_neutrality_party:0 "Parti non-aligné"
- SIA_neutrality_party:0 "Khana Ratsadon"
- SIA_neutrality_party_long:0 "Khana Ratsadon"
+ SIA_neutrality_party:0 "Khana Ratsadon (N)"
+ SIA_neutrality_party_long:0 "Khana Ratsadon - Non-alignés" 
+ SIA_monarchist_party:0 "Khana Ratsadon (M)"
+ SIA_monarchist_party_long:0 "Khana Ratsadon - Monarchistes"
  SIA_fascism_party:0 "Parti fasciste"
  SIA_communism_party:0 "Parti communiste"
  SIA_democratic_party:0 "Parti démocratique"
@@ -660,7 +663,8 @@
  KOR_communism_party:0 "PTC"
  KOR_communism_party_long:0 "Parti du travail de Corée"
  KOR_democratic_party:0 "Parti libéral"
- KOR_neutrality_party:0 "Dynastie Yi"
+ KOR_neutrality_party:0 "Dynastie Yi (N)"
+ KOR_monarchist_party:0 "Dynastie Yi (M)"
  KOR_fascism_party:0 "CDN"
  KOR_fascism_party_long:0 "Comité de la défense nationale"
  ICE_democratic_party:1 "Framsóknarflokkurinn"
@@ -712,6 +716,8 @@
  VIN_democratic_party:0 "Can Lao" #formed in early 50s
  VIN_communism_party:0 "PCV"
  VIN_communism_party_long:0 "Parti communiste vietnamien" #Viet Minh was more important in early years
+ VIN_communism_party:0 "PRV"
+ VIN_communism_party_long:0 "Parti royaliste vietnamien" 
  VIN_neutrality_party:0 "VNQDĐ"
  VIN_neutrality_party_long:0 "Viêt Nam Quôc Dân Đáng"
  CAM_fascism_party:0 "Parti khmérite"
@@ -719,6 +725,7 @@
  CAM_communism_party:0 "PCK"
  CAM_communism_party_long:0 "Parti communiste du Kampuchéa" # aka Khmer Communist Party or a different party Krom Pracheachon aka Krom
  CAM_neutrality_party:0 "Sangkum Reastr Niyum" # or just Sangkum 1955, democratic but right leaning and anti communist
+ CAM_monarchist_party:0 "Parti Royaliste du Cambodge"
  INS_fascism_party:0 "Ordre Nouveau" #inspired by right wingers from 1960s
  INS_democratic_party:0 "PNI" #Indonesian National Party founded by Sukarno
  INS_democratic_party_long:0 "Partai Nasional Indonesia"
@@ -733,12 +740,15 @@
  MAL_democratic_party_long:0 "Organisation nationale des Malais unis" #or UMNO or PEKEMBAR
  MAL_communism_party:0 "PCM"
  MAL_communism_party_long:0 "Parti communiste de Malaisie" #or MCP
+ MAL_monarchist_party:0 "PRM"
+ MAL_monarchist_party_long:0 "Parti royaliste de Malaisie"
  MAL_neutrality_party:0 "Kesatuan Melayu Muda" #or KMM 
  LAO_fascism_party:0 "PCT"
  LAO_fascism_party_long:0 "Parti de la centralisation tribale"
  LAO_democratic_party:0 "Parti démocratique"
  LAO_communism_party:0 "Pathet Lao"
  LAO_neutrality_party:0 "Royalistes"
+ LAO_monarchist_party:0 "Maison Royale du Laos"
  MNT_fascism_party:0 "Verts"
  MNT_democratic_party:0 "Ligue démocratique"
  MNT_communism_party:0 "PCM"
@@ -964,6 +974,7 @@
  BRM_communism_party:0 "Parti communiste"
  BRM_democratic_party:0 "Parti démocratique"
  BRM_neutrality_party:0 "Parti non-aligné"
+ BRM_monarchist_party:0 "Parti monarchique"  
  CAR_fascism_party:0 "Parti fasciste"
  CAR_communism_party:0 "Parti communiste"
  CAR_democratic_party:0 "Parti démocratique"
