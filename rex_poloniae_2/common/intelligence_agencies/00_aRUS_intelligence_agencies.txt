@@ -9,12 +9,15 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_rus_okhranka
 	names = { "Ohkrana" }
 		
-	available = { 
-		original_tag = rus
-		OR {
-			has_government = neutrality
-			has_government = monarchist
+	available = {
+		AND = {
+			original_tag = rus
+			OR = {
+				has_government = neutrality
+				has_government = monarchist
+			}
 		}
+		
 	}
 	
 	default = { always = yes } 
@@ -26,12 +29,15 @@ intelligence_agency = {
 	names = { "NKVD" }
 		
 	default = { tag = rus }
-	available = { 
-		original_tag = rus
-		OR = {
-			has_government = communism
-			is_ai = no
+	available = {
+		AND = {
+			original_tag = rus
+			OR = {
+				has_government = communism
+				is_ai = no
+			}
 		}
+		
 	}
 }
 
@@ -43,10 +49,13 @@ intelligence_agency = {
 		
 	default = { tag = rus }
 	available = {
-		original_tag = rus		
-		OR = {
-			NOT = { has_government = communism }
-			is_ai = no
+		AND = {
+			original_tag = rus		
+			OR = {
+				NOT = { has_government = communism }
+				is_ai = no
+			}
 		}
+		
 	}
 }
