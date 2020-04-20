@@ -162,6 +162,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Vincent Von Braun"
+	desc = "POLITICS_ALFRED_KLAHR_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = paternalism
+	traits = {
+		#
+	}
+}
+
 #create_country_leader = {
 #	name = "Dennis Fredauer"
 #	desc = ""

@@ -86,4 +86,15 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Artyom Abazasdze"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	expire = "1953.3.1"
+	ideology = monarchist
+	traits = {
+		
+	}
+}
+
 #couldnt find anything else, the commies simply forced everyone else into exile

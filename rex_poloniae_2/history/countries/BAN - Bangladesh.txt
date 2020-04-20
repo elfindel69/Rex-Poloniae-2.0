@@ -54,7 +54,19 @@ set_popularities = {
 	democratic = 75
 	fascism = 1
 	communism = 1
-	neutrality = 23
+	neutrality = 20
+	monarchist = 3
+}
+
+create_country_leader = {
+	name = "Bihari Mitra" 
+	desc = "POLITICS_ZHANG_LAN_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = monarchism
+	traits = {
+		#
+	}
 }
 
 #create_country_leader = {

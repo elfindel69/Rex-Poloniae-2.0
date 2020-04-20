@@ -57,6 +57,17 @@ set_popularities = {
 	monarchist = 4
 }
 
+create_country_leader = {
+	name = "Azat Otunbayev" 
+	desc = "POLITICS_ZHANG_LAN_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

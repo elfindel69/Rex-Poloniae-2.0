@@ -57,6 +57,18 @@ set_popularities = {
 	monarchist = 2
 }
 
+
+create_country_leader = {
+	name = "Ion Tchmil"
+	desc = "POLITICS_ALFRED_KLAHR_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = paternalism
+	traits = {
+		#
+	}
+}
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

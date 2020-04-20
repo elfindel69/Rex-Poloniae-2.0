@@ -66,7 +66,7 @@ set_popularities = {
 	democratic = 40
 	fascism = 25
 	communism = 30
-	monarchism = 5
+	monarchist = 5
 }
 
 create_country_leader = {

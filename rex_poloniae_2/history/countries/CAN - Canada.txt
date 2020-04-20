@@ -238,6 +238,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Theodore Rose"
+	desc = "POLITICS_JS_WOODSWORTH_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
 set_convoys = 100
 set_stability = 0.75
 

@@ -56,6 +56,18 @@ set_popularities = {
 	neutrality = 23
 }
 
+
+create_country_leader = {
+	name = "Shawqi al-Bahri" 
+	desc = "POLITICS_ZHANG_LAN_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

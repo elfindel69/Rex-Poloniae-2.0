@@ -171,6 +171,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Yuan Xiang" 
+	desc = "POLITICS_ZHANG_LAN_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = monarchism
+	traits = {
+		#
+	}
+}
+
 create_field_marshal = {
 	name = "Mao Zedong"
 	gfx = "GFX_portrait_prc_mao_zedong"

@@ -78,6 +78,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Geser Khan" 
+	desc = "POLITICS_ZHANG_LAN_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = monarchism
+	traits = {
+		#
+	}
+}
+
 1939.1.1 = {
 	add_ideas = {
 		limited_conscription

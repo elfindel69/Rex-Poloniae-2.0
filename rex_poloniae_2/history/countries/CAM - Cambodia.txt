@@ -104,6 +104,17 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Ek Phirum"
+	desc = ""
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+	expire = "1953.3.1"
+	ideology = paternalism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
 	name = "Norodom Sihanouk" 
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"

@@ -249,6 +249,17 @@ if = {
 	}
 	
 	create_country_leader = {
+		name = "Frederico Cavaco"
+		desc = "POLITICS_FRANSISCO_BARCELOS_ROLAO_PRETO_DESC"
+		picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+		expire = "1965.1.1"
+		ideology = monarchism
+		traits = {
+			fascist_militia_leader
+		}
+	}
+	
+	create_country_leader = {
 		name = "José Norton de Matos"
 		desc = "POLITICS_JOSE_NORTON_DE_MATOS_DESC"
 		picture = "gfx/leaders/POR/portrait_por_jose_norton_de_matos.dds"
@@ -258,6 +269,18 @@ if = {
 			democratic_reformer
 		}
 	}
+	
+	create_country_leader = {
+		name = "Mateus Lopes"
+		desc = "POLITICS_BENTO_GONCALVES_DESC"
+		picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+		expire = "1965.1.1"
+		ideology = paternalism
+		traits = {
+			#
+		}
+	}
+	
 	
 	
 	create_field_marshal = {
@@ -329,6 +352,17 @@ if = {
 		picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
 		expire = "1965.1.1"
 		ideology = marxism
+		traits = {
+			#
+		}
+	}
+	
+	create_country_leader = {
+		name = "Mateus Lopes"
+		desc = "POLITICS_BENTO_GONCALVES_DESC"
+		picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+		expire = "1965.1.1"
+		ideology = paternalism
 		traits = {
 			#
 		}

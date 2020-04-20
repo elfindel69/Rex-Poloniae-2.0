@@ -81,3 +81,14 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Bohuslav Čížik"
+	desc = "POLITICS_ALFRED_KLAHR_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}

@@ -109,6 +109,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Hushai Dongoran"
+	desc = ""
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+	expire = "1953.3.1"
+	ideology = monarchism
+	traits = {
+		
+	}
+}
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"

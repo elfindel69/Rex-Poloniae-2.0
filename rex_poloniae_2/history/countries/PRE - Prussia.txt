@@ -126,13 +126,22 @@ set_politics = {
 set_popularities = {
 	democratic = 30
 	fascism = 10
-	communism = 60
+	communism = 20
+	monarchist = 40
 }
 
 add_ideas = {
 }
 
-
+create_country_leader = {
+	name = "Gunter Platz"
+	desc = ""
+	picture = "Portrait_Germany_Konrad_Adenauer.dds"
+	expire = "1965.1.1"
+	ideology = paternalism
+	traits = {
+	}
+}
 
 #create_country_leader = {
 #	name = "Dennis Fredauer"

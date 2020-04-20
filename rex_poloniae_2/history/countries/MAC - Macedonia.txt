@@ -53,3 +53,14 @@ set_popularities = {
 	communism = 34
 	monarchist = 3
 }
+
+create_country_leader = {
+	name = "Kirce Kostencev"
+	desc = "POLITICS_ALFRED_KLAHR_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = paternalism
+	traits = {
+		#
+	}
+}

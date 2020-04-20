@@ -100,6 +100,17 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Aadam bin Zufar"
+	desc = ""
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+	expire = "1953.3.1"
+	ideology = paternalism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
 	name = "Lai Teck"
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"

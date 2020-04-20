@@ -58,6 +58,18 @@ set_popularities = {
 	monarchist = 3
 }
 
+create_country_leader = {
+	name = "Mathies Assink"
+	desc = "POLITICS_ARMANDO_SALES_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = paternalism
+	traits = {
+		#
+	}
+}
+
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

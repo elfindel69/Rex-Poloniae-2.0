@@ -89,6 +89,17 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Mesrob Sandruni"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	expire = "1953.3.1"
+	ideology = monarchism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
 	name = "Grigor Harutyunyan"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"

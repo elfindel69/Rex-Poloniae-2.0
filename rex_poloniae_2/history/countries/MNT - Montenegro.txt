@@ -86,4 +86,15 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Bajo Mirotić"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	expire = "1953.3.1"
+	ideology = paternalism
+	traits = {
+		
+	}
+}
+
 

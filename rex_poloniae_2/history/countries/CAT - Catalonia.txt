@@ -88,6 +88,13 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Lluc Isarch"
+	picture = "gfx//leaders//Europe//portrait_europe_generic_5.dds"
+	expire = "1965.1.1"
+	ideology = paternalism
+}
+
+create_country_leader = {
 	name = "Francesc Cambó i Batlle"
 	picture = "gfx//leaders//Europe//portrait_europe_generic_6.dds"
 	expire = "1965.1.1"

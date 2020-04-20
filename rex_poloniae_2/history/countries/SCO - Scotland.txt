@@ -59,6 +59,17 @@ set_popularities = {
 	monarchist = 3
 }
 
+create_country_leader = {
+	name = "Taog MacCaibe"
+	desc = "POLITICS_ALFRED_KLAHR_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = monarchism
+	traits = {
+		#
+	}
+}
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"
