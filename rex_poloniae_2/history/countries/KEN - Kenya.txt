@@ -67,8 +67,9 @@ create_country_leader = {
 	traits = {
 		#
 	}
+}
 	
-	create_country_leader = {
+create_country_leader = {
 	
 	name = "Safiri Msia"
 	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
@@ -77,6 +78,5 @@ create_country_leader = {
 	traits = {
 		#
 	}
-}
 }
 

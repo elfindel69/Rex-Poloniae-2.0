@@ -198,6 +198,8 @@
  MEX_communism_party_long:0 "Partido Comunista Mexicano"
  MEX_neutrality_party:1 "PNR"
  MEX_neutrality_party_long:1 "Partido Nacional Revolucionario"
+ MEX_monarchist_party:1 "PRM"
+ MEX_monarchist_party_long:1 "Partido Realista de México"
  ARG_democratic_party:0 "UCR"
  ARG_democratic_party_long:0 "Unión Cívica Radical"
  ARG_fascism_party:0 "UNF"

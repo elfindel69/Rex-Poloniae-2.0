@@ -63,7 +63,7 @@ set_popularities = {
 	fascism = 20
 	communism = 5
 	neutrality = 45
-	monarchism = 5
+	monarchist = 5
 }
 
 create_country_leader = {
