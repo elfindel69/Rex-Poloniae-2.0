@@ -54,7 +54,7 @@ set_popularities = {
 	fascism = 1
 	communism = 1
 	neutrality = 20
-	monarchsist = 3
+	monarchist = 3
 }
 
 

@@ -1,4 +1,4 @@
-﻿capital = 742
+﻿capital = 584
 
 #oob = ""
 
@@ -53,12 +53,12 @@ set_popularities = {
 	democratic = 50
 	fascism = 1
 	communism = 40
-	neutrality = 5
-	monarchist = 4
+	neutrality = 7
+	monarchist = 2
 }
 
 create_country_leader = {
-	name = "Siamu Payamev" 
+	name = "Mitrofan Chuzhinov" 
 	desc = "POLITICS_ZHANG_LAN_DESC"
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
 	expire = "1965.1.1"

@@ -214,6 +214,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Tobias Smith"
+	desc = "POLITICS_ALFRED_KLAHR_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = paternalism
+	traits = {
+		#
+	}
+}
+
 set_convoys = 70
 
 1939.1.1 = {

@@ -1,4 +1,4 @@
-﻿capital = 742
+﻿capital = 686
 
 #oob = ""
 
@@ -50,19 +50,19 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 50
+	democratic = 75
 	fascism = 1
-	communism = 40
-	neutrality = 5
-	monarchist = 4
+	communism = 1
+	neutrality = 20
+	monarchist = 3
 }
 
 create_country_leader = {
-	name = "Siamu Payamev" 
-	desc = "POLITICS_ZHANG_LAN_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	name = "Julius Turner"
+	desc = "POLITICS_ALFRED_KLAHR_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 	expire = "1965.1.1"
-	ideology = monarchism
+	ideology = paternalism
 	traits = {
 		#
 	}

@@ -72,7 +72,8 @@ set_politics = {
 }
 
 set_popularities = {
-	neutrality = 100
+	neutrality = 97
+	monarchist = 3
 }
 
 create_country_leader = {
@@ -96,6 +97,17 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+		name = "Aarón Gálvez"
+		desc = "POLITICS_CARLOS_QUINTANILLA_DESC"
+		picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+		expire = "1965.1.1"
+		ideology = monarchism
+		traits = {
+			#
+		}
+	}
 
 1939.1.1 = {
 	set_politics = {
@@ -121,15 +133,6 @@ create_country_leader = {
 		}
 	}
 	
-	create_country_leader = {
-		name = "Aarón Gálvez"
-		desc = "POLITICS_CARLOS_QUINTANILLA_DESC"
-		picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
-		expire = "1965.1.1"
-		ideology = monarchism
-		traits = {
-			#
-		}
-	}
+	
 	
 }

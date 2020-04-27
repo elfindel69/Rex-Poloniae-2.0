@@ -180,7 +180,8 @@ set_popularities = {
 	democratic = 5
 	fascism = 15
 	communism = 15
-	neutrality = 20
+	neutrality = 17
+	monarchist = 3
 }
 
 create_country_leader = {
@@ -188,7 +189,7 @@ create_country_leader = {
 	desc = "POLITICS_ALFRED_KLAHR_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 	expire = "1965.1.1"
-	ideology = marxism
+	ideology = monarchism
 	traits = {
 		#
 	}
