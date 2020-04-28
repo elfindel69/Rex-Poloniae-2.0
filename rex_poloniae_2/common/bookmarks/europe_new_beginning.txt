@@ -1,14 +1,14 @@
 bookmarks = {
 	bookmark = {
-		name = "GATHERING_STORM_NAME"
-		desc = "GATHERING_STORM_DESC"
-		date = 1936.1.1.12
-		picture = "GFX_select_date_1936"
+		name = "NEW_BEGINNING_NAME"
+		desc = "NEW_BEGINNING_DESC"
+		date = 1922.1.1.12
+		picture = "GFX_select_date_1922"
 		default_country = "POL"
 		default = yes
 		
 		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
+			history = "FRA_NEW_BEGINNING_DESC"
 			ideology = monarchist
 			available = { NOT = { has_dlc = "La Resistance" } }
 			ideas = {
@@ -23,7 +23,7 @@ bookmarks = {
 			}
 		}
 		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
+			history = "FRA_NEW_BEGINNING_DESC"
 			ideology = monarchist
 			available = { has_dlc = "La Resistance" } 
 			ideas = {
@@ -38,7 +38,7 @@ bookmarks = {
 			}
 		}
 		"USA"={
-			history = "USA_GATHERING_STORM_DESC"
+			history = "USA_NEW_BEGINNING_DESC"
 			ideology = democratic
 			ideas = {
 				home_of_the_free
@@ -52,7 +52,7 @@ bookmarks = {
 			}
 		}
 		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
+			history = "ENG_NEW_BEGINNING_DESC"
 			ideology = democratic
 			available = { has_dlc = "Man the Guns" }
 			ideas = {
@@ -67,7 +67,7 @@ bookmarks = {
 			}
 		}
 		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
+			history = "ENG_NEW_BEGINNING_DESC"
 			ideology = democratic
 			available = { NOT = { has_dlc = "Man the Guns" } }
 			ideas = {
@@ -82,7 +82,7 @@ bookmarks = {
 			}
 		}
 		"POL"={
-			history = "POL_GATHERING_STORM_DESC"
+			history = "POL_NEW_BEGINNING_DESC"
 			ideology = monarchist
 			ideas = {
 				POL_monarchism_focus
@@ -95,7 +95,7 @@ bookmarks = {
 			}
 		}
 		"GER"={
-			history = "GER_GATHERING_STORM_DESC"
+			history = "GER_NEW_BEGINNING_DESC"
 			ideology = monarchist
 			available = { has_dlc = "Waking the Tiger" }
 			ideas = {
@@ -110,7 +110,7 @@ bookmarks = {
 			}
 		}
 		"GER"={
-			history = "GER_GATHERING_STORM_DESC"
+			history = "GER_NEW_BEGINNING_DESC"
 			ideology = monarchist
 			available = { NOT = { has_dlc = "Waking the Tiger" } }
 			ideas = {
@@ -125,7 +125,7 @@ bookmarks = {
 			}
 		}
 		"ITA"={
-			history = "ITA_GATHERING_STORM_DESC"
+			history = "ITA_NEW_BEGINNING_DESC"
 			ideology = monarchist
 			ideas = {
 				vittoria_mutilata
@@ -138,8 +138,8 @@ bookmarks = {
 			}		
 		}
 		"JAP"={
-			history = "JAP_GATHERING_STORM_DESC"
-			ideology = fascism
+			history = "JAP_NEW_BEGINNING_DESC"
+			ideology = monarchist
 			ideas = {
 				state_shintoism
 				JAP_zaibatsus
@@ -152,7 +152,7 @@ bookmarks = {
 			}			
 		}
 		"SOV"={
-			history = "SOV_GATHERING_STORM_DESC"
+			history = "SOV_NEW_BEGINNING_DESC"
 			ideology = communism
 			ideas = {
 				trotskyite_plot
@@ -166,14 +166,14 @@ bookmarks = {
 		}
 
 		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "OTHER_NEW_BEGINNING_DESC"
 		}
 
 
 		# minors from DLC ####
 		"CAN"={
 			minor = yes
-			history = "CAN_GATHERING_STORM_DESC"
+			history = "CAN_NEW_BEGINNING_DESC"
 			ideology = democratic
 			ideas = {
 				CAN_great_depression_1
@@ -187,7 +187,7 @@ bookmarks = {
 		}
 		"AST"={
 			minor = yes
-			history = "AST_GATHERING_STORM_DESC"
+			history = "AST_NEW_BEGINNING_DESC"
 			ideology = democratic
 			ideas = {
 				AST_great_depression_1
@@ -200,7 +200,7 @@ bookmarks = {
 		}
 		"NZL"={
 			minor = yes
-			history = "NZL_GATHERING_STORM_DESC"
+			history = "NZL_NEW_BEGINNING_DESC"
 			ideology = democratic
 			ideas = {
 				
@@ -213,7 +213,7 @@ bookmarks = {
 		}
 		"SAF"={
 			minor = yes
-			history = "SAF_GATHERING_STORM_DESC"
+			history = "SAF_NEW_BEGINNING_DESC"
 			ideology = democratic
 			ideas = {
 				SAF_ossewabrandwag
@@ -227,7 +227,7 @@ bookmarks = {
 		}
 		"RAJ"={
 			minor = yes
-			history = "RAJ_GATHERING_STORM_DESC"
+			history = "RAJ_NEW_BEGINNING_DESC"
 			ideology = neutrality
 			ideas = {
 				RAJ_agrarian_society
@@ -241,7 +241,7 @@ bookmarks = {
 		}
 		"CZE"={
 			minor = yes
-			history = "CZE_GATHERING_STORM_DESC"
+			history = "CZE_NEW_BEGINNING_DESC"
 			ideology = democratic
 			ideas = {
 				CZE_skoda_works
@@ -256,7 +256,7 @@ bookmarks = {
 
 		"HUN"={
 			minor = yes
-			history = "HUN_GATHERING_STORM_DESC"
+			history = "HUN_NEW_BEGINNING_DESC"
 			ideology = neutrality
 			ideas = {
 				HUN_treaty_of_triannon
@@ -270,8 +270,8 @@ bookmarks = {
 
 		"ROM"={
 			minor = yes
-			history = "ROM_GATHERING_STORM_DESC"
-			ideology = neutrality
+			history = "ROM_NEW_BEGINNING_DESC"
+			ideology = democratic
 			ideas = {
 				ROM_king_carol_ii_hedonist
 				neutrality_idea
@@ -285,8 +285,8 @@ bookmarks = {
 		
 		"YUG"={
 			minor = yes
-			history = "YUG_GATHERING_STORM_DESC"
-			ideology = neutrality
+			history = "YUG_NEW_BEGINNING_DESC"
+			ideology = monarchist
 			ideas = {
 				anti_german_military
 				YUG_idea_croatian_opposition
@@ -300,8 +300,8 @@ bookmarks = {
 		}
 		"CHI"={
 			minor = yes
-			history = "CHI_GATHERING_STORM_DESC"
-			ideology = neutrality
+			history = "CHI_NEW_BEGINNING_DESC"
+			ideology = democratic
 			ideas = {
 				CHI_army_corruption_1
 				CHI_hyper_inflation_1
@@ -315,8 +315,8 @@ bookmarks = {
 		}
 			"SPR"={
 			minor = yes
-			history = "SPAIN_GATHERING_STORM_DESC"
-			ideology = democratic
+			history = "SPAIN_NEW_BEGINNING_DESC"
+			ideology = monarchist
 			ideas = {
 				SPR_military_disloyalty
 				SPA_carlism_1
@@ -331,7 +331,7 @@ bookmarks = {
 
 		"POR"={
 			minor = yes
-			history = "PORTUGAL_GATHERING_STORM_DESC"
+			history = "PORTUGAL_NEW_BEGINNING_DESC"
 			ideology = democratic
 			ideas = {
 				POR_unstable_republic
@@ -346,7 +346,7 @@ bookmarks = {
 		
 		"MEX"={
 			minor = yes
-			history = "MEXICO_GATHERING_STORM_DESC"
+			history = "MEXICO_NEW_BEGINNING_DESC"
 			ideology = neutrality
 			ideas = {
 				MEX_church_power_2
@@ -362,10 +362,9 @@ bookmarks = {
 
 		"HOL"={
 			minor = yes
-			history = "NETHERLANDS_GATHERING_STORM_DESC"
-			ideology = democratic
+			history = "NETHERLANDS_NEW_BEGINNING_DESC"
+			ideology = monarchist
 			ideas = {
-				HOL_wilhelmina
 				HOL_shell_shocked_spectator_5
 				HOL_de_crisisjaren_5
 			}
