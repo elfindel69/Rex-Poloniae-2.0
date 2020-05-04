@@ -435,7 +435,7 @@ technologies = {
 			# electronics
 			# encryption_tech
 		# }
-	}
+	#}
 
 
 	# tankaircraft1 = {

@@ -677,7 +677,7 @@ technologies = {
 
 	mobile_warfare = {
 
-		xor = { mass_assault superior_firepower trench_warfare2 }
+		xor = { mass_assault superior_firepower trench_warfare2 } 
 
 		path = {
 			leads_to_tech = delay

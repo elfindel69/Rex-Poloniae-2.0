@@ -691,7 +691,7 @@ technologies = {
 		}
 	}
 	
-	advanced_light_art = 
+	advanced_light_art = {
 
 		enable_equipments = {
 			light_tank_artillery_equipment_3
@@ -1436,10 +1436,6 @@ technologies = {
 		
 		ai_will_do = { #EAI
 			factor = 100
-			
-			#DATE
-			modifier = { factor = 0 date < 1942.6.1 EAI_armor_tech_focus = yes }
-			modifier = { factor = 0 date < 1943.1.1 NOT = { EAI_armor_tech_focus = yes } }
 		}
 		
 		categories = {

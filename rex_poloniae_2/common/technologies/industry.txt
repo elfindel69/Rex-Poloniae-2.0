@@ -822,7 +822,7 @@ ww1_fortification6 = {
 		}
 	}
 
-	basic_machine_tools = { on_research_complete = { 
+	basic_machine_tools = { 
 	
 		production_factory_max_efficiency_factor = 0.1
 

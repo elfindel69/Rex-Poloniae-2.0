@@ -81,7 +81,7 @@ technologies = {
 		# ai_will_do = {
 			# factor = 1
 			
-			WEIGHT
+			#WEIGHT
 			# modifier = { factor = 80 date > 1910.10.1 }
 		# }
 	# }

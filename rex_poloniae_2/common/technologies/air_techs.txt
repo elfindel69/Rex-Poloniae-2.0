@@ -817,56 +817,56 @@ technologies = {
 		}
 	}
 	
-	transport_plane_3 = {
+	# transport_plane_3 = {
 
-		enable_equipments = {
-			transport_plane_equipment_30
-		}
+		# enable_equipments = {
+			# transport_plane_equipment_30
+		# }
 
-		research_cost = 2
-		start_year = 1961
-		folder = {
-			name = air_techs_folder
-			position = { x = @transport y = @1960 }
-		}
+		# research_cost = 2
+		# start_year = 1961
+		# folder = {
+			# name = air_techs_folder
+			# position = { x = @transport y = @1960 }
+		# }
 		
-		path = {
-			leads_to_tech = transport_plane_4
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = transport_plane_4
+			# research_cost_coeff = 1
+		# }
 
-		categories = {
-			medium_air
-			air_equipment
-		}
+		# categories = {
+			# medium_air
+			# air_equipment
+		# }
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
 	
-	transport_plane_4 = {
+	# transport_plane_4 = {
 
-		enable_equipments = {
-			transport_plane_equipment_40
-		}
+		# enable_equipments = {
+			# transport_plane_equipment_40
+		# }
 
-		research_cost = 2
-		start_year = 1984
-		folder = {
-			name = air_techs_folder
-			position = { x = @transport y = @1985 }
-		}
+		# research_cost = 2
+		# start_year = 1984
+		# folder = {
+			# name = air_techs_folder
+			# position = { x = @transport y = @1985 }
+		# }
 
-		categories = {
-			medium_air
-			air_equipment
-		}
+		# categories = {
+			# medium_air
+			# air_equipment
+		# }
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
 
 	
 	
@@ -1771,8 +1771,7 @@ technologies = {
 		ai_will_do = { #EAI
 			factor = 1
 			
-			#WEIGHT
-			modifier = { factor = 50 EAI_major_country = yes date > 1937.1.1 }
+			
 			modifier = { factor = 2 num_of_military_factories > 25 }
 		}
 	}

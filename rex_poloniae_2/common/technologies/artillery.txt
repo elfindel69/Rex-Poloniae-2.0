@@ -263,9 +263,9 @@ technologies = {
 
 	bonus_bertha3 = {
 
-		heavy_artillery_brigade = {
-			hard_attack = 0.1
-		}
+		# heavy_artillery_brigade = {
+			# hard_attack = 0.1
+		# }
 		artillery = {
 			hard_attack = 0.1
 		}
@@ -1592,7 +1592,7 @@ technologies = {
 		# ai_will_do = { #EAI
 			# factor = 50
 
-			DATE
+			#DATE
 			# modifier = { factor = 0 date < 1944.1.1 }
 		# }
 
@@ -2013,6 +2013,7 @@ technologies = {
 			factor = 0
 		}
 	}
+	
 	superartillery2 = {
 	
 		enable_equipments = {
