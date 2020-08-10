@@ -215,10 +215,10 @@ technologies = {
 			position = { x = 18 y = @1945 }
 		}
 		
-		path = {
-			leads_to_tech = tech_sniper_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_sniper_a
+			# research_cost_coeff = 1
+		# }
 		
 		categories = {
 			support_tech
@@ -450,10 +450,10 @@ technologies = {
 			position = { x = 16 y = @1945 }
 		}
 		
-		path = {
-			leads_to_tech = tech_flamethrower_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_flamethrower_a
+			# research_cost_coeff = 1
+		# }
 		
 		categories = {
 			support_tech
@@ -784,10 +784,10 @@ technologies = {
 			position = { x = 8 y = @1945 }
 		}
 		
-		path = {
-			leads_to_tech = tech_mortar_e
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_mortar_e
+			# research_cost_coeff = 1
+		# }
 		
 		
 		categories = {
@@ -1019,10 +1019,10 @@ technologies = {
 			position = { x = 0 y = @1945 }
 		}
 
-		path = {
-			leads_to_tech = tech_engineers_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_engineers_a
+			# research_cost_coeff = 1
+		# }
 
 		categories = {
 			support_tech
@@ -1151,10 +1151,10 @@ technologies = {
 			recon_tech
 		}
 
-		path = {
-			leads_to_tech = tech_recon_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_recon_a
+			# research_cost_coeff = 1
+		# }
 		
 		ai_will_do = { #EAI
 			factor = 1
@@ -1266,10 +1266,10 @@ technologies = {
 			position = { x = 4 y = @1945 }
 		}
 
-		path = {
-			leads_to_tech = tech_military_police_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_military_police_a
+			# research_cost_coeff = 1
+		# }
 
 		categories = {
 			support_tech
@@ -1392,10 +1392,10 @@ technologies = {
 			position = { x = 6 y = @1945 }
 		}
 
-		path = {
-			leads_to_tech = tech_maintenance_company_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_maintenance_company_a
+			# research_cost_coeff = 1
+		# }
 
 		categories = {
 			support_tech
@@ -1533,10 +1533,10 @@ technologies = {
 			position = { x = 10 y = @1945 }
 		}
 
-		path = {
-			leads_to_tech = tech_field_hospital_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_field_hospital_a
+			# research_cost_coeff = 1
+		# }
 
 		categories = {
 			support_tech
@@ -1674,10 +1674,10 @@ technologies = {
 			position = { x = 12 y = @1945 }
 		}
 
-		path = {
-			leads_to_tech = tech_logistics_company_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_logistics_company_a
+			# research_cost_coeff = 1
+		# }
 
 		categories = {
 			support_tech
@@ -1813,10 +1813,10 @@ technologies = {
 			position = { x = 14 y = @1945 }
 		}
 
-		path = {
-			leads_to_tech = tech_signal_company_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = tech_signal_company_a
+			# research_cost_coeff = 1
+		# }
 
 		categories = {
 			support_tech

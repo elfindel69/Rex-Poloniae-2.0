@@ -503,10 +503,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		path = {
-			leads_to_tech = cw_sp_artillery1
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = cw_sp_artillery1
+			# research_cost_coeff = 1
+		# }
 		
 		enable_equipment_modules = { 
 			ship_anti_air_1
@@ -755,10 +755,10 @@ technologies = {
 			position = { x = @light_arty y = @1943 }
 		}
 
-		path = {
-			leads_to_tech = artillery_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = artillery_a
+			# research_cost_coeff = 1
+		# }
 
 		categories = {
 			artillery
@@ -937,10 +937,10 @@ technologies = {
 			position = { x = @rocket_arty y = @1943 }
 		}
 
-		path = {
-			leads_to_tech = rocket_artillery_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = rocket_artillery_a
+			# research_cost_coeff = 1
+		# }
 		
 		ai_will_do = { #EAI
 			factor = 50
@@ -1179,10 +1179,10 @@ technologies = {
 			position = { x = @anti_air y = @1943 }
 		}
 
-		path = {
-			leads_to_tech = antiair_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = antiair_a
+			# research_cost_coeff = 1
+		# }
 		
 		ai_will_do = { #EAI
 			factor = 50
@@ -1409,10 +1409,10 @@ technologies = {
 			position = { x = @anti_tank y = @1943 }
 		}
 
-		path = {
-			leads_to_tech = antitank_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = antitank_a
+			# research_cost_coeff = 1
+		# }
 		
 		ai_will_do = { #EAI
 			factor = 10

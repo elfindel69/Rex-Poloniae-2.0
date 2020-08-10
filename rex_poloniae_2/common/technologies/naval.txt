@@ -370,10 +370,10 @@ technologies = {
 			destroyer_1948
 		}
 		
-		path = {
-			leads_to_tech = cw_destroyer1
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = cw_destroyer1
+			# research_cost_coeff = 1
+		# }
 		
 		research_cost = 1.25
 		
@@ -872,10 +872,10 @@ technologies = {
 			light_cruiser_1948
 		}	
 		
-		path = {
-			leads_to_tech = cw_light_cruiser1
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = cw_light_cruiser1
+			# research_cost_coeff = 1
+		# }
 		
 		research_cost = 2
 
@@ -1225,10 +1225,10 @@ technologies = {
 			heavy_cruiser_1948
 		}
 		
-		path = {
-			leads_to_tech = cw_heavy_cruiser1 
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = cw_heavy_cruiser1 
+			# research_cost_coeff = 1
+		# }
 		
 		
 		research_cost = 2
@@ -1608,10 +1608,10 @@ technologies = {
 			position = { x = @1948 y = 7 }
 		}
 		
-		path = {
-			leads_to_tech = missile_cruiser1
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = missile_cruiser1
+			# research_cost_coeff = 1
+		# }
 		
 		ai_will_do = {
 			factor = 1
@@ -2044,10 +2044,10 @@ technologies = {
 			battleship_1948
 		}
 		
-		path = {
-			leads_to_tech = cw_battleship1
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = cw_battleship1
+			# research_cost_coeff = 1
+		# }
 		
 		research_cost = 2
 		start_year = 1948
@@ -2191,10 +2191,10 @@ technologies = {
 			position = { x = @1944 y = 1 }
 		}
 		
-		path = {
-			leads_to_tech = cw_landing_craft
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = cw_landing_craft
+			# research_cost_coeff = 1
+		# }
 		
 		ai_will_do = {
 			factor = 10
@@ -2478,10 +2478,10 @@ technologies = {
 			carrier_1948
 		}
 		
-		path = {
-			leads_to_tech = cw_carrier1
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = cw_carrier1
+			# research_cost_coeff = 1
+		# }
 		
 		research_cost = 2
 
@@ -3021,10 +3021,10 @@ technologies = {
 			submarine_1948
 		}
 		
-		path = {
-			leads_to_tech = cw_submarine1
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = cw_submarine1
+			# research_cost_coeff = 1
+		# }
 		
 		research_cost = 1.02
 

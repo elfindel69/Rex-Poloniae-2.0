@@ -901,10 +901,10 @@ technologies = {
 			position = { x = -2 y = @1942 }
 		}
 
-		path = {
-			leads_to_tech = future_radar
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = future_radar
+			# research_cost_coeff = 1
+		# }
 		
 		ai_will_do = { #EAI
 			factor = 1
@@ -1055,10 +1055,10 @@ technologies = {
 			leads_to_tech = advanced_decryption 
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = future_computing_machine
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = future_computing_machine
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 2.5
 		start_year = 1942
@@ -1464,10 +1464,10 @@ technologies = {
 			soft_attack = 0.05
 		}
 		
-		path = {
-			leads_to_tech = advanced_rocket_engines 
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = advanced_rocket_engines 
+			# research_cost_coeff = 1
+		# }
 		
 		research_cost = 1.5
 		start_year = 1945

@@ -1024,15 +1024,15 @@ ww1_fortification6 = {
 		line_change_production_efficiency_factor = -0.2
 		
 
-		path = {
-			leads_to_tech = flexible_line_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = flexible_line_a
+			# research_cost_coeff = 1
+		# }
 		
-		path = {
-			leads_to_tech = streamlined_line_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = streamlined_line_a
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 1
 		start_year = 1946
@@ -1063,15 +1063,15 @@ ww1_fortification6 = {
 		production_factory_efficiency_gain_factor = -0.1
 		
 
-		path = {
-			leads_to_tech = flexible_line_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = flexible_line_a
+			# research_cost_coeff = 1
+		# }
 		
-		path = {
-			leads_to_tech = streamlined_line_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = streamlined_line_a
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 1
 		start_year = 1946
@@ -2199,10 +2199,10 @@ ww1_fortification6 = {
 		fuel_gain_factor_from_states = -2.5
 		
 
-		path = {
-			leads_to_tech = oil1
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = oil1
+			# research_cost_coeff = 1
+		# }
 		
 
 		research_cost = 1
@@ -2869,10 +2869,10 @@ demobilization_ww2_e = {
 		industry_repair_factor = -0.50
 		
 
-		path = {
-			leads_to_tech = construction_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = construction_a
+			# research_cost_coeff = 1
+		# }
 		
 
 		research_cost = 1
@@ -2903,10 +2903,10 @@ demobilization_ww2_e = {
 		local_resources_factor = -0.50
 		
 
-		path = {
-			leads_to_tech = excavation_a
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = excavation_a
+			# research_cost_coeff = 1
+		# }
 		
 
 		research_cost = 1
@@ -3084,7 +3084,7 @@ demobilization_ww2_e = {
 
 		# ai_will_do = {
 			# factor = 150
-			DATE
+			# DATE
 			# modifier = { factor = 0 date < 1955.1.1 }
 		# }
 
@@ -3113,7 +3113,7 @@ demobilization_ww2_e = {
 
 		# ai_will_do = {
 			# factor = 150
-			DATE
+			# DATE
 			# modifier = { factor = 0 date < 1970.1.1 }
 		# }
 

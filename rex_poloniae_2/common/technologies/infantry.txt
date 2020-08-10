@@ -1252,10 +1252,10 @@ technologies = {
 		
 		special_forces_no_supply_grace = 48
 		
-		path = {
-			leads_to_tech = elite_forces_02
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = elite_forces_02
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 2
 		start_year = 1946
@@ -1429,10 +1429,10 @@ technologies = {
 
 		land_night_attack = 0.15	
 
-		path = {
-			leads_to_tech = support_weapons_b
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = support_weapons_b
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 2
 		start_year = 1949
@@ -2110,10 +2110,10 @@ technologies = {
 			infantry_equipment_x
 		}
 
-		path = {
-			leads_to_tech = advanced_infantry_weapons_c
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = advanced_infantry_weapons_c
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 1.5
 		start_year = 1949
@@ -2449,10 +2449,10 @@ technologies = {
 			ap_attack = 1
 		}
 
-		path = {
-			leads_to_tech = infantry_at_b
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = infantry_at_b
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 1.5
 		start_year = 1947
@@ -3105,10 +3105,10 @@ technologies = {
 			max_organisation = 5
 		}
 		
-		path = {
-			leads_to_tech = paratroopers_c
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = paratroopers_c
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 2.0
 		start_year = 1949
@@ -3181,10 +3181,10 @@ technologies = {
 			max_organisation = 5
 		}
 		
-		path = {
-			leads_to_tech = marines_c
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = marines_c
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 2.0
 		start_year = 1949
@@ -3255,10 +3255,10 @@ technologies = {
 			max_organisation = 5
 		}
 		
-		path = {
-			leads_to_tech = mountaineers_c
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = mountaineers_c
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 2.0
 		start_year = 1949
@@ -3421,10 +3421,10 @@ jaegers = {
 			max_organisation = 5
 		}
 		
-		path = {
-			leads_to_tech = jaegers6
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = jaegers6
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 2.0
 		start_year = 1949
@@ -3586,11 +3586,11 @@ jaegers = {
 			max_organisation = 5
 		}
 		
-		path = {
+		# path = {
 
-			leads_to_tech = jungletroops6
-			research_cost_coeff = 1
-		}
+			# leads_to_tech = jungletroops6
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 2.0
 		start_year = 1949
@@ -3743,10 +3743,10 @@ jaegers = {
 			max_organisation = 5
 		}
 		
-		path = {
-			leads_to_tech = shocktroops6
-			research_cost_coeff = 1
-		}
+		# path = {
+			# leads_to_tech = shocktroops6
+			# research_cost_coeff = 1
+		# }
 
 		research_cost = 2.0
 		start_year = 1949
@@ -3901,11 +3901,11 @@ jaegers = {
 			max_organisation = 5
 		}
 		
-		path = {
+		# path = {
 
-			leads_to_tech = desertinfantry_at6
-			research_cost_coeff = 1
-		}
+			# leads_to_tech = desertinfantry_at6
+			# research_cost_coeff = 1
+		# }
 		
 		research_cost = 2.0
 		start_year = 1949
@@ -4592,25 +4592,25 @@ jaegers = {
 	# }					  
 
 	
-	MD_motorized_rocket_unit = {
+	# MD_motorized_rocket_unit = {
 
-		enable_subunits = {
-			motorized_rocket_brigade
-		}
-		enable_equipments = {
-			motorized_rocket_equipment_1
-		}
+		# enable_subunits = {
+			# motorized_rocket_brigade
+		# }
+		# enable_equipments = {
+			# motorized_rocket_equipment_1
+		# }
 	
-		research_cost = 1.5
-		start_year = 1970
+		# research_cost = 1.5
+		# start_year = 1970
 		
-		ai_will_do = {
-			factor = 10
-		}
+		# ai_will_do = {
+			# factor = 10
+		# }
 		
-		categories = {
-			mot_rockets
-		}
-	}
+		# categories = {
+			# mot_rockets
+		# }
+	# }
 
 }
