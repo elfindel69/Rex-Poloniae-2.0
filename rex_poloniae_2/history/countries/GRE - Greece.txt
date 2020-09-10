@@ -139,6 +139,23 @@ set_convoys = 10
 	}
 }
 
+1922.01.01 = {
+	set_politics = {
+		ruling_party = monarchist
+		last_election = "1921.6.9"
+		election_frequency = 12
+		elections_allowed = no # none after offset 1
+	}
+	
+	set_popularities = {
+		democratic = 10
+		fascism = 23
+		communism = 2
+		neutrality = 5
+		monarchist = 60
+	}
+}
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1935.6.9"

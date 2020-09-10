@@ -1301,9 +1301,6 @@ technologies = {
 		ai_will_do = { #EAI
 			factor = 5
 
-			#WEIGHT
-			modifier = { factor = 2 EAI_capital_tech_focus = yes }
-
 			#RESTRICTION
 			modifier = { 
 				factor = 0 
@@ -1542,7 +1539,7 @@ technologies = {
 		# }
 	# }
 	
-	jet_engines = { on_research_complete = { 
+	jet_engines = {
 	
 		folder = {
 			name = electronics_folder

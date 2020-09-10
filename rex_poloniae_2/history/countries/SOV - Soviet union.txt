@@ -263,32 +263,19 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
 	democratic = 10
 	fascism = 2
 	communism = 88
 }
 
-create_faction = Comintern
-add_to_faction = SOV
-add_to_faction = MON
-add_to_faction = TAN
-
-
-add_ideas = {
-	trotskyite_plot
-	home_of_revolution
-}
-
 create_country_leader = {
-	name = "Joseph Stalin"
-	desc = "POLITICS_JOSEPH_STALIN_DESC"
-	picture = "Portrait_Soviet_Joseph_Stalin.dds"
-	expire = "1953.3.1"
-	ideology = stalinism
-	traits = {
-		
-	}
+	name = "Vladimir Lenin"
+	desc = "POLITICS_VLADIMIR_LENIN_DESC"
+	picture = "WW1/Portrait_Russia_Vladimir_Lenin.dds"
+	expire = "1924.1.21"
+	ideology = leninism
 }
 
 create_country_leader = {
@@ -332,6 +319,89 @@ create_country_leader = {
 	ideology = oligarchism
 	traits = {
 	}
+}
+
+1936.01.01 = {
+
+	set_politics = {
+		ruling_party = communism
+		last_election = "1933.7.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	
+	set_popularities = {
+		democratic = 10
+		fascism = 2
+		communism = 88
+	}
+
+
+	create_faction = Comintern
+	add_to_faction = SOV
+	add_to_faction = MON
+	add_to_faction = TAN
+
+
+	add_ideas = {
+		trotskyite_plot
+		home_of_revolution
+	}
+
+	create_country_leader = {
+		name = "Joseph Stalin"
+		desc = "POLITICS_JOSEPH_STALIN_DESC"
+		picture = "Portrait_Soviet_Joseph_Stalin.dds"
+		expire = "1953.3.1"
+		ideology = stalinism
+		traits = {
+			
+		}
+	}
+
+	create_country_leader = {
+		name = "Konstantin Rodzaevsky"
+		desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
+		picture = "Portrait_Soviet_Konstantin_Rodzaevsky.dds"
+		expire = "1953.3.1"
+		ideology = fascism_ideology
+		traits = {
+			dictator
+		}
+	}
+
+	create_country_leader = {
+		name = "Alexander Fyodorovich Kerensky"
+		desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+		picture = "SOV_Portrait_Kerensky_D.dds"
+		expire = "1953.3.1"
+		ideology = socialism
+		traits = {
+			popular_figurehead
+		}
+	}
+
+	create_country_leader = {
+		name = "Kirill Vladimirovich Romanov"
+		desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+		picture = "SOV_Portrait_Romanov_N.dds"
+		expire = "1953.3.1"
+		ideology = paternalism
+		traits = {
+			imperial_connections
+		}
+	}
+
+	create_country_leader = {
+		name = "Gavril Igorevich Shvernik"
+		desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+		picture = "portrait_europe_generic_5.dds"
+		expire = "1953.3.1"
+		ideology = oligarchism
+		traits = {
+		}
+	}
+
 }
 
 

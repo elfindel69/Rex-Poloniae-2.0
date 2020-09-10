@@ -259,28 +259,22 @@ if = {
 set_convoys = 100
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = monarchist
 	last_election = "1936.7.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 60
+	democratic = 3
 	fascism = 2
 	communism = 35
-	monarchist = 3
+	monarchist = 60
 }
 
 create_faction = "Russian Alliance"
 add_to_faction = RUS
 add_to_faction = MON
 add_to_faction = TAN
-
-
-add_ideas = {
-	trotskyite_plot
-	home_of_revolution
-}
 
 create_country_leader = {
 	name = "Joseph Stalin"
@@ -316,14 +310,11 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Kirill Vladimirovich Romanov"
-	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
-	picture = "SOV_Portrait_Romanov_N.dds"
-	expire = "1953.3.1"
-	ideology = paternalism
-	traits = {
-		imperial_connections
-	}
+	name = "Nicholas II"
+	desc = "POLITICS_NICHOLAS_II_DESC"
+	picture = "WW1/Portrait_Russia_Nicholas_II.dds"
+	expire = "1965.3.1"
+	ideology = despotism
 }
 
 create_country_leader = {
@@ -336,6 +327,87 @@ create_country_leader = {
 	}
 }
 
+
+1936.01.01 = {
+	
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.7.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 60
+		fascism = 2
+		communism = 35
+		monarchist = 3
+	}
+
+	create_faction = "Russian Alliance"
+	add_to_faction = RUS
+	add_to_faction = MON
+	add_to_faction = TAN
+
+
+	add_ideas = {
+		trotskyite_plot
+		home_of_revolution
+	}
+
+	create_country_leader = {
+		name = "Joseph Stalin"
+		desc = "POLITICS_JOSEPH_STALIN_DESC"
+		picture = "Portrait_Soviet_Joseph_Stalin.dds"
+		expire = "1953.3.1"
+		ideology = stalinism
+		traits = {
+			
+		}
+	}
+
+	create_country_leader = {
+		name = "Konstantin Rodzaevsky"
+		desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
+		picture = "Portrait_Soviet_Konstantin_Rodzaevsky.dds"
+		expire = "1953.3.1"
+		ideology = fascism_ideology
+		traits = {
+			dictator
+		}
+	}
+
+	create_country_leader = {
+		name = "Alexander Fyodorovich Kerensky"
+		desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+		picture = "SOV_Portrait_Kerensky_D.dds"
+		expire = "1953.3.1"
+		ideology = socialism
+		traits = {
+			popular_figurehead
+		}
+	}
+
+	create_country_leader = {
+		name = "Kirill Vladimirovich Romanov"
+		desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+		picture = "SOV_Portrait_Romanov_N.dds"
+		expire = "1953.3.1"
+		ideology = paternalism
+		traits = {
+			imperial_connections
+		}
+	}
+
+	create_country_leader = {
+		name = "Gavril Igorevich Shvernik"
+		desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+		picture = "portrait_europe_generic_5.dds"
+		expire = "1953.3.1"
+		ideology = oligarchism
+		traits = {
+		}
+	}
+}
 add_namespace = {
 	name = "unit_leader_sov"
 	type = unit_leader
