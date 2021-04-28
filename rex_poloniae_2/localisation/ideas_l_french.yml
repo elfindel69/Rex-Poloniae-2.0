@@ -3342,13 +3342,15 @@
  SWE_generic_head_of_intelligence:0 "Carl Petersén"
 ############################
 
-RUS_liberty_ethos_focus:0 "Montée de la liberté"
-RUS_neutrality_idea:0 "Politique étrangère neutre"
+ RUS_liberty_ethos_focus:0 "Montée de la liberté"
+ RUS_neutrality_idea:0 "Politique étrangère neutre"
 
-UKR_liberty_ethos_focus:0 "Montée de la liberté"
-UKR_neutrality_idea:0 "Politique étrangère neutre"
-UKR_monarchy_rise_focus:0 "Montée de la Monarchie"
-UKR_monarchism_focus:0 "Un roi pour l'Ukraine ?"
+ UKR_liberty_ethos_focus:0 "Montée de la liberté"
+ UKR_neutrality_idea:0 "Politique étrangère neutre"
+ UKR_monarchy_rise_focus:0 "Montée de la Monarchie"
+ UKR_monarchism_focus:0 "Un roi pour l'Ukraine ?"
+
+ generic_monarchist_booster:0 "Conseiller Monarchiste"
 
 ######################
 ###  TO BE ERASED  ###

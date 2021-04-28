@@ -3331,8 +3331,147 @@
  FRLOC_COR_ADJ_S:0 "corse"
  FRLOC_COR_ADJ_P:0 "corses"
  FRLOC_COR_INHAB:0 "Corses"                                                  
-
-
+ KUR_neutrality:0 "Royaume du Kurdistan"
+ KUR_neutrality_ADJ:0 "kurde"
+ KUR_neutrality_DEF:0 "le Royaume du Kurdistan"
+ KUR_monarchist:0 "Royaume du Kurdistan"
+ KUR_monarchist_ADJ:0 "kurde"
+ KUR_monarchist_DEF:0 "le Royaume du Kurdistan"
+ KUR_communism:0 "République socialiste du Kurdistan"
+ KUR_communism_ADJ:0 "kurde"
+ KUR_communism_DEF:0 "la République socialiste du Kurdistan"
+ KUR_fascism:0 "Xoybûn kurde"
+ KUR_fascism_ADJ:0 "kurde"
+ KUR_fascism_DEF:0 "le Xoybûn kurde"
+ KUR_democratic:0 "Kurdistan"
+ KUR_democratic_ADJ:0 "kurde"
+ KUR_democratic_DEF:0 "le Kurdistan"
+ FRLOC_KUR_ADJ_S:0 "kurde" # [LocEditor:CustomLanguageKey]
+ FRLOC_KUR_ADJ_P:0 "kurdes" # [LocEditor:CustomLanguageKey]
+ FRLOC_KUR_INHAB:0 "Kurdes" # [LocEditor:CustomLanguageKey]
+ KUR:0 "Kurdistan" # [LocEditor:CustomLanguageKey]
+ KUR_ADJ:0 "kurdo-" # [LocEditor:CustomLanguageKey]
+ KUR_DEF:0 "le Kurdistan" # [LocEditor:CustomLanguageKey]
+ KOS_fascism:0 "Dardanie"
+ KOS_fascism_DEF:0 "la Dardanie"
+ KOS_democratic:0 "République du Kosovo"
+ KOS_democratic_DEF:0 "la République du Kosovo"
+ KOS_monarchist:0 "Duché du Kosovo"
+ KOS_monarchist_DEF:0 "le Duché du Kosovo"
+ KOS_communism:0 "Ligue communiste du Kosovo"
+ KOS_communism_DEF:0 "la Ligue communiste du Kosovo"
+ KOS_neutrality:0 "Kosovo" # [LocEditor:CustomLanguageKey]
+ KOS_neutrality_DEF:0 "le Kosovo" # [LocEditor:CustomLanguageKey]
+ KOS_fascism_ADJ:0 "dardanienne"
+ KOS_democratic_ADJ:0 "kosovare"
+ KOS_monarchist_ADJ:0 "kosovare"
+ KOS_communism_ADJ:0 "kosovare"
+ KOS_neutrality_ADJ:0 "kosovare" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_ADJ_MS:0 "kosovar" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_ADJ_FS:0 "kosovare" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_ADJ_MP:0 "kosovars" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_ADJ_FP:0 "kosovares" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_INHAB:0 "Kosovars" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_FASCISM_ADJ_MS:0 "dardanien" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_FASCISM_ADJ_FS:0 "dardanienne" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_FASCISM_ADJ_MP:0 "dardaniens" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_FASCISM_ADJ_FP:0 "dardaniennes" # [LocEditor:CustomLanguageKey]
+ FRLOC_KOS_FASCISM_INHAB:0 "Dardaniens" # [LocEditor:CustomLanguageKey]
+ KOS:0 "Kosovo"
+ KOS_DEF:0 "le Kosovo"
+ KOS_ADJ:0 "kosovo-"
+ dalmatia_fascism:0 "Ligue dalmate"
+ dalmatia_fascism_DEF:0 "la Ligue dalmate"
+ dalmatia_democratic:0 "République dalmate"
+ dalmatia_democratic_DEF:0 "la République dalmate"
+ dalmatia_communism:0 "Commune dalmate"
+ dalmatia_communism_DEF:0 "la Commune dalmate"
+ dalmatia_neutrality:0 "Dalmatie" # [LocEditor:CustomLanguageKey]
+ dalmatia_neutrality_DEF:0 "la Dalmatie" # [LocEditor:CustomLanguageKey]
+ dalmatia_fascism_ADJ:0 "dalmate"
+ dalmatia_democratic_ADJ:0 "dalmate"
+ dalmatia_communism_ADJ:0 "dalmate"
+ dalmatia_neutrality_ADJ:0 "dalmate" # [LocEditor:CustomLanguageKey]
+ FRLOC_dalmatia_ADJ_S:0 "dalmate" # [LocEditor:CustomLanguageKey]
+ FRLOC_dalmatia_ADJ_P:0 "dalmates" # [LocEditor:CustomLanguageKey]
+ FRLOC_dalmatia_INHAB:0 "Dalmates" # [LocEditor:CustomLanguageKey]
+ dalmatia:0 "Dalmatie"
+ dalmatia_DEF:0 "la Dalmatie"
+ dalmatia_ADJ:0 "dalmato-"
+ TRA_fascism:0 "Transylvanie légionnaire"
+ TRA_fascism_DEF:0 "la Transylvanie légionnaire"
+ TRA_communism:0 "Union socialiste des Carpates"
+ TRA_communism_DEF:0 "l'Union socialiste des Carpates"
+ TRA_neutrality:0 "Principauté de Transylvanie"
+ TRA_neutrality_DEF:0 "la Principauté de Transylvanie"
+ TRA_monarchist:0 "Principauté de Transylvanie"
+ TRA_monarchist_DEF:0 "la Principauté de Transylvanie"
+ TRA_democratic:0 "Transylvanie" # [LocEditor:CustomLanguageKey]
+ TRA_democratic_DEF:0 "la Transylvanie" # [LocEditor:CustomLanguageKey]
+ TRA_fascism_ADJ:0 "transylvaine"
+ TRA_communism_ADJ:0 "carpatique"
+ TRA_monarchist_ADJ:0 "transylvaine"
+ TRA_neutrality_ADJ:0 "transylvaine" # [LocEditor:CustomLanguageKey]
+ TRA_democratic_ADJ:0 "transylvaine" # [LocEditor:CustomLanguageKey]
+ FRLOC_TRA_ADJ_MS:0 "transylvain" # [LocEditor:CustomLanguageKey]
+ FRLOC_TRA_ADJ_FS:0 "transylvaine" # [LocEditor:CustomLanguageKey]
+ FRLOC_TRA_ADJ_MP:0 "transylvains" # [LocEditor:CustomLanguageKey]
+ FRLOC_TRA_ADJ_FP:0 "transylvaines" # [LocEditor:CustomLanguageKey]
+ FRLOC_TRA_INHAB:0 "Transylvains" # [LocEditor:CustomLanguageKey]
+ FRLOC_TRA_communism_ADJ_S:0 "carpatique" # [LocEditor:CustomLanguageKey]
+ FRLOC_TRA_communism_ADJ_P:0 "carpatiques" # [LocEditor:CustomLanguageKey]
+ FRLOC_TRA_communism_INHAB:0 "Carpatiques" # [LocEditor:CustomLanguageKey]
+ TRA:0 "Transylvanie"
+ TRA_DEF:0 "la Transylvanie"
+ TRA_ADJ:0 "transylvano-"
+ vojvodina_democratic:0 "République de Voïvodine"
+ vojvodina_democratic_DEF:0 "la République de Voïvodine"
+ vojvodina_democratic_ADJ:0 "voïvodinienne"
+ vojvodina_communism:0 "Province socialiste de Voïvodine"
+ vojvodina_communism_DEF:0 "la Province socialiste de Voïvodine"
+ vojvodina_communism_ADJ:0 "voïvodinienne"
+ vojvodina_fascism:0 "Empire de Syrmie"
+ vojvodina_fascism_DEF:0 "l'Empire de Syrmie"
+ vojvodina_fascism_ADJ:0 "syrmienne"
+ vojvodina_neutrality:0 "Voïvodine" # [LocEditor:CustomLanguageKey]
+ vojvodina_neutrality_DEF:0 "la Voïvodine" # [LocEditor:CustomLanguageKey]
+ vojvodina_neutrality_ADJ:0 "voïvodinienne" # [LocEditor:CustomLanguageKey]
+ vojvodina:0 "Voïvodine"
+ vojvodina_DEF:0 "la Voïvodine"
+ vojvodina_ADJ:0 "voïvodo-"
+ HRZ_fascism:0 "Nouveau duché de Saint Sava"
+ HRZ_fascism_DEF:0 "le Nouveau duché de Saint Sava"
+ HRZ_monarchist:0 "Duché de Saint Sava"
+ HRZ_monarchist_DEF:0 "le Duché de Saint Sava"
+ HRZ_democratic:0 "République herzégovine"
+ HRZ_democratic_DEF:0 "la République herzégovine"
+ HRZ_communism:0 "République socialiste d'Herzégovine"
+ HRZ_communism_DEF:0 "la République socialiste d'Herzégovine"
+ HRZ_neutrality:0 "Herzégovine" # [LocEditor:CustomLanguageKey]
+ HRZ_neutrality_DEF:0 "l'Herzégovine" # [LocEditor:CustomLanguageKey]
+ HRZ_fascism_ADJ:0 "herzégovinienne"
+ HRZ_monarchist_ADJ:0 "herzégovinienne"
+ HRZ_democratic_ADJ:0 "herzégovinienne"
+ HRZ_communism_ADJ:0 "herzégovinienne"
+ HRZ_neutrality_ADJ:0 "herzégovinienne" # [LocEditor:CustomLanguageKey]
+ FRLOC_HRZ_ADJ_MS:0 "herzégovinien" # [LocEditor:CustomLanguageKey]
+ FRLOC_HRZ_ADJ_FS:0 "herzégovinienne" # [LocEditor:CustomLanguageKey]
+ FRLOC_HRZ_ADJ_MP:0 "herzégoviniens" # [LocEditor:CustomLanguageKey]
+ FRLOC_HRZ_ADJ_FP:0 "herzégoviniennes" # [LocEditor:CustomLanguageKey]
+ FRLOC_HRZ_INHAB:0 "Herzégoviniens" # [LocEditor:CustomLanguageKey]
+ HRZ:0 "Herzégovine"
+ HRZ_DEF:0 "l'Herzégovine"
+ HRZ_ADJ:0 "herzégovino-"
+ BOS_without_HRZ_fascism:0 "État bosnien"
+ BOS_without_HRZ_fascism_DEF:0 "l'État bosnien"
+ BOS_without_HRZ_democratic:0 "Bosnie"
+ BOS_without_HRZ_democratic_DEF:0 "la Bosnie"
+ BOS_without_HRZ_communism:0 "République socialiste de Bosnie" # [LocEditor:CustomLanguageKey]
+ BOS_without_HRZ_communism_DEF:0 "la République socialiste de Bosnie" # [LocEditor:CustomLanguageKey]
+ BOS_without_HRZ_neutrality:0 "Bosnie" # [LocEditor:CustomLanguageKey]
+ BOS_without_HRZ_neutrality_DEF:0 "la Bosnie" # [LocEditor:CustomLanguageKey]
+ BOS_without_HRZ_monarchist:0 "Bosnie" # [LocEditor:CustomLanguageKey]
+ BOS_without_HRZ_monarchist_DEF:0 "la Bosnie" # [LocEditor:CustomLanguageKey]
 
 ######################
 ###  TO BE ERASED  ###

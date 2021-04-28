@@ -89,7 +89,7 @@ ideologies = {
 		
 		rules = {
 			can_create_collaboration_government = no
-			can_declare_war_on_same_ideology = no
+			can_declare_war_on_same_ideology = yes
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
@@ -119,7 +119,7 @@ ideologies = {
 		faction_modifiers = {
 			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
 		}
-		ai_fascist = yes # uses the fascist AI behaviour
+		
 	}
 
 	communism = {
@@ -186,7 +186,8 @@ ideologies = {
 		
 			nazism = {
 			}
-			
+			gen_nazism = {
+			}	 
 			fascism_ideology = {
 			}
 			

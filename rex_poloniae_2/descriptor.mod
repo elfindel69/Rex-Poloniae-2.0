@@ -1,11 +1,10 @@
-version="0.1.1"
+version="0.0.1"
 tags={
 	"Alternative History"
-	"Gameplay"
 	"Events"
+	"Ideologies"
 	"National Focuses"
 }
-name="Rex Poloniae 2.0"
 picture="thumb.jpg"
-supported_version="1.9.3"
-remote_file_id="2054082747"
+name="Rex Poloniae 2.0"
+supported_version="1.10.5"

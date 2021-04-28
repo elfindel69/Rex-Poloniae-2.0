@@ -503,8 +503,8 @@ GER_MOT_01 =
 	can_use = {
 		OR = {
 			has_government = neutrality 
-			has_government = monarchist
 			has_government = democratic 
+			has_government = monarchist
 		}
 	}
 
@@ -1007,9 +1007,9 @@ GER_MONINF_01 =
 	can_use = { 
 		OR = {
 			has_government = neutrality 
+			has_government = democratic
 			has_government = monarchist
-			has_government = democratic 
-		}
+		} 
 	}
 
 	division_types = { "infantry" "mechanized" "mountaineers" "paratrooper" "marine" }
@@ -1243,9 +1243,9 @@ GER_MONMOB_01 =
 
 	can_use = { 
 		OR = {
-			has_government = neutrality
-			has_government = monarchist 
-			has_government = democratic 
+			has_government = neutrality 
+			has_government = democratic
+			has_government = monarchist
 		}
 	}
 

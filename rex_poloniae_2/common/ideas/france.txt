@@ -1533,7 +1533,7 @@ ideas = {
 				OR = {
 					has_completed_focus = FRA_right_wing_rhetoric
 					has_completed_focus = FRA_utilize_the_leagues
-					has_focus_tree = vichy_french_focus
+					#has_focus_tree = vichy_french_focus
 				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }	

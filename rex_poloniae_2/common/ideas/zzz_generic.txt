@@ -1187,14 +1187,38 @@ ideas = {
 	
 	political_advisor = {
 		# POLITICAL	
+		
+		generic_monarchist_booster = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = monarchist_booster limit = 1 }		#In order to prevent it from appearing alongside country-specific ones.
+				}
+			}	
+			traits = { monarchist_booster }
+					
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
 		generic_communist_revolutionary = {
 			
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
+				NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR } }
 				NOT = {
 					has_available_idea_with_traits = { idea = communist_revolutionary limit = 1 }
 				}
-				
+				if = {
+					limit = { has_dlc = "Battle for the Bosporus" }
+					NOT = { tag = TUR tag = GRE }
+				}
 			}
 
 			available = {
@@ -1231,11 +1255,14 @@ ideas = {
 		generic_democratic_reformer = {
 			
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL } }
+				NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR } }
 				NOT = {
 					has_available_idea_with_traits = { idea = democratic_reformer limit = 1 }
 				}
-				
+				if = {
+					limit = { has_dlc = "Battle for the Bosporus" }
+					NOT = { tag = TUR tag = GRE }
+				}
 			}
 			
 			available = {
@@ -1280,9 +1307,13 @@ ideas = {
 		generic_fascist_demagogue = {
 			
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL } }
+				NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POR } }
 				NOT = {
 					has_available_idea_with_traits = { idea = fascist_demagogue limit = 1 }
+				}
+				if = {
+					limit = { has_dlc = "Battle for the Bosporus" }
+					NOT = { tag = TUR tag = GRE }
 				}
 
 			}
@@ -1324,6 +1355,15 @@ ideas = {
 				# china gets a special one via focus
 				NOT = { original_tag = CHI }
 				NOT = { is_chinese_warlord = yes }
+				if = {
+					limit = {
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = {
+						tag = GRE
+						tag = TUR
+					}
+				}
 			}
 			visible = {
 				OR = {
@@ -1394,6 +1434,12 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 				}
+				NOT = {
+					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1438,10 +1484,18 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 				}
+				NOT = {
 					AND = {
 						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
 						has_dlc = "La Resistance"
 					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1486,10 +1540,18 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 				}
+				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
+						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR}
 						has_dlc = "La Resistance"
 					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1529,10 +1591,18 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 				}
+				NOT = {
 					AND = {
 						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
 						has_dlc = "La Resistance"
 					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1572,10 +1642,18 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 				}
+				NOT = {
 					AND = {
 						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
 						has_dlc = "La Resistance"
 					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1611,10 +1689,18 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 				}
+				NOT = {
 					AND = {
 						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
 						has_dlc = "La Resistance"
 					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1651,10 +1737,18 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 				}
+				NOT = {
 					AND = {
 						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
 						has_dlc = "La Resistance"
 					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1691,10 +1785,18 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 				}
+		   NOT = {
 					AND = {
 						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
 						has_dlc = "La Resistance"
 					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1735,14 +1837,14 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
+						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
 						has_dlc = "La Resistance"
 					}
 				}
 				NOT = {
 					AND = {
-						OR = { tag = POR }
-						has_dlc = "La Resistance"
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
 					}
 				}
 			}
@@ -1786,8 +1888,8 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = POR }
-						has_dlc = "La Resistance"
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
 					}
 				}
 			}
@@ -1825,14 +1927,14 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
+						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
 						has_dlc = "La Resistance"
 					}
 				}
 				NOT = {
 					AND = {
-						OR = { tag = POR }
-						has_dlc = "La Resistance"
+						OR = { tag = BUL tag = GRE tag = TUR }
+						has_dlc = "Battle for the Bosporus"
 					}
 				}
 			}

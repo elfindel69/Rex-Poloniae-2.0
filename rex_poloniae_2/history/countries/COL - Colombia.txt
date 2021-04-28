@@ -167,7 +167,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Serafín Espiga"
 	desc = "POLITICS_MARIANO_OSPINA_PEREZ_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_4.dds"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
 	expire = "1965.1.1"
 	ideology = paternalism
 	traits = {
@@ -205,7 +205,7 @@ create_country_leader = {
 
 create_field_marshal = {
 	name = "Cristóbal Pomar"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_5"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
 	traits = {  offensive_doctrine }
 	skill = 3
 	attack_skill = 3
