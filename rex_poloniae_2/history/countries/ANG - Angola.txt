@@ -78,6 +78,15 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Pedro VII Afonso"
+	picture = "gfx/leaders/Monarchs/Portrait_Kongo_Pedro_VII_Afonso.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol 
+	}
+}
 
 #Now a colony of Italy  However, if independent it would have
 1939.1.1 = {

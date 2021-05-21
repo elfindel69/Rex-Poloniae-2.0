@@ -97,4 +97,13 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+		name = "King George Bagrationi"
+		picture = "gfx/leaders/Monarchs/Portrait_GEO_George_Bagriaton_Mukhraneli.tga"
+		expire = "1941.1.1"
+		ideology = absolutism
+		traits = {
+		}
+	}
+
 #couldnt find anything else, the commies simply forced everyone else into exile

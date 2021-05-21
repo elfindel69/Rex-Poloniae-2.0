@@ -76,3 +76,12 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Alfa Toure"
+	picture = "gfx/leaders/Monarchs/Portrait_Generic_Africa_reactionary_5.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}

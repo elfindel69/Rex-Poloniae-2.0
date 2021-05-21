@@ -67,3 +67,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Ratu Popi Epeli Cakobau"
+	picture = "gfx/leaders/Monarchs/Portrait_Ratu_Popi_Epeli_Cakobau.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol
+	}
+}

@@ -1,0 +1,51 @@
+﻿l_english:
+ ITA_monarchism_focus:0 "A nation and a king!"
+ 
+ FRA_monarchism_focus:0 "Long live the king!"
+ FRA_king_rules_focus:0 "King's direct control"
+ 
+ SOV_democracy_focus:0 "Democracy rise"
+ SOV_democracy_prop_focus:0 "Democratic propaganda" 
+
+ POL_monarchism_focus:0 "Long live the king!"
+ POL_king_rules_focus:0 "King's direct control"
+ 
+ RUS_liberty_ethos_focus:0 "Rise of liberty"
+ RUS_neutrality_idea:0 "Neutral foreign policy"
+ 
+ UKR_liberty_ethos_focus:0 "Rise of liberty"
+ UKR_neutrality_idea:0 "Neutral foreign policy"
+ UKR_monarchy_rise_focus:0 "Monarchy on the rise"
+ UKR_monarchism_focus:0 "A king for Ukraine?"
+ 
+ generic_monarchist_booster:0 "Monarchist advisor"
+ POL_generic_monarchist_booster:0 "Paweł Nowak"
+ 
+ monarchist_influence:0 "Monarchist influence"
+ monarchist_influence_desc:0 "Monarchist pressure has made monarchism very popular, and the country is susceptible to align with other monarchists."
+ monarchist_diplomacy:0 "Monarchist diplomacy"
+ monarchist_diplomacy_desc:0 "It is time to boost monarchism in order to ally with other monarchists."
+ anti_monarchist_diplomacy:0 "Anti-monarchist diplomacy"
+ pro_communist_diplomacy:0 "Pro-communist diplomacy"
+ pro_fascist_diplomacy:0 "Pro-fascist diplomacy"
+ pro_democratic_diplomacy:0 "Pro-democratic diplomacy"
+ POL_fascist_influence:0 "Fascist influence"
+ POL_communist_influence:0 "Communist influence"
+ POL_neutrality_government:0 "Authoritarian government"
+ POL_fascist_government:0 "Fascist government"
+ POL_communist_government:0 "Communist government"
+ POL_communist_science:0 "Communist science"
+ POL_SEPEWE:0 "SEPEWE"
+ POL_arms_export_syndicate:0 "Arms Export Syndicate"
+ POL_Polish_Cipher_Bureau_Focus0:0 "The Polish Cipher Bureau"
+ POL_Polish_Cipher_Bureau_Focus0_desc:0 "The Polish Cipher Bureau is tasked with counter-intelligence, radar detection, and cryptanalysis duties."
+ 
+ POL_Synthetic_Rubber:0 "Synthetic Rubber"
+ POL_Synthetic_Rubber_tt:0 "§WModify§! §HRubber Refinery§! §Woutput by:§! §G+2§!£resources_strip|3.\n"
+ POL_Synthetic_Rubber_desc:0 "Polish scientists working under the Department of Rubber Synthesis within the Chemical Research Institute in Warsaw have managed to develop a fully artificial form of rubber derived from potatoes and other agricultural products. Tires and machine parts can be produced without need for naturally occurring rubber from overseas plantations.§!"
+ 
+ POL_stanislas_iii:0 "Stanislas III"
+ POL_stanislas_iv:0 "Stanislas IV"
+ 
+ POL_exiled_royal_family:0 "Polish Royal Family Exiled"
+ POL_confiscated_royal_wealth:0 "Confiscated Royal Wealth"

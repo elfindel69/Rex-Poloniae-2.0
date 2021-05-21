@@ -93,7 +93,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Abdullah bin al-Hussein"
 	desc = ""
-	picture = "gfx/leaders/JOR/Portrait_Arabia_Generic_land_3.dds"
+	picture = "gfx/leaders/Monarchs/Portrait_JOR_Abdullah_i.tga"
 	ideology = despotism
 	traits = {
 		#
@@ -103,7 +103,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Abdullah bin al-Hussein"
 	desc = ""
-	picture = "gfx/leaders/JOR/Portrait_Arabia_Generic_land_3.dds"
+	picture = "gfx/leaders/Monarchs/Portrait_JOR_Abdullah_i.tga"
 	ideology = monarchism
 	traits = {
 		#

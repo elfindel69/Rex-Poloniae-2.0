@@ -1119,8 +1119,9 @@ ideas = {
 			picture = ast_abandon_the_westminster_system
 			
 			removal_cost = -1
+			
 		}
-
+		
 		ENG_the_kings_party_idea = {
 
 			name = ENG_the_kings_party
@@ -3230,4 +3231,5 @@ ideas = {
 
 
 }
+
 

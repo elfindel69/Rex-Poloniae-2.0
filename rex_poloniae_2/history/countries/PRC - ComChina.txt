@@ -182,6 +182,26 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Yuan Keding"
+	picture = "gfx/leaders/Monarchs/Yuan_Keding_China.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		imperial_sanction warrior_code
+	}
+}
+
+create_country_leader = {
+	name = "Emperor Yuntai"
+	picture = "gfx/leaders/Monarchs/Yuan_Keding_China.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = {
+		constitutional_monarch 
+	}
+}
+
 create_field_marshal = {
 	name = "Mao Zedong"
 	gfx = "GFX_portrait_prc_mao_zedong"

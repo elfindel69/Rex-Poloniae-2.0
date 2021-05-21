@@ -1133,7 +1133,6 @@ ideas = {
 				conscription = 0.05
 			}
 		}
-
 		HOL_oranje_boven_1 = {
 
 			name = HOL_oranje_boven

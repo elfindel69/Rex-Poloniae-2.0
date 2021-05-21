@@ -211,6 +211,16 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Don José de Borbón-Parma"
+	picture = "gfx/leaders/Monarchs/Joseph_of_Bourbon_Parma.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = {
+		constitutional_monarch
+	}
+}
+
+create_country_leader = {
 	name = "Marcelo T. de Alvear"
 	desc = "POLITICS_MARCELO_ALVEAR_DESC"
 	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"

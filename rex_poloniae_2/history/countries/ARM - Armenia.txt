@@ -100,6 +100,17 @@ create_country_leader = {
 }
 
 create_country_leader = {
+		name = "Hakob_Bragatuni"
+		picture = "gfx/leaders/Monarchs/Portrait_Armenia_Hakob_Bragatuni.tga"
+		expire = "1987.1.1"
+		ideology = paternalism
+		traits = {
+			constitutional_monarch
+		}
+	}
+}
+
+create_country_leader = {
 	name = "Grigor Harutyunyan"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"

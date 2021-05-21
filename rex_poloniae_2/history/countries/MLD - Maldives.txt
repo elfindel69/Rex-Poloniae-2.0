@@ -68,6 +68,16 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Sultan Osmaan of the Maldives"
+	picture = "gfx/leaders/Monarchs/Sultan_Osmaan.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		unpopular_monarch inexperienced_monarch 
+	}
+}
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

@@ -68,6 +68,16 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Mehmed Sabâhaddin"
+	picture = "gfx/leaders/Monarchs/Portrait_Prince_Sabahaddin_de_Neuchatel.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = { 
+		nationalist_symbol
+	}
+}
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

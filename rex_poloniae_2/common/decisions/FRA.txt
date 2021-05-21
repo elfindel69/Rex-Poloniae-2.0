@@ -1205,7 +1205,7 @@ economy_decisions = {
 			factor = 5
 		}
 	}
-}
+} 
 political_actions = {
 	FRA_rally_the_leagues = {
 		available = { }

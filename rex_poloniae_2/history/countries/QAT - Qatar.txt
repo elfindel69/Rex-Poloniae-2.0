@@ -68,6 +68,15 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Emir Abdullah bin Jassim Al Thani"
+	picture = "gfx/leaders/Monarchs/Portrait_Abdullah_bin_Jassim_Al_Thani.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

@@ -76,3 +76,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Mansa Modibo Keita"
+	picture = "gfx/leaders/Monarchs/Emperor_Modibo_Keita.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol 
+	}
+}

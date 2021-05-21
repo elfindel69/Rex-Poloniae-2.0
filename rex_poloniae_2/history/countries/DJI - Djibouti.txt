@@ -76,3 +76,12 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Abd Allah III"
+	picture = "gfx/leaders/Monarchs/Portrait_Ethiopia_Abiye_Abebe.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}

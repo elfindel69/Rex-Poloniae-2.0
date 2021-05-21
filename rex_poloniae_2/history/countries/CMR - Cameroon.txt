@@ -78,3 +78,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Achirimbi II"
+	picture = "gfx/leaders/Monarchs/Portrait_Mittelafrika_Achirimbi.tga"
+	expire = "1981.1.1"
+	ideology = despotism
+	traits = {
+		restored_monarch 
+	}
+}

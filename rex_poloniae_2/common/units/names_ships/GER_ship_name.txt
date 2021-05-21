@@ -82,8 +82,7 @@ GER_BC_HISTORICAL = {
 		9 = {"Friedrich Barbarossa"} 
 		10 = {"Karl der Große"} 
 	}
-}
-
+} 
 GER_TB_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_TB
 

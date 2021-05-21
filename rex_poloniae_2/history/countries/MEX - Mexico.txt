@@ -222,6 +222,16 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Empress Maria I"
+	picture = "gfx/leaders/Monarchs/Portrait_Mexico_Maria.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = {
+		popular_queen protector_of_the_campesinos refounder_of_mexico
+	}
+}
+
+create_country_leader = {
 	name = "Salvador Abascal"
 	desc = "POLITICS_SALVADOR_ABASCAL_DESC"
 	picture = "GFX_Portrait_MEX_Salvador_Abascal"

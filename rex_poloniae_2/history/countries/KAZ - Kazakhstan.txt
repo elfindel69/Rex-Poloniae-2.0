@@ -99,6 +99,14 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Pavel Shatilov"
+	picture = "gfx/leaders/Monarchs/Portrait_Russia_Generic_land_6.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}
 
 
 

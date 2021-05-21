@@ -62,8 +62,8 @@ news_event = {
 	option = {
 		name = POL_ITA_faction_news.1.a
 		trigger = {
+			has_government = communism
 			NOT = {
-				has_government = communism
 				tag = ITA
 			}
 		}
@@ -90,15 +90,68 @@ news_event = {
 			}
 		}
 	}
-
+	
 	#Italy has picked her side.
 	option = {
 		name = POL_ITA_faction_news.1.e
 		trigger = {
-			has_government = neutrality
-			has_government = monarchist
 			OR = {
+				has_government = monarchist
 				tag = ITA
+			}
+		}
+	}
+
+	#Italy has picked her side.
+	option = {
+		name = POL_ITA_faction_news.1.f
+		trigger = {
+			has_government = neutrality
+		}
+	}
+}
+
+news_event = {
+	id = POL_ITA_faction_news.2
+	title = POL_ITA_faction_news.2.t
+	desc = POL_ITA_faction_news.2.d
+	picture = GFX_news_event_french_parade
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		ITA = {
+			save_event_target_as = Italy		
+		}
+	}
+
+	#It is a shame!
+	option = {
+		name = POL_ITA_faction_news.2.a
+		trigger = {
+			tag = ITA
+		}
+	}
+	
+	
+	option = {
+		name = POL_ITA_faction_news.2.b
+		trigger = {
+			tag = POL
+		}
+	}
+	
+	
+	option = {
+		name = POL_ITA_faction_news.2.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = ITA
+					tag = POL
+				}
 			}
 		}
 	}

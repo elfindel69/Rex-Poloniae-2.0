@@ -76,3 +76,14 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Mutesa II of Buganda"
+	picture = "gfx/leaders/Monarchs/Portrait_Uganda_Mutesa.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = {
+		constitutional_monarch
+	}
+}
+				

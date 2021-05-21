@@ -4389,6 +4389,7 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_berlin_sov
+		play_victory_parade_effect = yes						  
 	}
 	
 	mean_time_to_happen = {
@@ -5188,7 +5189,8 @@ news_event = {
 	title = news.159.t
 	desc = {
 		text = news.159.d_01
-		trigger = { FROM = { has_government = neutrality has_government = monarchist } }
+		trigger = { FROM = { 
+		OR = {has_government = neutrality has_government = monarchist }} }
 	}
 	desc = {
 		text = news.159.d_02
@@ -7208,8 +7210,10 @@ news_event = {
 	option = {
 		name = news.196.e
 		trigger = {
-			has_government = neutrality
-			has_government = monarchist
+			OR = {
+				has_government = neutrality
+				has_government = monarchist
+			}
 		}
 	}
 }

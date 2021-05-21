@@ -77,3 +77,12 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Maad Saloum Fode N'Gouye Joof"
+	picture = "gfx/leaders/Monarchs/Portrait_Generic_Africa2.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}

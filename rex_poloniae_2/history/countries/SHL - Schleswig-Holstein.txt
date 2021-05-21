@@ -144,6 +144,14 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Prince Wilhelm Friedrich"
+	picture = "gfx/leaders/Monarchs/Portrait_Wilhelm_Friedrich_Schleswig.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = {
+	}
+}
 
 #create_country_leader = {
 #	name = "Dennis Fredauer"

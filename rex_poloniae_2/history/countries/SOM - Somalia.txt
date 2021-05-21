@@ -77,3 +77,14 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Sultan Ali Shire"
+	desc = "DESC_ALI_SHIRE"
+	picture = "gfx/leaders/Monarchs/Portrait_SOM_Ali_Shire.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}
+				

@@ -1534,15 +1534,14 @@ focus_tree = {
 			#1x50% bonus to Naval Doctrine research
 		}
 	}
-
-	############################
-	##### POLITICS SECTION #####
-	############################
-
-
+	
+	##############################
+	##### DIPLOMATIC SECTION #####
+	##############################
+	
 	focus = {
-		id = POL_strengthen_the_polish_state
-		icon = GFX_goal_generic_demand_territory
+		id = POL_reform_of_the_diplomacy
+		icon = GFX_focus_generic_treaty
 		
 		x = 29
 		y = 0
@@ -1555,41 +1554,26 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_political_power = 120
-			#PP +120
+			add_political_power = 150
+			#PP +150
 		}
 	}
-
+	
 	focus = {
-		id = POL_defensive_focus
-		icon = GFX_goal_generic_defence
-		prerequisite = { focus = POL_strengthen_the_polish_state }
-		
-		x = 4
-		y = 1
-		relative_position_id = POL_strengthen_the_polish_state
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
+		id = POL_keep_the_intermarius
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = POL_reform_of_the_diplomacy }
+		mutually_exclusive = {focus = POL_change_of_course}
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = monarchist
+			}
 		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = deterrence
-			#Grants Deterrence modifier
-		}
-	}
-
-	focus = {
-		id = POL_polish_militarism
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = POL_strengthen_the_polish_state }
 		
 		x = -2
 		y = 1
-		relative_position_id = POL_strengthen_the_polish_state
+		relative_position_id = POL_reform_of_the_diplomacy
 		cost = 10
 
 		ai_will_do = {
@@ -1599,82 +1583,18 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 20
-			add_ideas = POL_militarism_focus
+			add_timed_idea = {
+				idea = monarchist_diplomacy
+				days = 720
+			}
+			#Increase in Democratic Support
 		}
 	}
-
-	focus = {
-		id = POL_polish_revanchism
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = POL_polish_militarism }
-		
-		x = -1
-		y = 1
-		relative_position_id = POL_polish_militarism
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = POL_polish_revanchism_focus
-			#grants a -10% PP cost to war goal justification
-		}
-	}
-
-	focus = {
-		id = POL_poland_first
-		icon = GFX_goal_generic_defence
-		prerequisite = { focus = POL_polish_militarism }
-		mutually_exclusive = { focus = POL_internationalism }
-
-		x = 1
-		y = 1
-		relative_position_id = POL_polish_militarism
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = indoctrination_focus
-			#Gains the Indoctrination Modifier
-		}
-	}
-
-	focus = {
-		id = POL_ideological_fanaticism
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = POL_poland_first }
-
-		x = -4
-		y = 1
-		relative_position_id = POL_poland_first
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = POL_ideological_fanaticism
-			#Same as in Generic Focus
-		}
-	}
-
+	
 	focus = {
 		id = POL_treaty_with_romania
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = POL_ideological_fanaticism }
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = POL_keep_the_intermarius }
 
 		available = {
 			is_faction_leader = yes
@@ -1705,18 +1625,18 @@ focus_tree = {
 			}
 		}
 
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = POL_ideological_fanaticism
+		relative_position_id = POL_keep_the_intermarius
 		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			add_opinion_modifier = { target = ROM modifier = POL_treaty_with_bulgaria}
+			add_opinion_modifier = { target = ROM modifier = POL_treaty_with_romania}
 			ROM = { 
-				add_opinion_modifier = { target = ROOT modifier = POL_treaty_with_bulgaria}
+				add_opinion_modifier = { target = ROOT modifier = POL_treaty_with_romania}
 			}
 			if = {
 				limit = {
@@ -1746,7 +1666,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_treaty_with_bulgaria
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_focus_generic_befriend_bulgaria
 		prerequisite = { focus = POL_treaty_with_romania }
 	
 		bypass = {
@@ -1778,9 +1698,9 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_opinion_modifier = { target = BUL modifier = POL_treaty_with_romania}
+			add_opinion_modifier = { target = BUL modifier = POL_treaty_with_bulgaria}
 			BUL = { 
-				add_opinion_modifier = { target = ROOT modifier = POL_treaty_with_romania} 
+				add_opinion_modifier = { target = ROOT modifier = POL_treaty_with_bulgaria} 
 			}
 			if = {
 				limit = {
@@ -1901,6 +1821,505 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = POL_seek_accommodation_with_france
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = POL_keep_the_intermarius }
+		available = { 
+			FRA = { has_government = monarchist}
+		}
+		x = 1
+		y = 1
+		relative_position_id = POL_keep_the_intermarius
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = { target = FRA modifier = POL_seek_accommodation_with_france }
+			FRA = { add_opinion_modifier = { target = ROOT modifier = POL_seek_accommodation_with_france } }
+			#Relation Boost With France
+		}
+	}
+	
+	focus = {
+		id = POL_treaty_with_france
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = POL_seek_accommodation_with_france  }
+		available = {
+			FRA = {
+				is_in_faction = no
+				is_puppet = no
+				NOT = { has_war_with = POL }
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = POL_seek_accommodation_with_france
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = { target = FRA modifier = POL_seek_accommodation_with_france }
+			FRA = { add_opinion_modifier = { target = ROOT modifier = POL_seek_accommodation_with_france } }
+			#Relation Boost With France
+			FRA = {
+					custom_effect_tooltip = POL_invite_to_faction_tooltip
+				}
+			hidden_effect = {
+				FRA = {country_event = { id = FRA_POL_faction.1 days = 1 }}
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = POL_change_of_course
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_reform_of_the_diplomacy }
+		mutually_exclusive = { focus = POL_keep_the_intermarius}
+		x = 4
+		y = 1
+		relative_position_id = POL_reform_of_the_diplomacy
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = anti_monarchist_diplomacy
+				days = 720
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = POL_a_left_alliance
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = POL_change_of_course }
+		mutually_exclusive = {
+			focus = POL_to_the_right
+			focus = POL_a_democratic_alliance
+		}
+		
+		x = -2
+		y = 1
+		relative_position_id = POL_change_of_course
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = pro_communist_diplomacy
+				days = 720
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = POL_seek_accommodation_with_USSR
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = POL_a_left_alliance }
+		available = {
+			country_exists = SOV
+		}
+		x = 0
+		y = 1
+		relative_position_id = POL_a_left_alliance
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = { target = SOV modifier = POL_seek_accommodation_with_USSR }
+			SOV = { add_opinion_modifier = { target = ROOT modifier = POL_seek_accommodation_with_USSR } }
+			#Relation Boost with the USSR
+		}
+	}
+	
+	focus = {
+		id = POL_join_comintern
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = POL_seek_accommodation_with_USSR }
+		available = {
+			country_exists = SOV
+			has_government = communism
+			not = {
+				has_war_with = SOV
+			}
+			SOV = {
+				is_faction_leader = yes
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = POL_seek_accommodation_with_USSR
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = { target = SOV modifier = POL_seek_accommodation_with_USSR }
+			SOV = { add_opinion_modifier = { target = ROOT modifier = POL_seek_accommodation_with_USSR } }
+			#Relation Boost with the USSR
+			SOV = {
+				country_event = SOV_POL_faction.1
+			}
+			#ask to join Comintern	
+		}
+	}
+	
+	focus = {
+		id = POL_to_the_right
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = POL_change_of_course }
+		mutually_exclusive = {
+			focus = POL_a_left_alliance
+			focus = POL_a_democratic_alliance
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_change_of_course
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = pro_fascist_diplomacy
+				days = 720
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = POL_seek_accommodation_with_germany
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = POL_to_the_right }
+		available = {
+			country_exists = GER
+			GER = { has_government = fascism }
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_to_the_right
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = { target = GER modifier = POL_seek_accommodation_with_germany }
+			GER = { add_opinion_modifier = { target = ROOT modifier = POL_seek_accommodation_with_germany } }
+			#Relation Boost With Germany
+		}
+	}
+	
+	focus = {
+		id = POL_join_axis
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = POL_seek_accommodation_with_germany }
+		available = {
+			country_exists = GER
+			GER = { has_government = fascism }
+			has_government = fascism
+			not = {
+				has_war_with = GER
+			}
+			GER = {
+				is_faction_leader = yes
+			}
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = POL_seek_accommodation_with_germany
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = { target = GER modifier = POL_seek_accommodation_with_germany }
+			GER = { add_opinion_modifier = { target = ROOT modifier = POL_seek_accommodation_with_germany } }
+			#Relation Boost With Germany
+			GER = { country_event = { id = GER_POL_faction.1 days = 1 } }
+			#ask to join the Axis
+		}
+	}
+	
+	focus = {
+		id = POL_a_democratic_alliance
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = POL_change_of_course }
+		mutually_exclusive = {
+			focus = POL_a_left_alliance
+			focus = POL_to_the_right
+		}
+		
+		x = 2
+		y = 1
+		relative_position_id = POL_change_of_course
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = pro_democratic_diplomacy
+				days = 720
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = POL_draw_closer_to_britain
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_a_democratic_alliance }
+		available = {
+			country_exists = ENG
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_a_democratic_alliance
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = POL_draw_closer_to_britain }
+			ENG = { add_opinion_modifier = { target = ROOT modifier = POL_draw_closer_to_britain } }
+			#Relation boost with the UK
+		}
+	}
+	
+	focus = {
+		id = POL_join_allies
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = POL_draw_closer_to_britain }
+		available = {
+			country_exists = ENG
+			has_government = democratic
+			ENG = {
+				is_faction_leader = yes
+				has_government = democratic
+				not = { has_war_with = ROOT }
+			}
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_draw_closer_to_britain
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = POL_draw_closer_to_britain }
+			ENG = { add_opinion_modifier = { target = ROOT modifier = POL_draw_closer_to_britain } }
+			#Relation boost with the UK
+			ENG = { country_event = { id = ENG_POL_faction.1 hours = 4 } }
+			#Ask to join the Allies
+		}
+	}
+	
+	
+	
+	
+
+	############################
+	##### POLITICS SECTION #####
+	############################
+
+
+	focus = {
+		id = POL_strengthen_the_polish_state
+		icon = GFX_goal_generic_demand_territory
+		
+		x = 43
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+			#PP +120
+		}
+	}
+
+	focus = {
+		id = POL_defensive_focus
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = POL_strengthen_the_polish_state }
+		
+		x = 4
+		y = 1
+		relative_position_id = POL_strengthen_the_polish_state
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+			#Grants Deterrence modifier
+		}
+	}
+
+	focus = {
+		id = POL_polish_militarism
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = POL_strengthen_the_polish_state }
+		
+		x = -2
+		y = 1
+		relative_position_id = POL_strengthen_the_polish_state
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = POL_militarism_focus
+		}
+	}
+
+	focus = {
+		id = POL_polish_revanchism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = POL_polish_militarism }
+		
+		x = -1
+		y = 1
+		relative_position_id = POL_polish_militarism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = POL_polish_revanchism_focus
+			#grants a -10% PP cost to war goal justification
+		}
+	}
+
+	focus = {
+		id = POL_poland_first
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = POL_polish_militarism }
+		mutually_exclusive = { focus = POL_internationalism }
+
+		x = 1
+		y = 1
+		relative_position_id = POL_polish_militarism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			#Gains the Indoctrination Modifier
+		}
+	}
+
+	focus = {
+		id = POL_ideological_fanaticism
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = POL_polish_revanchism }
+
+		x = -1
+		y = 1
+		relative_position_id = POL_polish_revanchism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = POL_ideological_fanaticism
+			#Same as in Generic Focus
+		}
+	}
+
+	
 
 	focus = {
 		id = POL_internationalism
@@ -1908,9 +2327,9 @@ focus_tree = {
 		prerequisite = { focus = POL_polish_militarism focus = POL_defensive_focus }
 		mutually_exclusive = { focus = POL_poland_first }
 
-		x = 3
+		x = 0
 		y = 1
-		relative_position_id = POL_polish_militarism
+		relative_position_id = POL_defensive_focus
 		cost = 10
 
 		ai_will_do = {
@@ -1928,15 +2347,14 @@ focus_tree = {
 	focus = {
 		id = POL_authoritarianism
 		icon = GFX_goal_molotov_ribbentrop_pact
-		prerequisite = { focus = POL_internationalism }
+		prerequisite = { focus = POL_poland_first }
 		mutually_exclusive = { 
-		focus = POL_liberalism
 		focus= POL_monarchism
 		}
 
 		x = 1
 		y = 1
-		relative_position_id = POL_internationalism
+		relative_position_id = POL_poland_first
 		cost = 10
 
 		ai_will_do = {
@@ -1955,17 +2373,88 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = POL_a_new_government
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = POL_authoritarianism }
+
+		x = 0
+		y = 1
+		relative_position_id = POL_authoritarianism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = POL_neutrality_government
+				days = 720
+			}
+		}
+	}
+	
+	focus = {
+		id = POL_replace_the_king
+		icon = GFX_focus_rom_handle_king
+		prerequisite = { focus = POL_a_new_government }
+		
+		available = {
+			NOT = {has_government = neutrality}
+			neutrality > 0.4
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_a_new_government
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = POL_king_dies }
+					NOT = {has_idea = POL_stanislas_iii}
+				}
+				add_ideas = POL_stanislas_iii
+			} 
+			if  = {
+				limit = {
+					has_country_flag = POL_king_dies
+					NOT = {has_idea = POL_stanislas_iv}
+				}
+				add_ideas = POL_stanislas_iv
+				
+				if = {
+					limit = { has_idea = POL_stanislas_iii}
+					remove_ideas = POL_stanislas_iii
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = POL_monarchism
 		icon = GFX_focus_hun_elect_a_king
-		prerequisite = { focus = POL_internationalism }
+		prerequisite = { focus = POL_poland_first }
 		mutually_exclusive = { 
-		focus = POL_liberalism
 		focus = POL_authoritarianism
 		}
 
-		x = -3
+		x = -1
 		y = 1
-		relative_position_id = POL_internationalism
+		relative_position_id = POL_poland_first
 		cost = 10
 
 		ai_will_do = {
@@ -1987,11 +2476,10 @@ focus_tree = {
 		id = POL_paramilitarism
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = POL_monarchism}
-		mutually_exclusive = { focus = POL_go_left focus = POL_go_right}
 		
-		x = -5
+		x = 0
 		y = 1
-		relative_position_id = POL_authoritarianism
+		relative_position_id = POL_monarchism
 		cost = 10
 
 		ai_will_do = {
@@ -2030,7 +2518,7 @@ focus_tree = {
 			#Stability gain
 			if = {
 				limit = {
-					FRA = { has_government = neutrality }
+					FRA = { has_government = monarchist }
 				}
 				FRA = {
 					add_ai_strategy = {
@@ -2069,7 +2557,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					GER = { has_government = neutrality }
+					GER = { has_government = monarchist }
 				}
 				GER = {
 					add_ai_strategy = {
@@ -2108,39 +2596,16 @@ focus_tree = {
 			}
 		}
 	}
-	
-	focus = {
-		id = POL_seek_accommodation_with_france
-		icon = GFX_focus_chi_reach_out_to_france
-		prerequisite = { focus = POL_king_rules }
-
-		x = 0
-		y = 1
-		relative_position_id = POL_king_rules
-		cost = 10
-
-		ai_will_do = {
-			factor = 2.5
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_opinion_modifier = { target = FRA modifier = POL_seek_accommodation_with_france }
-			FRA = { add_opinion_modifier = { target = ROOT modifier = POL_seek_accommodation_with_france } }
-			#Relation Boost With Germany
-		}
-	}
 
 	focus = {
 		id = POL_go_right
 		icon = GFX_goal_support_fascism
-		prerequisite = { focus = POL_authoritarianism focus = POL_monarchism }
-		mutually_exclusive = { focus = POL_go_left focus = POL_paramilitarism}
+		prerequisite = { focus = POL_internationalism }
+		mutually_exclusive = { focus = POL_go_left focus = POL_liberalism}
 
-		x = -1
+		x = 0
 		y = 1
-		relative_position_id = POL_authoritarianism
+		relative_position_id = POL_internationalism
 		cost = 10
 
 		ai_will_do = {
@@ -2151,7 +2616,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				idea = fascist_influence
+				idea = POL_fascist_influence
 				days = 720
 			}
 			#Increases Fascist Support
@@ -2163,8 +2628,8 @@ focus_tree = {
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = POL_go_right }
 
-		x = 1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = POL_go_right
 		cost = 10
 
@@ -2179,44 +2644,15 @@ focus_tree = {
 			#As per generic
 		}
 	}
-
+	
 	focus = {
-		id = POL_seek_accommodation_with_germany
-		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = POL_go_right }
-		available = {
-			country_exists = GER
-			GER = { has_government = fascism }
-		}
-		
+		id = POL_a_new_rule
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = POL_military_youth }
+
 		x = 0
 		y = 1
-		relative_position_id = POL_go_right
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_opinion_modifier = { target = GER modifier = POL_seek_accommodation_with_germany }
-			GER = { add_opinion_modifier = { target = ROOT modifier = POL_seek_accommodation_with_germany } }
-			#Relation Boost With Germany
-		}
-	}
-
-	focus = {
-		id = POL_go_left
-		icon = GFX_goal_support_communism
-		prerequisite = { focus = POL_authoritarianism focus = POL_monarchism }
-		
-		mutually_exclusive = { focus = POL_go_right focus = POL_paramilitarism}
-
-		x = -3
-		y = 1
-		relative_position_id = POL_authoritarianism
+		relative_position_id = POL_military_youth
 		cost = 10
 
 		ai_will_do = {
@@ -2227,7 +2663,81 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				idea = communist_influence
+				idea = POL_fascist_government
+				days = 720
+			}
+		}
+	}
+	
+	focus = {
+		id = POL_handle_the_king
+		icon = GFX_focus_rom_handle_king
+		prerequisite = { focus = POL_a_new_rule }
+		
+		available = {
+			NOT = {has_government = fascism}
+			fascism > 0.4
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_a_new_rule
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = POL_king_dies }
+					NOT = {has_idea = POL_stanislas_iii}
+				}
+				add_ideas = POL_stanislas_iii
+			} 
+			if  = {
+				limit = {
+					has_country_flag = POL_king_dies
+					NOT = {has_idea = POL_stanislas_iv}
+				}
+				add_ideas = POL_stanislas_iv
+				
+				if = {
+					limit = { has_idea = POL_stanislas_iii}
+					remove_ideas = POL_stanislas_iii
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POL_go_left
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = POL_internationalism}
+		
+		mutually_exclusive = { focus = POL_go_right focus = POL_liberalism}
+
+		x = -2
+		y = 1
+		relative_position_id = POL_internationalism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = POL_communist_influence
 				days = 720
 			}
 			#Increases Communist Support
@@ -2239,8 +2749,8 @@ focus_tree = {
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = POL_go_left }
 
-		x = 1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = POL_go_left
 		cost = 10
 
@@ -2255,17 +2765,15 @@ focus_tree = {
 			#as per generic focus
 		}
 	}
-
+	
 	focus = {
-		id = POL_seek_accommodation_with_USSR
-		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = POL_go_left }
-		available = {
-			country_exists = SOV
-		}
+		id = POL_a_communist_rule
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = POL_political_commissars }
+
 		x = 0
 		y = 1
-		relative_position_id = POL_go_left
+		relative_position_id = POL_political_commissars
 		cost = 10
 
 		ai_will_do = {
@@ -2275,9 +2783,106 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_opinion_modifier = { target = SOV modifier = POL_seek_accommodation_with_USSR }
-			SOV = { add_opinion_modifier = { target = ROOT modifier = POL_seek_accommodation_with_USSR } }
-			#Relation Boost with the USSR
+			add_timed_idea = {
+				idea = POL_communist_government
+				days = 720
+			}
+		}
+	}
+	focus = {
+		id = POL_workers_state
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = POL_a_communist_rule }
+		
+		available = {
+			NOT = {has_government = communism}
+			communism > 0.4
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = POL_a_communist_rule
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+	}
+	
+	focus = {
+		id = POL_the_fate_of_the_royal_family
+		prerequisite = { focus = POL_workers_state }
+		available = {
+			has_government = communism
+		}
+		icon = GFX_focus_rom_abdicate
+		x = 0
+		y = 1
+		relative_position_id = POL_workers_state
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		completion_reward = {
+			add_political_power = 60
+			country_event = { id = POL_royals_events.1 }
+		}
+	}
+
+	
+	focus = {
+		id = POL_communist_science
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = POL_the_fate_of_the_royal_family }
+		available = { has_government = communism}
+		x = 0
+		y = 1
+		relative_position_id = POL_the_fate_of_the_royal_family
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = POL_communist_science
+		}
+	}
+	
+	focus = {
+		id = POL_poland_can_into_space
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = POL_communist_science }
+		x = 0
+		y = 1
+		relative_position_id = POL_communist_science
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret
+				bonus = 1.0
+				uses = 2
+				category = rocketry
+			}
 		}
 	}
 
@@ -2287,8 +2892,8 @@ focus_tree = {
 		prerequisite = { focus = POL_internationalism}
 		prerequisite = {focus = POL_defensive_focus }
 		mutually_exclusive = { 
-		focus = POL_authoritarianism
-		focus = POL_monarchism
+		focus = POL_go_left
+		focus = POL_go_right
 		}
 
 		x = 3
@@ -2310,15 +2915,63 @@ focus_tree = {
 			#Increase in Democratic Support
 		}
 	}
+	focus = {
+		id = POL_constitutional_monarchy
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = POL_liberalism }
+		
+		available = {
+			NOT = {has_government = democratic}
+			democratic > 0.4
+		}
 
+		x = 0
+		y = 1
+		relative_position_id = POL_liberalism
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = POL_king_dies }
+					NOT = {has_idea = POL_stanislas_iii}
+				}
+				add_ideas = POL_stanislas_iii
+			} 
+			if  = {
+				limit = {
+					has_country_flag = POL_king_dies
+					NOT = {has_idea = POL_stanislas_iv}
+				}
+				add_ideas = POL_stanislas_iv
+				
+				if = {
+					limit = { has_idea = POL_stanislas_iii}
+					remove_ideas = POL_stanislas_iii
+				}
+			}
+		}
+	}
 	focus = {
 		id = POL_intervention_focus
 		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = POL_liberalism }
-
-		x = 1
+		prerequisite = { focus = POL_constitutional_monarchy }
+		available = {
+			has_government = democratic
+		}
+		x = 0
 		y = 1
-		relative_position_id = POL_liberalism
+		relative_position_id = POL_constitutional_monarchy
 		cost = 10
 
 		ai_will_do = {
@@ -2331,32 +2984,6 @@ focus_tree = {
 			set_rule = { can_send_volunteers = yes }
 			add_political_power = 150
 			#As per generic
-		}
-	}
-
-	focus = {
-		id = POL_draw_closer_to_britain
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = POL_liberalism }
-		available = {
-			country_exists = ENG
-		}
-
-		x = 3
-		y = 1
-		relative_position_id = POL_liberalism
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_opinion_modifier = { target = ENG modifier = POL_draw_closer_to_britain }
-			ENG = { add_opinion_modifier = { target = ROOT modifier = POL_draw_closer_to_britain } }
-			#Relation boost with the UK
 		}
 	}
 

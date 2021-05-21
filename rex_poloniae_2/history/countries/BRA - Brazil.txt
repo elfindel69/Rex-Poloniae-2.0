@@ -183,6 +183,20 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Dom Pedro III"
+	desc = "POLITICS_PEDRO_VI_DESC"
+	picture = "gfx/leaders/Monarchs/Portrait_Brazil_Pedro_IV.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = {
+		inexperienced_monarch
+		constitutional_monarch
+		traditionalist_connections
+		pedro_fancy_title
+	}
+}
+
 set_convoys = 40
 
 1939.1.1 = {

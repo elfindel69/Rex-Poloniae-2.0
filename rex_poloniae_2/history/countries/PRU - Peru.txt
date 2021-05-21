@@ -175,6 +175,16 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Francisco Chukiwanka Ayulo"
+	picture = "gfx/leaders/Monarchs/Portrait_Pachacutec_II.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol
+	}
+}
+
 1939.1.1 = {
 	create_country_leader = {
 		name = "Manuel Prado Ugarteche"

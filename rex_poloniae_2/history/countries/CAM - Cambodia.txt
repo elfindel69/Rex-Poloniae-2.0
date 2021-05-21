@@ -117,9 +117,9 @@ create_country_leader = {
 create_country_leader = {
 	name = "Norodom Sihanouk" 
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
+	picture = "gfx/leaders/Monarchs/Portrait_CAM_Norodom_Sihanouk.tga"
 	expire = "1953.3.1"
-	ideology = conservatism
+	ideology = paternalism
 	traits = {
 		
 	}

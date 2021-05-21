@@ -110,6 +110,15 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Prince Zeid bin Hussein"
+	picture = "gfx/leaders/Monarchs/Portrait_Zeid_bin_Hussein.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = { 
+	}
+}
+
+create_country_leader = {
 	name = "Bulus Farah"
 	desc = ""
 	picture = "gfx/leaders/PAL/Portrait_Arabia_Generic_2.dds"

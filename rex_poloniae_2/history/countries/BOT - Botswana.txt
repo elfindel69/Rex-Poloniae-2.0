@@ -79,3 +79,14 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Kgosi Seretse Khama"
+	picture = "gfx/leaders/Monarchs/Botswana_Seretse_Khama.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol 
+	}
+}
+
+

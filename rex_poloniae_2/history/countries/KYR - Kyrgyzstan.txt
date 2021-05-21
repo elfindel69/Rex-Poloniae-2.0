@@ -68,6 +68,16 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Mohammed Alim Khan"
+	picture = "gfx/leaders/Monarchs/Portrait_Turkestan_Mohammed_Alim_Khan.tga"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}
+			
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

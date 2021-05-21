@@ -338,6 +338,16 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+		name = "Emperor Norton II"
+		picture = "gfx/leaders/Monarchs/Portrait_CAL_Norton_II_emporer.tga"
+		expire = "1981.1.1"
+		ideology = paternalism
+		traits = {
+			constitutional_monarch
+		}
+	}
+
 create_corps_commander = {
 	name = "George S. Patton"
 	picture = "Portrait_USA_George_S_Patton.dds"

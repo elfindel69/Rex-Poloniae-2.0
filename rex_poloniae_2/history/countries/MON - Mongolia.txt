@@ -89,6 +89,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Jampal Khan"
+	desc = ""
+	picture = "gfx/leaders/Monarchs/Portrait_Bogd_Khan.tga"
+	expire = "1989.1.1"
+	ideology = absolutism
+	traits = {
+		popular_monarch
+	}
+}
+
 1939.1.1 = {
 	add_ideas = {
 		limited_conscription

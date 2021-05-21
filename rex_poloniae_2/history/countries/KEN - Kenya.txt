@@ -80,3 +80,13 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Sultan Khalifa"
+	desc = "DESC_SULTAN_KHALIFA"
+	picture = "gfx/leaders/Monarchs/Portrait_Zanzibar_Sultan_Khalifa.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}
+

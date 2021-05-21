@@ -144,6 +144,16 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Albrecht von Wurttemberg"
+	picture = "gfx/leaders/Monarchs/GER_albrecht_von_wurttemberg.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = {
+		restored_monarch 
+	}
+}
+
 #create_country_leader = {
 #	name = "Dennis Fredauer"
 #	desc = ""

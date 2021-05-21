@@ -651,7 +651,6 @@ ideas = {
 				industrial_capacity_factory = 0.1
 			} 
 		}
-
 		POR_monarchists_on_the_rise = { #BRA
 			picture = bra_monarchist_uprising
 			allowed = {
@@ -684,7 +683,6 @@ ideas = {
 				stability_weekly = -0.005
 			}
 		}
-
 		POR_convoy_build_efficiency = {
 			picture = generic_coastal_defense_ships2
 			allowed = {

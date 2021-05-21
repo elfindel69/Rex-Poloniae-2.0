@@ -194,3 +194,14 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Prince Louis of Grimaldi"
+	desc = "POLITICS_GRIMALDI_DESC"
+	picture = "gfx/leaders/Monarchs/Portrait_Occitany_Louis_Grimaldi.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = { 
+	}
+}
+				

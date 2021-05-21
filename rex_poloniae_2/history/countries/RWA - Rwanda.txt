@@ -76,3 +76,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Mwami Mutara III"
+	picture = "gfx/leaders/Monarchs/Mutara_III_Rwanda.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol
+	}
+}

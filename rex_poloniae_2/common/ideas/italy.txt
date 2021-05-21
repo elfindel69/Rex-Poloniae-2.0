@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		victor_emmanuel = {
-			
+			picture = victor_emmanuel
 			
 			allowed = {
 				original_tag = "ITA"
@@ -30,7 +30,8 @@ ideas = {
 				stability_factor = 0.05				
 			}
 		}
-		vittoria_mutilata = {			
+		vittoria_mutilata = {
+			picture = vittoria_mutilata
 			
 			allowed = {
 				original_tag = "ITA"
@@ -62,6 +63,7 @@ ideas = {
 
 			allowed = {
 				original_tag = ITA
+			   
 			}
 
 			allowed_civil_war = {
@@ -96,7 +98,7 @@ ideas = {
 				air_doctrine = 0.05
 			}				
 		}
-		
+			
 		ITA_monarchism_focus = {
 			
 			allowed = {
@@ -115,7 +117,7 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-				neutrality_drift = +0.1
+				monarchist_drift = +0.1
 				fascism_drift = -0.1
 				democratic_drift = -0.1
 				democratic_acceptance = -100
@@ -123,12 +125,14 @@ ideas = {
 		}
 	}
 
-	political_advisor = {
+political_advisor = {
 		amadeo_bordiga = {
 			
+			picture = amadeo_bordiga			  
 			
 			allowed = {
 				original_tag = "ITA"
+			   
 			}
 			
 			available = {
@@ -153,6 +157,7 @@ ideas = {
 			
 		ivanoe_bonomi = {
 			
+			picture = ivanoe_bonomi
 			
 			allowed = {
 				original_tag = "ITA"
@@ -180,6 +185,7 @@ ideas = {
 		
 		carlo_scorza = {
 			
+			picture = carlo_scorza
 			
 			allowed = {
 				original_tag = "ITA"
@@ -383,7 +389,8 @@ ideas = {
 				has_dlc = "La Resistance" 
 			}
 			
-			traits = { head_of_intelligence }		 
+			traits = { head_of_intelligence }
+
 		}
 	}
 		
@@ -545,7 +552,7 @@ ideas = {
 	high_command = {
 	
 		mario_roatta = {
-			ledger = army		  
+			ledger = army
 			
 			
 			allowed = {
@@ -562,7 +569,7 @@ ideas = {
 		}
 		
 		vittorio_ambrosio = {
-			ledger = army		  
+			ledger = army
 			
 			
 			allowed = {
@@ -596,7 +603,7 @@ ideas = {
 		}	
 		
 		ettore_muti = {
-			ledger = air		  
+			ledger = air
 			
 			
 			allowed = {
@@ -613,7 +620,7 @@ ideas = {
 		}
 		
 		marziale_cerutti = {
-			ledger = air		  
+			ledger = air
 			
 			
 			allowed = {
@@ -630,7 +637,7 @@ ideas = {
 		}
 		
 		silvio_scaroni = {
-			ledger = air		  
+			ledger = air
 			
 			
 			allowed = {
@@ -647,7 +654,7 @@ ideas = {
 		}
 		
 		alberto_da_zara = {
-			ledger = navy		  
+			ledger = navy
 			
 			
 			allowed = {
@@ -664,7 +671,7 @@ ideas = {
 		}
 		
 		carlo_bergamini = {
-			ledger = navy		  
+			ledger = navy
 			
 			
 			allowed = {
@@ -681,7 +688,7 @@ ideas = {
 		}
 		
 		luigi_mascherpa = {
-			ledger = navy		  
+			ledger = navy
 			
 			
 			allowed = {
@@ -953,7 +960,7 @@ ideas = {
 		}
 		
 		renato_sandalli = {
-			ledger = air		  
+			ledger = air
 			
 			
 			allowed = {
@@ -968,7 +975,7 @@ ideas = {
 		}
 		
 		gaetano_crocco = {
-			ledger = air		  
+			ledger = air
 			
 			
 			allowed = {
@@ -982,4 +989,6 @@ ideas = {
 			traits = { rocket_scientist }
 		}
 	}
-}
+}			   
+
+	

@@ -120,6 +120,15 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Sultan Hamengkubuwono IX"
+	picture = "gfx/leaders/Monarchs/Portrait_Indonesia_Hamengbukuwono_IX.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = { 
+	}
+}
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"

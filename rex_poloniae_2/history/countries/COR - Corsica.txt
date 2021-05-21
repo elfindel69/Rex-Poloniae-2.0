@@ -193,3 +193,14 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Napoléon VI"
+	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+	picture = "gfx/leaders/Monarchs/portraits_fra_napoleon_vi.tga"
+	expire = "1965.1.1"
+	ideology = absolutism
+	traits = {
+		
+	}
+}

@@ -22,7 +22,28 @@ country_event = {
 
     option = { 
         name = POL_king_dies.1.a
-        kill_country_leader = yes
+		if = {
+			limit = {
+				has_government = monarchist
+			}
+			kill_country_leader = yes
+		}
+		else =  {
+			if = {
+				limit = {
+					NOT = {
+						has_government = communism
+					}
+					has_idea = POL_stanislas_iii
+				}
+				swap_ideas = {
+					remove_idea = POL_stanislas_iii
+					add_idea = POL_stanislas_iv
+				}
+				
+			}
+			kill_ideology_leader = monarchist
+        }
         create_country_leader = {
            
 			name = "Stanisław IV Poniatowski"
@@ -31,7 +52,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = paternalism
 			traits = {
-				#
+				great_war_hero
 			}
 
         }

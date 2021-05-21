@@ -69,7 +69,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "David Kalakaua Kawananakoa"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+	picture = "gfx/leaders/Monarchs/Portrait_HAW_David_Kalakaua.tga"
 	ideology = monarchism
 	traits = {
 		#
@@ -79,7 +79,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "David Kalakaua Kawananakoa"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+	picture = "gfx/leaders/Monarchs/Portrait_HAW_David_Kalakaua.tga"
 	ideology = fascism_ideology
 	traits = {
 		#

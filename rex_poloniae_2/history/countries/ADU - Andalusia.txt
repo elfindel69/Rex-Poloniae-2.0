@@ -77,3 +77,12 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Emir Mohammed Ben Aarafa"
+	picture = "gfx/leaders/Monarchs/Mohammed_Ben_Aarafa.tga"
+	expire = "1987.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}	

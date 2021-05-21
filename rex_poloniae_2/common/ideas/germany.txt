@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		sour_loser = {
+			sour_loser = {
 			
 			allowed = {
 				always = no
@@ -352,7 +352,6 @@ ideas = {
 				fascism_drift = -0.05
 			}
 		}
-
 		GER_revive_the_kaiserreich = {
 			allowed = {
 				always = no
@@ -577,7 +576,6 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
-
 		GER_rekindle_imperial_sentiment = {
 			allowed = {
 				always = no
@@ -595,7 +593,6 @@ ideas = {
 				monarchist_drift = 0.2
 			}
 		}
-
 		GER_expatriate_the_communists = {
 			allowed = {
 				always = no
@@ -1831,6 +1828,10 @@ ideas = {
 			allowed = {
 				original_tag = GER
 				has_dlc = "Waking the Tiger"
+			}
+
+			available = {
+				original_tag = GER
 			}
 			
 			traits = { anti_fascist_agent }

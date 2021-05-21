@@ -76,3 +76,13 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "King Sobhuza II of Eswatini"
+	picture = "gfx/leaders/Monarchs/Sobhuza_II.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol 
+	}
+}
+

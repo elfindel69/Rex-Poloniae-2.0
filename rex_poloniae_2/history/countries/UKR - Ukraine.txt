@@ -119,6 +119,17 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Hetman Pavlo Skoropadskyi"
+	picture = "gfx/leaders/Monarchs/r56_portrait_UKR_Pavlo_Skoropadskyi.tga"
+	expire = "1981.1.1"
+	ideology = monarchism
+	traits = {
+		dictator generallissimo disdain_for_politicians_1
+	}
+}
+		
+
+create_country_leader = {
 	name = "Pavlo Skoropadskyi"
 	desc = ""
 	picture = "gfx/leaders/UKR/r56_portrait_UKR_Pavlo_Skoropadskyi.dds"

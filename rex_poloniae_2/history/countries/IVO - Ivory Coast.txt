@@ -76,3 +76,14 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Amon N'Douffou IV"
+	picture = "gfx/leaders/Monarchs/Portrait_Generic_Africa_despotism_4.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}
+				
+				

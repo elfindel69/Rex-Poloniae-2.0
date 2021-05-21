@@ -126,6 +126,15 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Emperor Bao Dai"
+	picture = "gfx/leaders/Monarchs/Portrait_VIN_Bao_Dai.tga"
+	expire = "1999.1.1"
+	ideology = absolutism
+	traits = { 
+	}
+}
+
+create_country_leader = {
 	name = "Nguyen Tuong Tam"
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"

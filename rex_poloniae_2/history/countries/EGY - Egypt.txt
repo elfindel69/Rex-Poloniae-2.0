@@ -111,6 +111,48 @@ create_country_leader = {
 	}
 }
 
+if = { 
+	limit = { date < 1937.1.1 }
+		create_country_leader = {
+			name = "King Fuad I"
+			picture = "GFX_portrait_egy_faud_i"
+			expire = "1981.1.1"
+			ideology = absolutism
+			traits = {
+				#
+			}
+		}
+		create_country_leader = {
+			name = "King Fuad I"
+			picture = "GFX_portrait_egy_faud_i"
+			expire = "1981.1.1"
+			ideology = despotism
+			traits = {
+				#
+			}
+		}
+	}
+	if = { 
+		limit = { date > 1937.1.1 }
+			create_country_leader = {
+				name = "King Farouk Muhammad Ali"
+				picture = "gfx/leaders/Monarchs/Portrait_EGY_Farouk_Muhammad_Ali.tga"
+				expire = "1981.1.1"
+				ideology = absolutism
+				traits = {
+					unpopular_monarch
+				}
+			}
+			create_country_leader = {
+				name = "King Farouk Muhammad Ali"
+				picture = "gfx/leaders/Monarchs/Portrait_EGY_Farouk_Muhammad_Ali.tga"
+				expire = "1981.1.1"
+				ideology = despotism
+				traits = {
+					unpopular_monarch
+				}
+			}
+	}
 create_country_leader = {
 	name = "Hosni al-Arabi"
 	desc = ""

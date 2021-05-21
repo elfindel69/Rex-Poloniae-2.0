@@ -78,3 +78,11 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Hosea Kutako"
+	picture = "gfx/leaders/Monarchs/Portrait_NAM_Hosea_Kutako.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = { 
+	}
+}

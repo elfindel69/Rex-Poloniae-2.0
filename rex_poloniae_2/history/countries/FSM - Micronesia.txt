@@ -67,3 +67,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Queen Salote Tupou III"
+	picture = "gfx/leaders/Monarchs/Portrait_Salote_Tupou_III.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}
+				

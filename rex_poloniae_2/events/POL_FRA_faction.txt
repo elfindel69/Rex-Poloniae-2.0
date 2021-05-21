@@ -1,0 +1,161 @@
+add_namespace = POL_FRA_faction
+
+# France national focus -  requests to join Intermarius
+country_event = {
+	id = POL_FRA_faction.1
+	title = POL_faction.1.t
+	desc = POL_faction.1.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+    mean_time_to_happen = {
+        days = 1
+	}
+
+		
+	option = {
+		name = POL_FRA_faction.1.a
+		POL = { add_to_faction = FRA }
+		FRA = {
+			add_ai_strategy = {
+				type = alliance
+				id = "POL"
+				value = 200
+			}
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = POL_faction_news.1 }
+		}
+	}
+	option = {
+		name = POL_FRA_faction.1.b
+		ai_chance = { factor = 0 }
+		FRA = {
+			add_opinion_modifier = {
+				target = POL
+				modifier = POL_FRA_join_intermarius_reject
+			}
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = FRA_POL_faction_news.1 }
+		}
+	}
+}
+
+add_namespace = POL_FRA_faction_news
+#France Is Welcomed by the Intermarius
+news_event = {
+	id = POL_FRA_faction_news.1
+	title = POL_FRA_faction_news.1.t
+	desc = POL_FRA_faction_news.1.d
+	picture = GFX_news_event_french_parade
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		FRA = {
+			save_event_target_as = France		
+		}
+	}
+
+	#United towards the World Revolution!
+	option = {
+		name = POL_FRA_faction_news.1.a
+		trigger = {
+			has_government = communism
+			NOT = {
+				tag = FRA
+			}
+		}
+	}
+
+	#Their alliance will crumble soon enough.
+	option = {
+		name = POL_FRA_faction_news.1.b
+		trigger = {
+			has_government = fascism
+			NOT = {
+				tag = FRA
+			}
+		}
+	}
+
+	#The enemies of democracy must not be allowed to grow stronger.
+	option = {
+		name = POL_FRA_faction_news.1.c
+		trigger = {
+			has_government = democratic
+			NOT = {
+				tag = FRA
+			}
+		}
+	}
+	#France has picked her side.
+	option = {
+		name = POL_FRA_faction_news.1.e
+		trigger = {
+			OR = {
+				has_government = monarchist
+				tag = FRA
+			}
+		}
+	}
+
+	#France has picked her side.
+	option = {
+		name = POL_FRA_faction_news.1.f
+		trigger = {
+			has_government = neutrality
+		}
+	}
+}
+
+#France is rejected entry to the Intermarius
+news_event = {
+	id = POL_FRA_faction_news.2
+	title = POL_FRA_faction_news.2.t
+	desc = POL_FRA_faction_news.2.d
+	picture = GFX_news_event_french_parade
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		FRA = {
+			save_event_target_as = France		
+		}
+	}
+
+	#It is a shame!
+	option = {
+		name = POL_FRA_faction_news.2.a
+		trigger = {
+			tag = FRA
+		}
+	}
+	
+	
+	option = {
+		name = POL_FRA_faction_news.2.b
+		trigger = {
+			tag = POL
+		}
+	}
+	
+	
+	option = {
+		name = POL_FRA_faction_news.2.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FRA
+					tag = POL
+				}
+			}
+		}
+	}
+}

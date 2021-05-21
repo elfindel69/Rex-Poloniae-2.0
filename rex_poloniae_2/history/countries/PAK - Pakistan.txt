@@ -137,6 +137,16 @@ create_country_leader = {
 }
 
 create_country_leader = {
+		name = "Sadeq Mohammad Khan"
+		picture = "gfx/leaders/Monarchs/Portrait_PAK_Sadeq_Mohammad_Khan_V.tga"
+		expire = "1981.1.1"
+		ideology = absolutism
+		traits = {
+			nationalist_symbol 
+		}
+	}
+
+create_country_leader = {
 	name = "Haji Mohammad Danesh"
 	
 	picture = "gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"

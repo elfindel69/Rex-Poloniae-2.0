@@ -78,3 +78,12 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Abdul Qadir III"
+	picture = "gfx/leaders/Monarchs/Portrait_Generic_Africa_reactionary_3.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = { 
+	}
+}

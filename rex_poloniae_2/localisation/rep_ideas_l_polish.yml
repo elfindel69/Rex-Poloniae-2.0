@@ -1,0 +1,51 @@
+﻿l_polish:
+ ITA_monarchism_focus:0 "Naród i król!"
+ 
+ FRA_monarchism_focus:0 "Niech żyje Król!"
+ FRA_king_rules_focus:0 "królewska bezpośrednia kontrola"
+ 
+ SOV_democracy_focus:0 "Wzrost demokracji"
+ SOV_democracy_prop_focus:0 "Demokratyczna propaganda"
+ 
+ POL_monarchism_focus:0 "Niech żyje Król!"
+ POL_king_rules_focus:0 "królewska bezpośrednia kontrola"
+ 
+ RUS_liberty_ethos_focus:0 "Wzrost wolności"
+ RUS_neutrality_idea:0 "Polityka zagraniczna neutralna"
+ 
+ UKR_liberty_ethos_focus:0 "Wzrost wolności"
+ UKR_neutrality_idea:0 "Polityka zagraniczna neutralna"
+ UKR_monarchy_rise_focus:0 "Wzrost Monarchii"
+ UKR_monarchism_focus:0 "Król dla Ukrainy?"
+ 
+ generic_monarchist_booster:0 "Monarchistyczny doradca"
+ POL_generic_monarchist_booster:0 "Paweł Nowak"
+ 
+ monarchist_influence:0 "Wpływ monarchistów"
+ monarchist_influence_desc:0 "Zewnętrzny nacisk pcha nasz kraj w stronę monarchizmu i innych państw o zbliżonej ideologii."
+ monarchist_diplomacy:0 "Dyplomacja monarchistyczna"
+ monarchist_diplomacy_desc:0 "Nadszedł czas, aby wzmocnić monarchizm, aby sprzymierzyć się z innymi monarchiami."
+ anti_monarchist_diplomacy:0 "Dyplomacja antymonarchistyczna"
+ pro_communist_diplomacy:0 "Dyplomacja prokomunistyczna"
+ pro_fascist_diplomacy:0 "Dyplomacja profaszystowska"
+ pro_democratic_diplomacy:0 "Dyplomacja prodemokratyczna"
+ POL_fascist_influence:0 "Wpływ Faszystów"
+ POL_communist_influence:0 "Wpływ Komunistów"
+ POL_neutrality_government:0 "Rząd autorytarny"
+ POL_fascist_government:0 "Rząd faszystowski"
+ POL_communist_government:0 "Rząd komunistyczny"
+ POL_communist_science:0 "Nauka komunistyczna"
+ POL_SEPEWE:0 "SEPEWE"
+ POL_arms_export_syndicate:0 "Syndykat Eksportu Broni"
+ POL_Polish_Cipher_Bureau_Focus0:0 "Polskie Biuro Szyfrów"
+ POL_Polish_Cipher_Bureau_Focus0_desc:0 "Polskie Biuro Szyfrów ma za zadanie kontrwywiad, wykrywanie radarów i kryptoanalizę."
+ 
+ POL_Synthetic_Rubber:0 "Kauczuk syntetyczny"
+ POL_Synthetic_Rubber_tt:0 "§WZmodyfikuj§! §Wwydajność§! rafinerii syntetycznych§! przez: §G+2§!£resources_strip|3.\n"
+ POL_Synthetic_Rubber_desc:0 "Polskim naukowcom pracującym w Zakładzie Syntezy Gumy Instytutu Chemii w Warszawie udało się opracować w pełni sztuczną formę kauczuku pochodzącego z ziemniaków i innych produktów rolnych. Opony i części maszyn mogą być produkowane bez konieczności stosowania naturalnie występującej gumy z zagranicznych plantacji.§!"
+ 
+ POL_stanislas_iii:0 "Stanisław III"
+ POL_stanislas_iv:0 "Stanisław IV"
+ 
+ POL_exiled_royal_family:0 "Polska Rodzina królewska wygnana"
+ POL_confiscated_royal_wealth:0 "Konfiskata królewskiego majątku"

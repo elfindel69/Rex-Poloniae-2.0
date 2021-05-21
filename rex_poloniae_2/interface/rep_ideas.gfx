@@ -1,0 +1,24 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_Synthetic_Rubber"
+		texturefile = "gfx/interface/ideas/r56_idea_Synthetic_Rubber.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_Intelligence_Service0"
+		texturefile = "gfx/interface/ideas/r56_idea_POL_Intelligence_Service0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SEPEWE"
+		texturefile = "gfx/interface/ideas/r56_idea_POL_company_SEPEWE.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stanislas_iii"
+		texturefile = "gfx/interface/ideas/idea_stanislas_iii.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stanislas_iv"
+		texturefile = "gfx/interface/ideas/idea_stanislas_iv.dds"
+	}
+	
+}

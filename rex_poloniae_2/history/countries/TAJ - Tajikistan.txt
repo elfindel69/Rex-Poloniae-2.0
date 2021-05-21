@@ -68,6 +68,16 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Mohammed Daoud Khan"
+	picture = "gfx/leaders/Monarchs/Portrait_Afghan_Mohammed_Daoud_Khan.tga"
+	expire = "1989.1.1"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

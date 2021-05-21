@@ -1,0 +1,51 @@
+﻿l_french:
+ ITA_monarchism_focus:0 "Une nation et un roi!"
+
+ FRA_monarchism_focus:0 "Longue vie au roi!"
+ FRA_king_rules_focus:0 "Contrôle direct du roi"
+
+ SOV_democracy_focus:0 "Montée de la démocratie"
+ SOV_democracy_prop_focus:0 "Propagande démocratique"
+
+ POL_monarchism_focus:0 "Longue vie au roi!"
+ POL_king_rules_focus:0 "Contrôle direct du roi"
+ 
+ RUS_liberty_ethos_focus:0 "Montée de la liberté"
+ RUS_neutrality_idea:0 "Politique étrangère neutre"
+
+ UKR_liberty_ethos_focus:0 "Montée de la liberté"
+ UKR_neutrality_idea:0 "Politique étrangère neutre"
+ UKR_monarchy_rise_focus:0 "Montée de la monarchie"
+ UKR_monarchism_focus:0 "Un roi pour l'Ukraine ?"
+
+ generic_monarchist_booster:0 "Conseiller monarchiste"
+ POL_generic_monarchist_booster:0 "Paweł Nowak"
+ 
+ monarchist_influence:0 "Influence monarchiste"
+ monarchist_influence_desc:0 "Les pressions exercées par les monarchistes ont rendu cette idéologie très populaire, et le pays est susceptible de s'allier à d'autres États monarchistes."
+ monarchist_diplomacy:0 "Diplomacie monarchiste"
+ monarchist_diplomacy_desc:0 "Il est temps de renforcer le monarchisme afin de s'allier avec d'autres monarchies."
+ anti_monarchist_diplomacy:0 "Diplomatie anti-monarchiste"
+ pro_communist_diplomacy:0 "Diplomacie pro communiste"
+ pro_fascist_diplomacy:0 "Diplomacie pro fasciste"
+ pro_democratic_diplomacy:0 "Diplomacie pro démocratique"
+ POL_fascist_influence:0 "Influence Fasciste"
+ POL_communist_influence:0 "Influence communiste"
+ POL_neutrality_government:0 "Gouvernement autoritariste"
+ POL_fascist_government:0 "Gouvernement fasciste"
+ POL_communist_government:0 "Gouvernement communiste"
+ POL_communist_science:0 "Science communiste"
+ POL_SEPEWE:0 "SEPEWE"
+ POL_arms_export_syndicate:0 "Syndicat d'Exportation d'Armes"
+ POL_Polish_Cipher_Bureau_Focus0:0 "Le bureau polonais du Chiffre"
+ POL_Polish_Cipher_Bureau_Focus0_desc:0 "Le Bureau polonais du Chiffre est chargé des fonctions de contre-espionnage, de détection radar et de cryptanalyse."
+ 
+ POL_Synthetic_Rubber:0 "Caoutchouc synthétique"
+ POL_Synthetic_Rubber_tt:0 "§WModifie§! §Wla production des §! §HRaffineries Synthétiques§! par: §G+2§!£resources_strip|3.\n"
+ POL_Synthetic_Rubber_desc:0 "Des scientifiques polonais travaillant dans le cadre du Département de synthèse du caoutchouc au sein de l'Institut de recherche chimique de Varsovie ont réussi à développer une forme entièrement artificielle de caoutchouc dérivé de pommes de terre et d'autres produits agricoles. Les pneus et les pièces de machines peuvent être produits sans avoir besoin de caoutchouc naturel provenant de plantations étrangères.§!"
+ 
+ POL_stanislas_iii:0 "Stanislas III"
+ POL_stanislas_iv:0 "Stanislas IV"
+ 
+ POL_exiled_royal_family:0 "Famille royale polonaise en exil"
+ POL_confiscated_royal_wealth:0 "Fortune de la famille royale saisie"

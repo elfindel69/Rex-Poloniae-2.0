@@ -43,17 +43,6 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Otto von Habsburg"
-	desc = "POLITICS_OTTO_VON_HABSBURG_DESC"
-	picture = "r56_portrait_AUS_Otto_von_Habsburg.dds"
-	expire = "2011.1.1"
-	ideology = absolutism
-	traits = {
-		#
-	}
-}
-	
-create_country_leader = {
 	name = "Karl Renner"
 	desc = "POLITICS_KARL_RENNER_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
@@ -94,6 +83,17 @@ create_country_leader = {
 	ideology = paternalism
 	traits = {
 		#
+	}
+}
+
+create_country_leader = {
+		name = "Otto von Habsburg"
+		picture = "gfx/leaders/Monarchs/Portrait_EYE_Austria_Otto_I.tga"
+		expire = "1987.1.1"
+		ideology = paternalism
+		traits = {
+			constitutional_monarch
+		}
 	}
 }
 

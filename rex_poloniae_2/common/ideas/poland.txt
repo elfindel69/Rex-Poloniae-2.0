@@ -2,6 +2,120 @@ ideas = {
 
 country = {
 
+	POL_exiled_royal_family = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = monarchist
+		}
+		
+		modifier = {
+			army_morale_factor = 0.1
+			stability_factor = 0.1
+			war_support_factor = 0.05
+		}
+
+		picture = generic_king_handled
+
+		removal_cost = -1
+	}
+		
+	POL_confiscated_royal_wealth = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = monarchist
+		}
+		
+		modifier = {
+			production_speed_industrial_complex_factor = 0.20
+			production_speed_arms_factory_factor = 0.20
+			production_speed_dockyard_factor = 0.20
+		}
+
+		picture = generic_foreign_capital
+
+		removal_cost = -1
+	}
+
+	POL_stanislas_iii = {
+		picture = stanislas_iii	
+			
+		allowed = {
+			original_tag = POL
+			always = yes
+			NOT = { has_country_flag = POL_king_dies}
+		}
+
+	   available = {
+			NOT = {
+				has_government = monarchist #remove if King in power
+			}
+		}
+		allowed_civil_war = {
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				any_other_country = {
+					original_tag = POL
+					has_government = fascism
+				}
+			}
+		}
+		
+		removal_cost = -1
+		
+		modifier = {
+			stability_factor = 0.1
+			political_advisor_cost_factor = -0.25
+		}
+	}
+	
+	POL_stanislas_iv = {
+		picture = stanislas_iv
+			
+		allowed = {
+			original_tag = POL
+			always = yes
+			has_country_flag = POL_king_dies
+		}
+
+	   available = {
+			NOT = {
+				OR = {
+					has_government = monarchist #remove if King in power
+					has_government = communism
+				}
+				
+			}
+		}
+		allowed_civil_war = {
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				any_other_country = {
+					original_tag = POL
+					has_government = fascism
+				}
+			}
+		}
+		
+		removal_cost = -1
+		
+		modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.05
+		}
+	}	
+
 	POL_ideological_fanaticism = {
 		
 		
@@ -40,10 +154,9 @@ country = {
 		modifier = {
 			conscription = 0.025
 			war_support_factor = 0.05
-			resistance_damage_to_garrison = -0.1
+			resistance_damage_to_garrison = -0.1 
 		}
-	}	
-
+	}
 	POL_authoritarianism_focus = {
 			
 		allowed = {
@@ -59,66 +172,22 @@ country = {
 			
 		removal_cost = -1
 
-		picture = generic_intel_bonus
+		picture = generic_neutrality_drift_bonus
 		
 		modifier = {
-			neutrality_drift = -0.1
-			fascism_drift = +0.1
-			democratic_drift = -0.1
-			democratic_acceptance = -100
-		}
-	}
-	
-	POL_monarchism_focus = {
-			
-		allowed = {
-			original_tag = POL
-			always = no
-		}
-
-		allowed_civil_war = {
-			NOT = {
-				has_government = democratic
-			}
-		}
-			
-		removal_cost = -1
-
-		picture = generic_intel_bonus
-		
-		modifier = {
-			monarchist_drift = +0.1
+			neutrality_drift = +0.1
+			neutrality_acceptance = 85
 			fascism_drift = -0.1
 			democratic_drift = -0.1
 			democratic_acceptance = -100
+			communism_drift = -0.1
+			monarchist_drift = -0.1
 		}
 	}
-	
-	POL_king_rules_focus = {
-			
-		allowed = {
-			original_tag = POL
-			always = no
-		}
-
-		allowed_civil_war = {
-			NOT = {
-				has_government = democratic
-			}
-		}
-			
-		removal_cost = -1
-
-		picture = generic_intel_bonus
-		
-		modifier = {
-			monarchist_drift = +0.1
-			stability_factor = 0.05
-		}
-	}
-
 	POL_polish_revanchism_focus = {
 	
+							  
+   
 		allowed = {
 			original_tag = POL
 			always = no
@@ -157,11 +226,239 @@ country = {
 		modifier = {		
 			trade_opinion_factor = 0.2
 		}
-	}	
+	}								
+	
+	POL_neutrality_government = {
+			
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = neutrality
+		}
+			
+		removal_cost = -1
+
+		picture = generic_neutrality_drift_bonus
+		
+		modifier = {
+			neutrality_drift = +0.1
+			stability_factor = 0.05
+		}
+	}
+	
+	POL_fascist_government = {
+			
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = fascism
+		}
+			
+		removal_cost = -1
+
+		picture = generic_fascism_drift_bonus
+		
+		modifier = {
+			fascism_drift = +0.1
+			stability_factor = 0.05
+		}
+	}
+	
+	POL_communist_government = {
+			
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+			
+		removal_cost = -1
+
+		picture = generic_communism_drift_bonus
+		
+		modifier = {
+			communism_drift = +0.1
+			stability_factor = 0.05
+		}
+	}
+	
+	POL_fascist_influence = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				monarchist_drift = -0.1
+				fascism_drift = +0.1
+				fascism_acceptance = 85
+				democratic_drift = -0.1
+				democratic_acceptance = -100
+				neutrality_drift = -0.1
+				communism_drift = -0.1
+			}
+		}
+		
+		POL_communist_influence = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				monarchist_drift = -0.1
+				fascism_drift = -0.1
+				democratic_drift = -0.1
+				democratic_acceptance = -100
+				neutrality_drift = -0.1
+				communism_drift = +0.1
+				communism_acceptance = 85
+			}
+		}
+		
+		POL_communist_science = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = +0.2
+			}
+		}
+		
+	
+	
+	POL_monarchism_focus = {
+			
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			NOT = {
+				has_government = democratic
+			}
+		}
+			
+		removal_cost = -1
+
+		picture = HUN_hungarian_monarchy
+		
+		modifier = {
+			monarchist_drift = +0.1
+			monarchist_acceptance = 85
+			fascism_drift = -0.1
+			democratic_drift = -0.1
+			democratic_acceptance = -100
+			neutrality_drift = -0.1
+			communism_drift = -0.1
+		}
+	}
+	
+	POL_king_rules_focus = {
+			
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			NOT = {
+				has_government = democratic
+			}
+		}
+			
+		removal_cost = -1
+
+		picture = HUN_hungarian_monarchy
+		
+		modifier = {
+			monarchist_drift = +0.1
+			stability_factor = 0.05
+		}
+	}
+
+	POL_Polish_Cipher_Bureau_Focus0	= {
+	
+		name = POL_Polish_Cipher_Bureau_Focus0
+	
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+			
+		removal_cost = -1
+		
+		picture = POL_Intelligence_Service0
+		
+		research_bonus = {
+			decryption_power_factor = 0.05
+		}
+	}
+	
+	POL_Synthetic_Rubber = {
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+			
+		picture = Synthetic_Rubber
+		
+		modifier = {
+			custom_modifier_tooltip = POL_Synthetic_Rubber_tt
+			production_speed_synthetic_refinery_factor = 0.02
+		}
+		
+	}
 }
 
-
-political_advisor = {
+	political_advisor = {
 
 	POL_roman_dmowski = {
 
@@ -169,6 +466,7 @@ political_advisor = {
 
 		allowed = {
 			original_tag = POL
+			  
 		}
 		
 		available = {
@@ -177,6 +475,10 @@ political_advisor = {
 				NOT = { has_autonomy_state = autonomy_supervised_state }
 			}
 		}
+   
+				   
+
+										  
 		
 		traits = { fascist_demagogue }
 
@@ -206,6 +508,7 @@ political_advisor = {
 			factor = 0
 		}
 	}
+				   
 
 	POL_mieczyslaw_michalowicz = {
 
@@ -235,12 +538,17 @@ political_advisor = {
 
 		allowed = {
 			original_tag = POL
+			  
 		}
 		
 		traits = { war_industrialist }
 	}
 
 	POL_eugeniusz_kwiatkowiski = {
+							 
+   
+   
+				   
 
 		picture = generic_army_europe_4
 			
@@ -261,6 +569,7 @@ political_advisor = {
 		
 		traits = { smooth_talking_charmer }
 	}
+	
 	POL_jan_kowalewski = {
 		
 			picture = generic_political_advisor_europe_3
@@ -276,17 +585,23 @@ political_advisor = {
 			
 			traits = { head_of_intelligence }
 
-	}				   
+	}
+							
 }
 
 theorist = {
 
 	POL_tomislaw_lupaszko = {
-		ledger = army	   
+		ledger = army
 				
 				
 		allowed = {
 			original_tag = POL
+						   
+								
+						   
+						  
+	
 		}
 		
 		picture = generic_army_europe_6
@@ -299,7 +614,7 @@ theorist = {
 	}
 
 	POL_wladyslaw_kalkus = {
-		ledger = air	  
+		ledger = air
 				
 				
 		allowed = {
@@ -346,11 +661,16 @@ theorist = {
 			}
 			
 
+										  
 			
 			traits = { army_chief_defensive_2 }
 			
 			ai_will_do = {
 				factor = 1
+								
+						   
+						  
+							 
 			}
 		}
 	}
@@ -374,6 +694,7 @@ theorist = {
 				factor = 1
 			}
 		}
+					
 
 		POL_ludomil_rayski = {
 			
@@ -382,7 +703,16 @@ theorist = {
 			allowed = {
 				original_tag = POL
 			}
+   
+  
+ 
+ 
+						 
 			
+			 
+					 
+			  
+   
 
 			
 			traits = { air_chief_ground_support_2 }
@@ -392,16 +722,29 @@ theorist = {
 			}
 		}
 	}
+				   
 
 
 	navy_chief = {
 		
+			  
+						  
+							 
+					   
+						  
+							   
+						  
+						 
+   
+  
+ 
 		POL_josef_unrug = {
 			
 			picture = generic_navy_europe_2
 			
 			allowed = {
 				original_tag = POL
+			  
 			}
 			
 
@@ -430,11 +773,19 @@ theorist = {
 			}
 		}
 	}
+
+									
 	
+										
 	
 	high_command = {
 		POL_zygmunt_buhusz_szysko = {
-			ledger = army	
+			ledger = army
+   
+
+					   
+			  
+   
 			
 			
 			allowed = {
@@ -451,7 +802,7 @@ theorist = {
 		}
 		
 		POL_stanislav_maczek = {
-			ledger = army	
+			ledger = army
 			
 			
 			allowed = {
@@ -466,9 +817,10 @@ theorist = {
 				factor = 1
 			}
 		}
+  
 	
 		POL_wladyslaw_anders = {
-			ledger = army	
+			ledger = army
 			
 			
 			allowed = {
@@ -485,8 +837,10 @@ theorist = {
 		}
 
 		POL_stanislaw_pawluc = {
-			ledger = air 
+			ledger = air
+   
 			
+				   
 			
 			allowed = {
 				original_tag = POL
@@ -500,11 +854,13 @@ theorist = {
 				factor = 1
 			}
 		}
+  
 	}
 
 	materiel_manufacturer = {
-			
 		designer = yes
+  
+									 
 		
 		POL_fb = {
 			
@@ -526,6 +882,8 @@ theorist = {
 		}
 
 		POL_lrl = {
+			   
+   
 			
 			allowed = {
 				has_dlc = "Poland: United and Ready"
@@ -544,6 +902,9 @@ theorist = {
 			}
 		}
 
+  
+ 
+					   
 		POL_smpa = {
 			
 			allowed = {
@@ -552,6 +913,15 @@ theorist = {
 			}
 			
 			picture = generic_artillery_manufacturer_1
+		   
+						  
+				   
+				  
+				  
+	   
+	  
+	 
+	
 			
 			research_bonus = {
 				artillery = 0.15
@@ -560,6 +930,39 @@ theorist = {
 			traits = { artillery_manufacturer }
 			
 			modifier = {
+											
+								
+									  
+							  
+			}
+		}
+	
+		POL_SEPEWE = {
+			
+			allowed = {
+				original_TAG = POL
+			}
+			
+			available = {
+				NOT = {
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 0.5
+						}
+					}
+				}
+			}
+			
+			picture = SEPEWE
+			
+			traits = { POL_arms_export_syndicate }
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+				industrial_capacity_factory = -0.1
+				lend_lease_tension = -0.35
 			}
 		}
 	}
@@ -570,6 +973,9 @@ theorist = {
 			
 			picture = generic_tank_manufacturer_1
 
+					   
+			   
+   
 			
 			allowed = {
 				original_tag = POL
@@ -586,6 +992,7 @@ theorist = {
 				# heavily armored light tanks 7TP, weak vs air ,diesel powered
 			}
 		}
+  
 	}
 	
 	naval_manufacturer = { 			
@@ -604,6 +1011,13 @@ theorist = {
 			
 			research_bonus = {
 				naval_equipment = 0.15
+						  
+				   
+				  
+				  
+	   
+	  
+	 
 			}
 			
 			equipment_bonus = {
@@ -613,6 +1027,10 @@ theorist = {
 			traits = { naval_manufacturer }
 			
 			modifier = {
+											
+								
+									  
+							  
 			}
 		}
 	}
@@ -671,7 +1089,6 @@ theorist = {
 			}
 		}
 	}
-
 	industrial_concern = {
 				
 		POL_pkp = {
@@ -685,6 +1102,11 @@ theorist = {
 			
 			research_bonus = {
 				industry = 0.15
+				  
+				  
+	   
+	  
+	 
 			}
 			
 			traits = { industrial_concern }
@@ -709,6 +1131,10 @@ theorist = {
 			traits = { electronics_concern }
 			
 			modifier = {
+											
+								
+									  
+							  
 			}
 		}
 		

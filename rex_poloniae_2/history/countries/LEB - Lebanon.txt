@@ -121,6 +121,15 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Prince Abdullah of Hejaz"
+	picture = "gfx/leaders/Monarchs/r56_portrait_IRQ_abd_al_ilah.tga"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
 	name = "Rami Sarraff"
 	desc = ""
 	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_land_2.dds"

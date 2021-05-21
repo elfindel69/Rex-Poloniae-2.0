@@ -99,16 +99,26 @@ create_country_leader = {
 }
 
 create_country_leader = {
-		name = "Aarón Gálvez"
-		desc = "POLITICS_CARLOS_QUINTANILLA_DESC"
-		picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
-		expire = "1965.1.1"
-		ideology = monarchism
-		traits = {
-			#
-		}
+	name = "Aarón Gálvez"
+	desc = "POLITICS_CARLOS_QUINTANILLA_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = monarchism
+	traits = {
+		#
 	}
+}
 
+create_country_leader = {
+	name = "Bonifacio Piñedo"
+	picture = "gfx/leaders/Monarchs/generic1.dds"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol
+	}
+}
+			
 1939.1.1 = {
 	set_politics = {
 		ruling_party = neutrality

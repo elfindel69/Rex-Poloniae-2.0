@@ -280,7 +280,6 @@ ideas = {
 
 			modifier = {
 				conscription = 0.01
-				monarchist_drift = 0.05
 			}
 		}
 

@@ -133,3 +133,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Mindaugas III"
+	picture = "gfx/leaders/Monarchs/Portrait_Poland_Mindaugas_III.tga"
+	expire = "1981.1.1"
+	ideology = paternalism
+	traits = {
+	}
+}
+				

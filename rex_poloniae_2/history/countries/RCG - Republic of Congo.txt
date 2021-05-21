@@ -77,3 +77,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Queen Ngalifourou"
+	picture = "gfx/leaders/Monarchs/Portrait_Teke_Queen_Ngalifourou.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		restored_monarch 
+	}
+}

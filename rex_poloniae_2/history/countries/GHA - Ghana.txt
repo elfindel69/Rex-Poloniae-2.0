@@ -76,3 +76,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Agyeman Prempeh II"
+	picture = "gfx/leaders/Monarchs/Nana_Otumfuo_Agyeman_Prempeh_II.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol
+	}
+}

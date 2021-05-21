@@ -14,6 +14,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			NOT = { has_government = fascism }
+		}
+		localization_key = FRLOC_ADU_INHAB_NOT_FASCISM
+	}
+	text = {
+		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			has_government = fascism
+		}
+		localization_key = FRLOC_ADU_INHAB_FASCISM
+	}
+	text = {
+		trigger = {
 			AND = {
 				OR = { tag = MOR tag = ALG tag = TUN tag = WES tag = LBA original_tag = MOR original_tag = ALG original_tag = TUN original_tag = WES original_tag = LBA }
 				has_cosmetic_tag = ADU
@@ -126,6 +140,10 @@ defined_text = {
 		localization_key = FRLOC_BOS_INHAB
 	}
 	text = {
+		trigger = { OR = { tag = HRZ original_tag = HRZ } }
+		localization_key = FRLOC_HRZ_INHAB
+	}
+	text = {
 		trigger = { OR = { tag = BOT original_tag = BOT } }
 		localization_key = FRLOC_BOT_INHAB
 	}
@@ -136,6 +154,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = BRD original_tag = BRD } }
 		localization_key = FRLOC_BRD_INHAB
+	}
+	text = {
+		trigger = { OR = { tag = BRI original_tag = BRI } }
+		localization_key = FRLOC_BRI_INHAB
 	}
 	text = {
 		trigger = {
@@ -152,8 +174,18 @@ defined_text = {
 		localization_key = FRLOC_BRM_INHAB_NEUTRALITY
 	}
 	text = {
-		trigger = { OR = { tag = BUL original_tag = BUL } }
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			NOT = { has_country_flag = BUL_ubf_flag }
+		}
 		localization_key = FRLOC_BUL_INHAB
+	}
+	text = {
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			has_country_flag = BUL_ubf_flag
+		}
+		localization_key = FRLOC_UBF_united_balkan_federation_INHAB
 	}
 	text = {
 		trigger = { OR = { tag = CAM original_tag = CAM } }
@@ -244,6 +276,10 @@ defined_text = {
 		localization_key = FRLOC_COL_INHAB
 	}
 	text = {
+		trigger = { OR = { tag = COR original_tag = COR } }
+		localization_key = FRLOC_COR_INHAB
+	}
+	text = {
 		trigger = { OR = { tag = COS original_tag = COS } }
 		localization_key = FRLOC_COS_INHAB
 	}
@@ -269,8 +305,12 @@ defined_text = {
 		localization_key = FRLOC_CRC_INHAB_COMMUNISM
 	}
 	text = {
-		trigger = { OR = { tag = CRO original_tag = CRO } }
+		trigger = { OR = { tag = CRO original_tag = CRO } NOT = { has_cosmetic_tag = dalmatia } }
 		localization_key = FRLOC_CRO_INHAB
+	}
+	text = {
+		trigger = { has_cosmetic_tag = dalmatia }
+		localization_key = FRLOC_dalmatia_INHAB
 	}
 	text = {
 		trigger = { OR = { tag = CSA original_tag = CSA } }
@@ -458,7 +498,12 @@ defined_text = {
 		localization_key = FRLOC_FIN_INHAB
 	}
 	text = {
-		trigger = { OR = { tag = FRA original_tag = FRA } NOT = { has_cosmetic_tag = EUR_UNIFIED } NOT = { has_cosmetic_tag = FRA_FREE } }
+		trigger = {
+			OR = { tag = FRA original_tag = FRA }
+			NOT = { has_cosmetic_tag = EUR_UNIFIED }
+			NOT = { has_cosmetic_tag = FRA_FREE }
+			NOT = { has_cosmetic_tag = FRANCO_SPAIN }
+		}
 		localization_key = FRLOC_FRA_INHAB
 	}
 	text = {
@@ -472,6 +517,10 @@ defined_text = {
 			NOT = { has_cosmetic_tag = united_polynesia }
 		}
 		localization_key = FRLOC_FSM_INHAB_DEMOCRATIC_NEUTRALITY
+	}
+	text = {
+		trigger = { OR = { tag = FRA original_tag = FRA } has_cosmetic_tag = FRANCO_SPAIN }
+		localization_key = FRLOC_FRANCO_SPAIN_INHAB
 	}
 	text = {
 		trigger = {
@@ -536,8 +585,102 @@ defined_text = {
 		localization_key = FRLOC_GNB_INHAB
 	}
 	text = {
-		trigger = { OR = { tag = GRE original_tag = GRE } }
-		localization_key = FRLOC_GRE_INHAB
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = fascism has_government = democratic }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_INHAB # "Hellènes"/"hellénique" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			OR = { has_government = fascism has_government = democratic }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_INHAB # "Hellènes"/"hellénique" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = neutrality has_government = communism }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_INHAB # "Grecs" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_cosmetic_tag = GRE_stalinist
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_INHAB # "Grecs" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_country_flag = GRE_dem_monarchy_flag has_cosmetic_tag = GRE_byz_republic }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_INHAB # "Grecs" (3)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			has_government = neutrality
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_INHAB # "Grecs" (4)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = communism }
+		}
+		localization_key = FRLOC_GRE_GREATER_GREECE_communism_INHAB # "Égéens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_byz_unified_flag
+		}
+		localization_key = FRLOC_BYZ_UNIFIED_INHAB # "Byzantins"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			has_government = communism
+		}
+		localization_key = FRLOC_MAE_COMMUNISM_INHAB # "Argéades"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			OR = { has_government = fascism has_government = democratic has_government = neutrality }
+		}
+		localization_key = FRLOC_MAE_NOT_COMMUNISM_INHAB # "Macédoniens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = {
+				has_country_flag = GRE_com_independent_flag
+				AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = democratic }
+			}
+		}
+		localization_key = FRLOC_GRE_com_independent_communism_INHAB # "Hellènes" (Hellade)
 	}
 	text = {
 		trigger = { OR = { tag = GUA original_tag = GUA } }
@@ -605,7 +748,7 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = { tag = HOL original_tag = HOL }
-			NOT = { has_cosmetic_tag = HOL_benelux_unified has_government = democratic }
+			NOT = { AND = { has_cosmetic_tag = HOL_benelux_unified has_government = democratic } }
 			NOT = { has_cosmetic_tag = EUR_UNIFIED }
 		}
 		localization_key = FRLOC_HOL_INHAB
@@ -638,8 +781,12 @@ defined_text = {
 		localization_key = FRLOC_HON_INHAB
 	}
 	text = {
-		trigger = { OR = { tag = HUN original_tag = HUN } }
+		trigger = { OR = { tag = HUN original_tag = HUN } NOT = { has_cosmetic_tag = vojvodina } }
 		localization_key = FRLOC_HUN_INHAB
+	}
+	text = {
+		trigger = { has_cosmetic_tag = vojvodina }
+		localization_key = FRLOC_vojvodina_INHAB
 	}
 	text = {
 		trigger = { OR = { tag = ICE original_tag = ICE } }
@@ -714,6 +861,18 @@ defined_text = {
 		localization_key = FRLOC_KOR_INHAB
 	}
 	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } NOT = { has_government = fascism } }
+		localization_key = FRLOC_KOS_INHAB
+	}
+	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } has_government = fascism }
+		localization_key = FRLOC_KOS_FASCISM_INHAB
+	}
+	text = {
+		trigger = { OR = { tag = KUR original_tag = KUR } }
+		localization_key = FRLOC_KUR_INHAB
+	}
+	text = {
 		trigger = { OR = { tag = KUW original_tag = KUW } }
 		localization_key = FRLOC_KUW_INHAB
 	}
@@ -753,8 +912,18 @@ defined_text = {
 		localization_key = FRLOC_LUX_INHAB
 	}
 	text = {
-		trigger = { OR = { tag = MAC original_tag = MAC } }
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MAC_INHAB
+	}
+	text = {
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MAC_YUG_subject_INHAB
 	}
 	text = {
 		trigger = {
@@ -825,8 +994,18 @@ defined_text = {
 		localization_key = FRLOC_MLW_INHAB
 	}
 	text = {
-		trigger = { OR = { tag = MNT original_tag = MNT } }
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MNT_INHAB
+	}
+	text = {
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MNT_YUG_subject_INHAB
 	}
 	text = {
 		trigger = {
@@ -973,6 +1152,20 @@ defined_text = {
 		localization_key = FRLOC_NZL_INHAB_ENG_imperialist_canada_fascism_neutrality
 	}
 	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			has_government = neutrality
+		}
+		localization_key = FRLOC_OCC_neutrality_INHAB
+	}
+	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			NOT = { has_government = neutrality }
+		}
+		localization_key = FRLOC_OCC_INHAB
+	}
+	text = {
 		trigger = { OR = { tag = OMA original_tag = OMA } }
 		localization_key = FRLOC_OMA_INHAB
 	}
@@ -1076,8 +1269,16 @@ defined_text = {
 		localization_key = FRLOC_RCG_INHAB
 	}
 	text = {
-		trigger = { OR = { tag = ROM original_tag = ROM } }
+		trigger = { OR = { tag = ROM original_tag = ROM } NOT = { has_cosmetic_tag = transylvania } }
 		localization_key = FRLOC_ROM_INHAB
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania NOT = { has_government = communism } }
+		localization_key = FRLOC_transylvania_INHAB
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania has_government = communism }
+		localization_key = FRLOC_transylvania_communism_INHAB
 	}
 	text = {
 		trigger = { OR = { tag = RWA original_tag = RWA } }
@@ -1152,7 +1353,7 @@ defined_text = {
 		localization_key = FRLOC_SEN_INHAB_NEUTRALITY
 	}
 	text = {
-		trigger = { OR = { tag = SER original_tag = SER } }
+		trigger = { OR = { tag = SER original_tag = SER has_cosmetic_tag = SER } }
 		localization_key = FRLOC_SER_INHAB
 	}
 	text = {
@@ -1190,8 +1391,18 @@ defined_text = {
 		localization_key = FRLOC_SLO_INHAB
 	}
 	text = {
-		trigger = { OR = { tag = SLV original_tag = SLV } }
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_SLV_INHAB
+	}
+	text = {
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_SLV_YUG_subject_INHAB
 	}
 	text = {
 		trigger = {
@@ -1238,7 +1449,10 @@ defined_text = {
 		localization_key = SOV_russia_communism_INHAB
 	}
 	text = {
-		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } }
+		trigger = {
+			OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD }
+			NOT = { has_cosmetic_tag = SPR_castille }
+		}
 		localization_key = FRLOC_SPR_INHAB
 	}
 	text = {
@@ -1248,6 +1462,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } has_cosmetic_tag = SPC_global_defense_council has_government = neutrality }
 		localization_key = FRLOC_SPR_SPA_SPB_SPC_SPD_global_defense_council_INHAB
+	}
+	text = {
+		trigger = { OR = { tag = SPR original_tag = SPR } has_cosmetic_tag = SPR_castille }
+		localization_key = FRLOC_SPR_castille_INHAB
 	}
 	text = {
 		trigger = {
@@ -1365,6 +1583,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			OR = { NOT = { has_government = communism } is_subject_of = YUG }
+		}
+		localization_key = FRLOC_TRA_INHAB
+	}
+	text = {
+		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			AND = { has_government = communism NOT = { is_subject_of = YUG } }
+		}
+		localization_key = FRLOC_TRA_communism_INHAB
+	}
+	text = {
+		trigger = {
 			OR = { tag = TRI original_tag = TRI }
 			NOT = { has_government = fascism has_government = communism }
 		}
@@ -1401,8 +1633,33 @@ defined_text = {
 		localization_key = FRLOC_TUN_INHAB_FASCISM
 	}
 	text = {
-		trigger = { OR = { tag = TUR original_tag = TUR } }
-		localization_key = FRLOC_TUR_INHAB
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			NOT = { has_country_flag = TUR_trn_flag }
+			NOT = { has_country_flag = TUR_PROVISIONARY_flag }
+		}
+		localization_key = FRLOC_TUR_INHAB # "Turcs"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			has_country_flag = TUR_PROVISIONARY_flag
+		}
+		localization_key = FRLOC_TUR_PROVISIONARY_INHAB # "Anatoliens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag has_government = communism }
+		}
+		localization_key = FRLOC_TRN_COMMUNISM_INHAB # "Turciques"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag NOT = { has_government = communism } }
+		}
+		localization_key = FRLOC_TRN_NOT_COMMUNISM_INHAB # "Touraniens"
 	}
 	text = {
 		trigger = { OR = { tag = TZN original_tag = TZN } }
@@ -1644,6 +1901,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			NOT = { has_government = fascism }
+		}
+		localization_key = FRLOC_ADU_ADJ_MS_NOT_FASCISM
+	}
+	text = {
+		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			has_government = fascism
+		}
+		localization_key = FRLOC_ADU_ADJ_MS_FASCISM
+	}
+	text = {
+		trigger = {
 			AND = {
 				OR = { tag = MOR tag = ALG tag = TUN tag = WES tag = LBA original_tag = MOR original_tag = ALG original_tag = TUN original_tag = WES original_tag = LBA }
 				has_cosmetic_tag = ADU
@@ -1756,6 +2027,10 @@ defined_text = {
 		localization_key = FRLOC_BOS_ADJ_MS
 	}
 	text = {
+		trigger = { OR = { tag = HRZ original_tag = HRZ } }
+		localization_key = FRLOC_HRZ_ADJ_MS
+	}
+	text = {
 		trigger = { OR = { tag = BOT original_tag = BOT } }
 		localization_key = FRLOC_BOT_ADJ_M
 	}
@@ -1766,6 +2041,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = BRD original_tag = BRD } }
 		localization_key = FRLOC_BRD_ADJ_M
+	}
+	text = {
+		trigger = { OR = { tag = BRI original_tag = BRI } }
+		localization_key = FRLOC_BRI_ADJ_MS
 	}
 	text = {
 		trigger = {
@@ -1781,9 +2060,20 @@ defined_text = {
 		}
 		localization_key = FRLOC_BRM_ADJ_M_NEUTRALITY
 	}
+
 	text = {
-		trigger = { OR = { tag = BUL original_tag = BUL } }
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			NOT = { has_country_flag = BUL_ubf_flag }
+		}
 		localization_key = FRLOC_BUL_ADJ_S
+	}
+	text = {
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			has_country_flag = BUL_ubf_flag
+		}
+		localization_key = FRLOC_UBF_united_balkan_federation_ADJ_S
 	}
 	text = {
 		trigger = { OR = { tag = CAM original_tag = CAM } }
@@ -1874,6 +2164,10 @@ defined_text = {
 		localization_key = FRLOC_COL_ADJ_MS
 	}
 	text = {
+		trigger = { OR = { tag = COR original_tag = COR } }
+		localization_key = FRLOC_COR_ADJ_S
+	}
+	text = {
 		trigger = { OR = { tag = COS original_tag = COS } }
 		localization_key = FRLOC_COS_ADJ_MS
 	}
@@ -1899,8 +2193,12 @@ defined_text = {
 		localization_key = FRLOC_CRC_ADJ_MS_COMMUNISM
 	}
 	text = {
-		trigger = { OR = { tag = CRO original_tag = CRO } }
+		trigger = { OR = { tag = CRO original_tag = CRO } NOT = { has_cosmetic_tag = dalmatia } }
 		localization_key = FRLOC_CRO_ADJ_S
+	}
+	text = {
+		trigger = { has_cosmetic_tag = dalmatia }
+		localization_key = FRLOC_dalmatia_ADJ_S
 	}
 	text = {
 		trigger = { OR = { tag = CSA original_tag = CSA } }
@@ -2088,12 +2386,21 @@ defined_text = {
 		localization_key = FRLOC_FIN_ADJ_M
 	}
 	text = {
-		trigger = { OR = { tag = FRA original_tag = FRA } NOT = { has_cosmetic_tag = EUR_UNIFIED } NOT = { has_cosmetic_tag = FRA_FREE } }
+		trigger = {
+			OR = { tag = FRA original_tag = FRA }
+			NOT = { has_cosmetic_tag = EUR_UNIFIED }
+			NOT = { has_cosmetic_tag = FRA_FREE }
+			NOT = { has_cosmetic_tag = FRANCO_SPAIN }
+		}
 		localization_key = FRLOC_FRA_ADJ_M
 	}
 	text = {
 		trigger = { OR = { tag = FRA original_tag = FRA } has_cosmetic_tag = FRA_FREE }
 		localization_key = FRLOC_FRA_FREE_democratic_ADJ_MS
+	}
+	text = {
+		trigger = { OR = { tag = FRA original_tag = FRA } has_cosmetic_tag = FRANCO_SPAIN }
+		localization_key = FRLOC_FRANCO_SPAIN_ADJ_MS
 	}
 	text = {
 		trigger = {
@@ -2166,8 +2473,102 @@ defined_text = {
 		localization_key = FRLOC_GNB_ADJ_MS
 	}
 	text = {
-		trigger = { OR = { tag = GRE original_tag = GRE } }
-		localization_key = FRLOC_GRE_ADJ_MS
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = fascism has_government = democratic }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_ADJ_S # "Hellènes"/"hellénique" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			OR = { has_government = fascism has_government = democratic }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_ADJ_S # "Hellènes"/"hellénique" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = neutrality has_government = communism }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_MS # "Grecs" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_cosmetic_tag = GRE_stalinist
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_MS # "Grecs" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_country_flag = GRE_dem_monarchy_flag has_cosmetic_tag = GRE_byz_republic }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_MS # "Grecs" (3)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			has_government = neutrality
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_MS # "Grecs" (4)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = communism }
+		}
+		localization_key = FRLOC_GRE_GREATER_GREECE_communism_ADJ_MS # "Égéens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_byz_unified_flag
+		}
+		localization_key = FRLOC_BYZ_UNIFIED_ADJ_MS # "Byzantins"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			has_government = communism
+		}
+		localization_key = FRLOC_MAE_COMMUNISM_ADJ_S # "Argéades"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			OR = { has_government = fascism has_government = democratic has_government = neutrality }
+		}
+		localization_key = FRLOC_MAE_NOT_COMMUNISM_ADJ_MS # "Macédoniens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = {
+				has_country_flag = GRE_com_independent_flag
+				AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = democratic }
+			}
+		}
+		localization_key = FRLOC_GRE_com_independent_communism_ADJ_S # "Hellènes" (Hellade)
 	}
 	text = {
 		trigger = { OR = { tag = GUA original_tag = GUA } }
@@ -2268,8 +2669,12 @@ defined_text = {
 		localization_key = FRLOC_HON_ADJ_MS
 	}
 	text = {
-		trigger = { OR = { tag = HUN original_tag = HUN } }
+		trigger = { OR = { tag = HUN original_tag = HUN } NOT = { has_cosmetic_tag = vojvodina } }
 		localization_key = FRLOC_HUN_ADJ_M
+	}
+	text = {
+		trigger = { has_cosmetic_tag = vojvodina }
+		localization_key = FRLOC_vojvodina_ADJ_MS
 	}
 	text = {
 		trigger = { OR = { tag = ICE original_tag = ICE } }
@@ -2344,6 +2749,18 @@ defined_text = {
 		localization_key = FRLOC_KOR_ADJ_MS
 	}
 	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } NOT = { has_government = fascism } }
+		localization_key = FRLOC_KOS_ADJ_MS
+	}
+	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } has_government = fascism }
+		localization_key = FRLOC_KOS_FASCISM_ADJ_MS
+	}
+	text = {
+		trigger = { OR = { tag = KUR original_tag = KUR } }
+		localization_key = FRLOC_KUR_ADJ_S
+	}
+	text = {
 		trigger = { OR = { tag = KUW original_tag = KUW } }
 		localization_key = FRLOC_KUW_ADJ_MS
 	}
@@ -2383,8 +2800,18 @@ defined_text = {
 		localization_key = FRLOC_LUX_ADJ_M
 	}
 	text = {
-		trigger = { OR = { tag = MAC original_tag = MAC } }
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MAC_ADJ_MS
+	}
+	text = {
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MAC_YUG_subject_ADJ_MS
 	}
 	text = {
 		trigger = {
@@ -2465,8 +2892,18 @@ defined_text = {
 		localization_key = FRLOC_MLW_ADJ_S
 	}
 	text = {
-		trigger = { OR = { tag = MNT original_tag = MNT } }
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MNT_ADJ_MS
+	}
+	text = {
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MNT_YUG_subject_ADJ_MS
 	}
 	text = {
 		trigger = {
@@ -2613,6 +3050,20 @@ defined_text = {
 		localization_key = FRLOC_NZL_ADJ_M_ENG_imperialist_new_zealand_fascism_neutrality
 	}
 	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			has_government = neutrality
+		}
+		localization_key = FRLOC_OCC_neutrality_ADJ_MS
+	}
+	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			NOT = { has_government = neutrality }
+		}
+		localization_key = FRLOC_OCC_ADJ_MS
+	}
+	text = {
 		trigger = { OR = { tag = OMA original_tag = OMA } }
 		localization_key = FRLOC_OMA_ADJ_M
 	}
@@ -2716,8 +3167,16 @@ defined_text = {
 		localization_key = FRLOC_RCG_ADJ_M
 	}
 	text = {
-		trigger = { OR = { tag = ROM original_tag = ROM } }
+		trigger = { OR = { tag = ROM original_tag = ROM } NOT = { has_cosmetic_tag = transylvania } }
 		localization_key = FRLOC_ROM_ADJ_MS
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania NOT = { has_government = communism } }
+		localization_key = FRLOC_transylvania_ADJ_MS
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania has_government = communism }
+		localization_key = FRLOC_transylvania_communism_ADJ_S
 	}
 	text = {
 		trigger = { OR = { tag = RWA original_tag = RWA } }
@@ -2794,7 +3253,7 @@ defined_text = {
 		localization_key = FRLOC_SEN_ADJ_S_NEUTRALITY
 	}
 	text = {
-		trigger = { OR = { tag = SER original_tag = SER } }
+		trigger = { OR = { tag = SER original_tag = SER has_cosmetic_tag = SER } }
 		localization_key = FRLOC_SER_ADJ_S
 	}
 	text = {
@@ -2832,8 +3291,18 @@ defined_text = {
 		localization_key = FRLOC_SLO_ADJ_S
 	}
 	text = {
-		trigger = { OR = { tag = SLV original_tag = SLV } }
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_SLV_ADJ_S
+	}
+	text = {
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_SLV_YUG_subject_ADJ_MS
 	}
 	text = {
 		trigger = {
@@ -2880,7 +3349,10 @@ defined_text = {
 		localization_key = SOV_russia_communism_ADJ_s_frloc
 	}
 	text = {
-		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } }
+		trigger = {
+			OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD }
+			NOT = { has_cosmetic_tag = SPR_castille }
+		}
 		localization_key = FRLOC_SPR_ADJ_MS
 	}
 	text = {
@@ -2890,6 +3362,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } has_cosmetic_tag = SPC_global_defense_council has_government = neutrality }
 		localization_key = FRLOC_SPR_SPA_SPB_SPC_SPD_global_defense_council_ADJ_S
+	}
+	text = {
+		trigger = { OR = { tag = SPR original_tag = SPR } has_cosmetic_tag = SPR_castille }
+		localization_key = FRLOC_SPR_castille_ADJ_MS
 	}
 	text = {
 		trigger = {
@@ -3007,6 +3483,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			OR = { NOT = { has_government = communism } is_subject_of = YUG }
+		}
+		localization_key = FRLOC_TRA_ADJ_MS
+	}
+	text = {
+		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			AND = { has_government = communism NOT = { is_subject_of = YUG } }
+		}
+		localization_key = FRLOC_TRA_communism_ADJ_S
+	}
+	text = {
+		trigger = {
 			OR = { tag = TRI original_tag = TRI }
 			NOT = { has_government = fascism has_government = communism }
 		}
@@ -3043,8 +3533,33 @@ defined_text = {
 		localization_key = FRLOC_TUN_ADJ_S_FASCISM
 	}
 	text = {
-		trigger = { OR = { tag = TUR original_tag = TUR } }
-		localization_key = FRLOC_TUR_ADJ_MS
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			NOT = { has_country_flag = TUR_trn_flag }
+			NOT = { has_country_flag = TUR_PROVISIONARY_flag }
+		}
+		localization_key = FRLOC_TUR_ADJ_MS # "Turcs"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			has_country_flag = TUR_PROVISIONARY_flag
+		}
+		localization_key = FRLOC_TUR_PROVISIONARY_ADJ_MS # "Anatoliens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag has_government = communism }
+		}
+		localization_key = FRLOC_TRN_COMMUNISM_ADJ_S # "Turciques"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag NOT = { has_government = communism } }
+		}
+		localization_key = FRLOC_TRN_NOT_COMMUNISM_ADJ_MS # "Touraniens"
 	}
 	text = {
 		trigger = { OR = { tag = TZN original_tag = TZN } }
@@ -3284,6 +3799,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			NOT = { has_government = fascism }
+		}
+		localization_key = FRLOC_ADU_ADJ_FS_NOT_FASCISM
+	}
+	text = {
+		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			has_government = fascism
+		}
+		localization_key = FRLOC_ADU_ADJ_FS_FASCISM
+	}
+	text = {
+		trigger = {
 			AND = {
 				OR = { tag = MOR tag = ALG tag = TUN tag = WES tag = LBA original_tag = MOR original_tag = ALG original_tag = TUN original_tag = WES original_tag = LBA }
 				has_cosmetic_tag = ADU
@@ -3396,6 +3925,10 @@ defined_text = {
 		localization_key = FRLOC_BOS_ADJ_FS
 	}
 	text = {
+		trigger = { OR = { tag = HRZ original_tag = HRZ } }
+		localization_key = FRLOC_HRZ_ADJ_FS
+	}
+	text = {
 		trigger = { OR = { tag = BOT original_tag = BOT } }
 		localization_key = FRLOC_BOT_ADJ_FS
 	}
@@ -3406,6 +3939,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = BRD original_tag = BRD } }
 		localization_key = FRLOC_BRD_ADJ_FS
+	}
+	text = {
+		trigger = { OR = { tag = BRI original_tag = BRI } }
+		localization_key = FRLOC_BRI_ADJ_FS
 	}
 	text = {
 		trigger = {
@@ -3422,8 +3959,18 @@ defined_text = {
 		localization_key = FRLOC_BRM_ADJ_FS_NEUTRALITY
 	}
 	text = {
-		trigger = { OR = { tag = BUL original_tag = BUL } }
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			NOT = { has_country_flag = BUL_ubf_flag }
+		}
 		localization_key = FRLOC_BUL_ADJ_S
+	}
+	text = {
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			has_country_flag = BUL_ubf_flag
+		}
+		localization_key = FRLOC_UBF_united_balkan_federation_ADJ_S
 	}
 	text = {
 		trigger = { OR = { tag = CAM original_tag = CAM } }
@@ -3514,6 +4061,10 @@ defined_text = {
 		localization_key = FRLOC_COL_ADJ_FS
 	}
 	text = {
+		trigger = { OR = { tag = COR original_tag = COR } }
+		localization_key = FRLOC_COR_ADJ_S
+	}
+	text = {
 		trigger = { OR = { tag = COS original_tag = COS } }
 		localization_key = FRLOC_COS_ADJ_FS
 	}
@@ -3539,8 +4090,12 @@ defined_text = {
 		localization_key = FRLOC_CRC_ADJ_FS_COMMUNISM
 	}
 	text = {
-		trigger = { OR = { tag = CRO original_tag = CRO } }
+		trigger = { OR = { tag = CRO original_tag = CRO } NOT = { has_cosmetic_tag = dalmatia } }
 		localization_key = FRLOC_CRO_ADJ_S
+	}
+	text = {
+		trigger = { has_cosmetic_tag = dalmatia }
+		localization_key = FRLOC_dalmatia_ADJ_S
 	}
 	text = {
 		trigger = { OR = { tag = CSA original_tag = CSA } }
@@ -3728,12 +4283,21 @@ defined_text = {
 		localization_key = FRLOC_FIN_ADJ_FS
 	}
 	text = {
-		trigger = { OR = { tag = FRA original_tag = FRA } NOT = { has_cosmetic_tag = EUR_UNIFIED } NOT = { has_cosmetic_tag = FRA_FREE } }
+		trigger = {
+			OR = { tag = FRA original_tag = FRA }
+			NOT = { has_cosmetic_tag = EUR_UNIFIED }
+			NOT = { has_cosmetic_tag = FRA_FREE }
+			NOT = { has_cosmetic_tag = FRANCO_SPAIN }
+		}
 		localization_key = FRLOC_FRA_ADJ_FS
 	}
 	text = {
 		trigger = { OR = { tag = FRA original_tag = FRA } has_cosmetic_tag = FRA_FREE }
 		localization_key = FRLOC_FRA_FREE_democratic_ADJ_FS
+	}
+	text = {
+		trigger = { OR = { tag = FRA original_tag = FRA } has_cosmetic_tag = FRANCO_SPAIN }
+		localization_key = FRLOC_FRANCO_SPAIN_ADJ_FS
 	}
 	text = {
 		trigger = {
@@ -3806,8 +4370,102 @@ defined_text = {
 		localization_key = FRLOC_GNB_ADJ_FS
 	}
 	text = {
-		trigger = { OR = { tag = GRE original_tag = GRE } }
-		localization_key = FRLOC_GRE_ADJ_FS
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = fascism has_government = democratic }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_ADJ_S # "Hellènes"/"hellénique" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			OR = { has_government = fascism has_government = democratic }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_ADJ_S # "Hellènes"/"hellénique" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = neutrality has_government = communism }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_FS # "Grecs" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_cosmetic_tag = GRE_stalinist
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_FS # "Grecs" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_country_flag = GRE_dem_monarchy_flag has_cosmetic_tag = GRE_byz_republic }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_FS # "Grecs" (3)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			has_government = neutrality
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_FS # "Grecs" (4)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = communism }
+		}
+		localization_key = FRLOC_GRE_GREATER_GREECE_communism_ADJ_FS # "Égéens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_byz_unified_flag
+		}
+		localization_key = FRLOC_BYZ_UNIFIED_ADJ_FS # "Byzantins"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			has_government = communism
+		}
+		localization_key = FRLOC_MAE_COMMUNISM_ADJ_S # "Argéades"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			OR = { has_government = fascism has_government = democratic has_government = neutrality }
+		}
+		localization_key = FRLOC_MAE_NOT_COMMUNISM_ADJ_FS # "Macédoniens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = {
+				has_country_flag = GRE_com_independent_flag
+				AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = democratic }
+			}
+		}
+		localization_key = FRLOC_GRE_com_independent_communism_ADJ_S # "Hellènes" (Hellade)
 	}
 	text = {
 		trigger = { OR = { tag = GUA original_tag = GUA } }
@@ -3908,8 +4566,12 @@ defined_text = {
 		localization_key = FRLOC_HON_ADJ_FS
 	}
 	text = {
-		trigger = { OR = { tag = HUN original_tag = HUN } }
+		trigger = { OR = { tag = HUN original_tag = HUN } NOT = { has_cosmetic_tag = vojvodina } }
 		localization_key = FRLOC_HUN_ADJ_FS
+	}
+	text = {
+		trigger = { has_cosmetic_tag = vojvodina }
+		localization_key = FRLOC_vojvodina_ADJ_FS
 	}
 	text = {
 		trigger = { OR = { tag = ICE original_tag = ICE } }
@@ -3984,6 +4646,18 @@ defined_text = {
 		localization_key = FRLOC_KOR_ADJ_FS
 	}
 	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } NOT = { has_government = fascism } }
+		localization_key = FRLOC_KOS_ADJ_FS
+	}
+	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } has_government = fascism }
+		localization_key = FRLOC_KOS_FASCISM_ADJ_FS
+	}
+	text = {
+		trigger = { OR = { tag = KUR original_tag = KUR } }
+		localization_key = FRLOC_KUR_ADJ_S
+	}
+	text = {
 		trigger = { OR = { tag = KUW original_tag = KUW } }
 		localization_key = FRLOC_KUW_ADJ_FS
 	}
@@ -4023,8 +4697,18 @@ defined_text = {
 		localization_key = FRLOC_LUX_ADJ_FS
 	}
 	text = {
-		trigger = { OR = { tag = MAC original_tag = MAC } }
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MAC_ADJ_FS
+	}
+	text = {
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MAC_YUG_subject_ADJ_FS
 	}
 	text = {
 		trigger = {
@@ -4105,8 +4789,18 @@ defined_text = {
 		localization_key = FRLOC_MLW_ADJ_S
 	}
 	text = {
-		trigger = { OR = { tag = MNT original_tag = MNT } }
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MNT_ADJ_FS
+	}
+	text = {
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MNT_YUG_subject_ADJ_FS
 	}
 	text = {
 		trigger = {
@@ -4253,6 +4947,20 @@ defined_text = {
 		localization_key = FRLOC_NZL_ADJ_FS_ENG_imperialist_new_zealand_fascism_neutrality
 	}
 	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			has_government = neutrality
+		}
+		localization_key = OCC_neutrality_ADJ
+	}
+	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			NOT = { has_government = neutrality }
+		}
+		localization_key = FRLOC_OCC_ADJ_FS
+	}
+	text = {
 		trigger = { OR = { tag = OMA original_tag = OMA } }
 		localization_key = FRLOC_OMA_ADJ_FS
 	}
@@ -4356,8 +5064,16 @@ defined_text = {
 		localization_key = FRLOC_RCG_ADJ_FS
 	}
 	text = {
-		trigger = { OR = { tag = ROM original_tag = ROM } }
+		trigger = { OR = { tag = ROM original_tag = ROM } NOT = { has_cosmetic_tag = transylvania } }
 		localization_key = FRLOC_ROM_ADJ_FS
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania NOT = { has_government = communism } }
+		localization_key = FRLOC_transylvania_ADJ_FS
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania has_government = communism }
+		localization_key = FRLOC_transylvania_communism_ADJ_S
 	}
 	text = {
 		trigger = { OR = { tag = RWA original_tag = RWA } }
@@ -4434,7 +5150,7 @@ defined_text = {
 		localization_key = FRLOC_SEN_ADJ_S_NEUTRALITY
 	}
 	text = {
-		trigger = { OR = { tag = SER original_tag = SER } }
+		trigger = { OR = { tag = SER original_tag = SER has_cosmetic_tag = SER } }
 		localization_key = FRLOC_SER_ADJ_S
 	}
 	text = {
@@ -4472,8 +5188,18 @@ defined_text = {
 		localization_key = FRLOC_SLO_ADJ_S
 	}
 	text = {
-		trigger = { OR = { tag = SLV original_tag = SLV } }
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_SLV_ADJ_S
+	}
+	text = {
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_SLV_YUG_subject_ADJ_FS
 	}
 	text = {
 		trigger = {
@@ -4520,7 +5246,10 @@ defined_text = {
 		localization_key = SOV_russia_communism_ADJ_s_frloc
 	}
 	text = {
-		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } }
+		trigger = {
+			OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD }
+			NOT = { has_cosmetic_tag = SPR_castille }
+		}
 		localization_key = FRLOC_SPR_ADJ_FS
 	}
 	text = {
@@ -4530,6 +5259,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } has_cosmetic_tag = SPC_global_defense_council has_government = neutrality }
 		localization_key = FRLOC_SPR_SPA_SPB_SPC_SPD_global_defense_council_ADJ_S
+	}
+	text = {
+		trigger = { OR = { tag = SPR original_tag = SPR } has_cosmetic_tag = SPR_castille }
+		localization_key = FRLOC_SPR_castille_ADJ_FS
 	}
 	text = {
 		trigger = {
@@ -4647,6 +5380,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			OR = { NOT = { has_government = communism } is_subject_of = YUG }
+		}
+		localization_key = FRLOC_TRA_ADJ_FS
+	}
+	text = {
+		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			AND = { has_government = communism NOT = { is_subject_of = YUG } }
+		}
+		localization_key = FRLOC_TRA_communism_ADJ_S
+	}
+	text = {
+		trigger = {
 			OR = { tag = TRI original_tag = TRI }
 			NOT = { has_government = fascism has_government = communism }
 		}
@@ -4683,8 +5430,33 @@ defined_text = {
 		localization_key = FRLOC_TUN_ADJ_S_FASCISM
 	}
 	text = {
-		trigger = { OR = { tag = TUR original_tag = TUR } }
-		localization_key = FRLOC_TUR_ADJ_FS
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			NOT = { has_country_flag = TUR_trn_flag }
+			NOT = { has_country_flag = TUR_PROVISIONARY_flag }
+		}
+		localization_key = FRLOC_TUR_ADJ_FS # "Turcs"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			has_country_flag = TUR_PROVISIONARY_flag
+		}
+		localization_key = FRLOC_TUR_PROVISIONARY_ADJ_FS # "Anatoliens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag has_government = communism }
+		}
+		localization_key = FRLOC_TRN_COMMUNISM_ADJ_S # "Turciques"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag NOT = { has_government = communism } }
+		}
+		localization_key = FRLOC_TRN_NOT_COMMUNISM_ADJ_FS # "Touraniens"
 	}
 	text = {
 		trigger = { OR = { tag = TZN original_tag = TZN } }
@@ -4924,6 +5696,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			NOT = { has_government = fascism }
+		}
+		localization_key = FRLOC_ADU_ADJ_MP_NOT_FASCISM
+	}
+	text = {
+		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			has_government = fascism
+		}
+		localization_key = FRLOC_ADU_ADJ_MP_FASCISM
+	}
+	text = {
+		trigger = {
 			AND = {
 				OR = { tag = MOR tag = ALG tag = TUN tag = WES tag = LBA original_tag = MOR original_tag = ALG original_tag = TUN original_tag = WES original_tag = LBA }
 				has_cosmetic_tag = ADU
@@ -5036,6 +5822,10 @@ defined_text = {
 		localization_key = FRLOC_BOS_ADJ_MP
 	}
 	text = {
+		trigger = { OR = { tag = HRZ original_tag = HRZ } }
+		localization_key = FRLOC_HRZ_ADJ_MP
+	}
+	text = {
 		trigger = { OR = { tag = BOT original_tag = BOT } }
 		localization_key = FRLOC_BOT_ADJ_M
 	}
@@ -5046,6 +5836,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = BRD original_tag = BRD } }
 		localization_key = FRLOC_BRD_ADJ_M
+	}
+	text = {
+		trigger = { OR = { tag = BRI original_tag = BRI } }
+		localization_key = FRLOC_BRI_ADJ_MP
 	}
 	text = {
 		trigger = {
@@ -5062,8 +5856,18 @@ defined_text = {
 		localization_key = FRLOC_BRM_ADJ_M_NEUTRALITY
 	}
 	text = {
-		trigger = { OR = { tag = BUL original_tag = BUL } }
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			NOT = { has_country_flag = BUL_ubf_flag }
+		}
 		localization_key = FRLOC_BUL_ADJ_P
+	}
+	text = {
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			has_country_flag = BUL_ubf_flag
+		}
+		localization_key = FRLOC_UBF_united_balkan_federation_ADJ_P
 	}
 	text = {
 		trigger = { OR = { tag = CAM original_tag = CAM } }
@@ -5154,6 +5958,10 @@ defined_text = {
 		localization_key = FRLOC_COL_ADJ_MP
 	}
 	text = {
+		trigger = { OR = { tag = COR original_tag = COR } }
+		localization_key = FRLOC_COR_ADJ_P
+	}
+	text = {
 		trigger = { OR = { tag = COS original_tag = COS } }
 		localization_key = FRLOC_COS_ADJ_MP
 	}
@@ -5179,8 +5987,12 @@ defined_text = {
 		localization_key = FRLOC_CRC_ADJ_MP_COMMUNISM
 	}
 	text = {
-		trigger = { OR = { tag = CRO original_tag = CRO } }
+		trigger = { OR = { tag = CRO original_tag = CRO } NOT = { has_cosmetic_tag = dalmatia } }
 		localization_key = FRLOC_CRO_ADJ_P
+	}
+	text = {
+		trigger = { has_cosmetic_tag = dalmatia }
+		localization_key = FRLOC_dalmatia_ADJ_P
 	}
 	text = {
 		trigger = { OR = { tag = CSA original_tag = CSA } }
@@ -5368,12 +6180,21 @@ defined_text = {
 		localization_key = FRLOC_FIN_ADJ_M
 	}
 	text = {
-		trigger = { OR = { tag = FRA original_tag = FRA } NOT = { has_cosmetic_tag = EUR_UNIFIED } NOT = { has_cosmetic_tag = FRA_FREE } }
+		trigger = {
+			OR = { tag = FRA original_tag = FRA }
+			NOT = { has_cosmetic_tag = EUR_UNIFIED }
+			NOT = { has_cosmetic_tag = FRA_FREE }
+			NOT = { has_cosmetic_tag = FRANCO_SPAIN }
+		}
 		localization_key = FRLOC_FRA_ADJ_M
 	}
 	text = {
 		trigger = { OR = { tag = FRA original_tag = FRA } has_cosmetic_tag = FRA_FREE }
 		localization_key = FRLOC_FRA_FREE_democratic_ADJ_MP
+	}
+	text = {
+		trigger = { OR = { tag = FRA original_tag = FRA } has_cosmetic_tag = FRANCO_SPAIN }
+		localization_key = FRLOC_FRANCO_SPAIN_ADJ_MP
 	}
 	text = {
 		trigger = {
@@ -5446,8 +6267,102 @@ defined_text = {
 		localization_key = FRLOC_GNB_ADJ_MP
 	}
 	text = {
-		trigger = { OR = { tag = GRE original_tag = GRE } }
-		localization_key = FRLOC_GRE_ADJ_MP
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = fascism has_government = democratic }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_ADJ_P # "Hellènes"/"hellénique" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			OR = { has_government = fascism has_government = democratic }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_ADJ_P # "Hellènes"/"hellénique" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = neutrality has_government = communism }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_MP # "Grecs" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_cosmetic_tag = GRE_stalinist
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_MP # "Grecs" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_country_flag = GRE_dem_monarchy_flag has_cosmetic_tag = GRE_byz_republic }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_MP # "Grecs" (3)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			has_government = neutrality
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_MP # "Grecs" (4)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = communism }
+		}
+		localization_key = FRLOC_GRE_GREATER_GREECE_communism_ADJ_MP # "Égéens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_byz_unified_flag
+		}
+		localization_key = FRLOC_BYZ_UNIFIED_ADJ_MP # "Byzantins"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			has_government = communism
+		}
+		localization_key = FRLOC_MAE_COMMUNISM_ADJ_P # "Argéades"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			OR = { has_government = fascism has_government = democratic has_government = neutrality }
+		}
+		localization_key = FRLOC_MAE_NOT_COMMUNISM_ADJ_MP # "Macédoniens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = {
+				has_country_flag = GRE_com_independent_flag
+				AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = democratic }
+			}
+		}
+		localization_key = FRLOC_GRE_com_independent_communism_ADJ_P # "Hellènes" (Hellade)
 	}
 	text = {
 		trigger = { OR = { tag = GUA original_tag = GUA } }
@@ -5548,8 +6463,12 @@ defined_text = {
 		localization_key = FRLOC_HON_ADJ_MP
 	}
 	text = {
-		trigger = { OR = { tag = HUN original_tag = HUN } }
+		trigger = { OR = { tag = HUN original_tag = HUN } NOT = { has_cosmetic_tag = vojvodina } }
 		localization_key = FRLOC_HUN_ADJ_M
+	}
+	text = {
+		trigger = { has_cosmetic_tag = vojvodina }
+		localization_key = FRLOC_vojvodina_ADJ_MP
 	}
 	text = {
 		trigger = { OR = { tag = ICE original_tag = ICE } }
@@ -5624,6 +6543,18 @@ defined_text = {
 		localization_key = FRLOC_KOR_ADJ_MP
 	}
 	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } NOT = { has_government = fascism } }
+		localization_key = FRLOC_KOS_ADJ_MP
+	}
+	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } has_government = fascism }
+		localization_key = FRLOC_KOS_FASCISM_ADJ_MP
+	}
+	text = {
+		trigger = { OR = { tag = KUR original_tag = KUR } }
+		localization_key = FRLOC_KUR_ADJ_P
+	}
+	text = {
 		trigger = { OR = { tag = KUW original_tag = KUW } }
 		localization_key = FRLOC_KUW_ADJ_MP
 	}
@@ -5663,8 +6594,18 @@ defined_text = {
 		localization_key = FRLOC_LUX_ADJ_M
 	}
 	text = {
-		trigger = { OR = { tag = MAC original_tag = MAC } }
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MAC_ADJ_MP
+	}
+	text = {
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MAC_YUG_subject_ADJ_MP
 	}
 	text = {
 		trigger = {
@@ -5745,8 +6686,18 @@ defined_text = {
 		localization_key = FRLOC_MLW_ADJ_P
 	}
 	text = {
-		trigger = { OR = { tag = MNT original_tag = MNT } }
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MNT_ADJ_MP
+	}
+	text = {
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MNT_YUG_subject_ADJ_MP
 	}
 	text = {
 		trigger = {
@@ -5893,6 +6844,20 @@ defined_text = {
 		localization_key = FRLOC_NZL_ADJ_M_ENG_imperialist_new_zealand_fascism_neutrality
 	}
 	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			has_government = neutrality
+		}
+		localization_key = FRLOC_OCC_neutrality_ADJ_MP
+	}
+	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			NOT = { has_government = neutrality }
+		}
+		localization_key = FRLOC_OCC_ADJ_MP
+	}
+	text = {
 		trigger = { OR = { tag = OMA original_tag = OMA } }
 		localization_key = FRLOC_OMA_ADJ_M
 	}
@@ -5996,8 +6961,16 @@ defined_text = {
 		localization_key = FRLOC_RCG_ADJ_M
 	}
 	text = {
-		trigger = { OR = { tag = ROM original_tag = ROM } }
+		trigger = { OR = { tag = ROM original_tag = ROM } NOT = { has_cosmetic_tag = transylvania } }
 		localization_key = FRLOC_ROM_ADJ_MP
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania NOT = { has_government = communism } }
+		localization_key = FRLOC_transylvania_ADJ_MP
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania has_government = communism }
+		localization_key = FRLOC_transylvania_communism_ADJ_P
 	}
 	text = {
 		trigger = { OR = { tag = RWA original_tag = RWA } }
@@ -6074,7 +7047,7 @@ defined_text = {
 		localization_key = FRLOC_SEN_ADJ_P_NEUTRALITY
 	}
 	text = {
-		trigger = { OR = { tag = SER original_tag = SER } }
+		trigger = { OR = { tag = SER original_tag = SER has_cosmetic_tag = SER } }
 		localization_key = FRLOC_SER_ADJ_P
 	}
 	text = {
@@ -6112,8 +7085,18 @@ defined_text = {
 		localization_key = FRLOC_SLO_ADJ_P
 	}
 	text = {
-		trigger = { OR = { tag = SLV original_tag = SLV } }
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_SLV_ADJ_P
+	}
+	text = {
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_SLV_YUG_subject_ADJ_MP
 	}
 	text = {
 		trigger = {
@@ -6160,7 +7143,10 @@ defined_text = {
 		localization_key = SOV_russia_communism_ADJ_p_frloc
 	}
 	text = {
-		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } }
+		trigger = {
+			OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD }
+			NOT = { has_cosmetic_tag = SPR_castille }
+		}
 		localization_key = FRLOC_SPR_ADJ_MP
 	}
 	text = {
@@ -6170,6 +7156,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } has_cosmetic_tag = SPC_global_defense_council has_government = neutrality }
 		localization_key = FRLOC_SPR_SPA_SPB_SPC_SPD_global_defense_council_ADJ_P
+	}
+	text = {
+		trigger = { OR = { tag = SPR original_tag = SPR } has_cosmetic_tag = SPR_castille }
+		localization_key = FRLOC_SPR_castille_ADJ_MP
 	}
 	text = {
 		trigger = {
@@ -6287,6 +7277,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			OR = { NOT = { has_government = communism } is_subject_of = YUG }
+		}
+		localization_key = FRLOC_TRA_ADJ_MP
+	}
+	text = {
+		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			AND = { has_government = communism NOT = { is_subject_of = YUG } }
+		}
+		localization_key = FRLOC_TRA_communism_ADJ_P
+	}
+	text = {
+		trigger = {
 			OR = { tag = TRI original_tag = TRI }
 			NOT = { has_government = fascism has_government = communism }
 		}
@@ -6323,8 +7327,33 @@ defined_text = {
 		localization_key = FRLOC_TUN_ADJ_P_FASCISM
 	}
 	text = {
-		trigger = { OR = { tag = TUR original_tag = TUR } }
-		localization_key = FRLOC_TUR_ADJ_MP
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			NOT = { has_country_flag = TUR_trn_flag }
+			NOT = { has_country_flag = TUR_PROVISIONARY_flag }
+		}
+		localization_key = FRLOC_TUR_ADJ_MP # "Turcs"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			has_country_flag = TUR_PROVISIONARY_flag
+		}
+		localization_key = FRLOC_TUR_PROVISIONARY_ADJ_MP # "Anatoliens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag has_government = communism }
+		}
+		localization_key = FRLOC_TRN_COMMUNISM_ADJ_P # "Turciques"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag NOT = { has_government = communism } }
+		}
+		localization_key = FRLOC_TRN_NOT_COMMUNISM_ADJ_MP # "Touraniens"
 	}
 	text = {
 		trigger = { OR = { tag = TZN original_tag = TZN } }
@@ -6564,6 +7593,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			NOT = { has_government = fascism }
+		}
+		localization_key = FRLOC_ADU_ADJ_FP_NOT_FASCISM
+	}
+	text = {
+		trigger = {
+			OR = { tag = ADU original_tag = ADU }
+			has_government = fascism
+		}
+		localization_key = FRLOC_ADU_ADJ_FP_FASCISM
+	}
+	text = {
+		trigger = {
 			AND = {
 				OR = { tag = MOR tag = ALG tag = TUN tag = WES tag = LBA original_tag = MOR original_tag = ALG original_tag = TUN original_tag = WES original_tag = LBA }
 				has_cosmetic_tag = ADU
@@ -6676,6 +7719,10 @@ defined_text = {
 		localization_key = FRLOC_BOS_ADJ_FP
 	}
 	text = {
+		trigger = { OR = { tag = HRZ original_tag = HRZ } }
+		localization_key = FRLOC_HRZ_ADJ_FP
+	}
+	text = {
 		trigger = { OR = { tag = BOT original_tag = BOT } }
 		localization_key = FRLOC_BOT_ADJ_FP
 	}
@@ -6686,6 +7733,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = BRD original_tag = BRD } }
 		localization_key = FRLOC_BRD_ADJ_FP
+	}
+	text = {
+		trigger = { OR = { tag = BRI original_tag = BRI } }
+		localization_key = FRLOC_BRI_ADJ_FP
 	}
 	text = {
 		trigger = {
@@ -6702,8 +7753,18 @@ defined_text = {
 		localization_key = FRLOC_BRM_ADJ_FP_NEUTRALITY
 	}
 	text = {
-		trigger = { OR = { tag = BUL original_tag = BUL } }
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			NOT = { has_country_flag = BUL_ubf_flag }
+		}
 		localization_key = FRLOC_BUL_ADJ_P
+	}
+	text = {
+		trigger = {
+			OR = { tag = BUL original_tag = BUL }
+			has_country_flag = BUL_ubf_flag
+		}
+		localization_key = FRLOC_UBF_united_balkan_federation_ADJ_P
 	}
 	text = {
 		trigger = { OR = { tag = CAM original_tag = CAM } }
@@ -6794,6 +7855,10 @@ defined_text = {
 		localization_key = FRLOC_COL_ADJ_FP
 	}
 	text = {
+		trigger = { OR = { tag = COR original_tag = COR } }
+		localization_key = FRLOC_COR_ADJ_P
+	}
+	text = {
 		trigger = { OR = { tag = COS original_tag = COS } }
 		localization_key = FRLOC_COS_ADJ_FP
 	}
@@ -6819,8 +7884,12 @@ defined_text = {
 		localization_key = FRLOC_CRC_ADJ_FP_COMMUNISM
 	}
 	text = {
-		trigger = { OR = { tag = CRO original_tag = CRO } }
+		trigger = { OR = { tag = CRO original_tag = CRO } NOT = { has_cosmetic_tag = dalmatia } }
 		localization_key = FRLOC_CRO_ADJ_P
+	}
+	text = {
+		trigger = { has_cosmetic_tag = dalmatia }
+		localization_key = FRLOC_dalmatia_ADJ_P
 	}
 	text = {
 		trigger = { OR = { tag = CSA original_tag = CSA } }
@@ -7008,12 +8077,21 @@ defined_text = {
 		localization_key = FRLOC_FIN_ADJ_FP
 	}
 	text = {
-		trigger = { OR = { tag = FRA original_tag = FRA } NOT = { has_cosmetic_tag = EUR_UNIFIED } NOT = { has_cosmetic_tag = FRA_FREE } }
+		trigger = {
+			OR = { tag = FRA original_tag = FRA }
+			NOT = { has_cosmetic_tag = EUR_UNIFIED }
+			NOT = { has_cosmetic_tag = FRA_FREE }
+			NOT = { has_cosmetic_tag = FRANCO_SPAIN }
+		}
 		localization_key = FRLOC_FRA_ADJ_FP
 	}
 	text = {
 		trigger = { OR = { tag = FRA original_tag = FRA } has_cosmetic_tag = FRA_FREE }
 		localization_key = FRLOC_FRA_FREE_democratic_ADJ_FP
+	}
+	text = {
+		trigger = { OR = { tag = FRA original_tag = FRA } has_cosmetic_tag = FRANCO_SPAIN }
+		localization_key = FRLOC_FRANCO_SPAIN_ADJ_FP
 	}
 	text = {
 		trigger = {
@@ -7086,8 +8164,102 @@ defined_text = {
 		localization_key = FRLOC_GNB_ADJ_FP
 	}
 	text = {
-		trigger = { OR = { tag = GRE original_tag = GRE } }
-		localization_key = FRLOC_GRE_ADJ_FP
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = fascism has_government = democratic }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_ADJ_P # "Hellènes"/"hellénique" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			OR = { has_government = fascism has_government = democratic }
+		}
+		localization_key = FRLOC_GRE_FASCISM_DEMOCRATIC_ADJ_P # "Hellènes"/"hellénique" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_government = neutrality has_government = communism }
+			NOT = { has_country_flag = GRE_mae_flag }
+			NOT = { has_country_flag = GRE_com_independent_flag }
+			NOT = { has_cosmetic_tag = GRE_stalinist }
+			NOT = { has_country_flag = GRE_dem_monarchy_flag }
+			NOT = { has_country_flag = GRE_GREATER_GREECE_flag }
+			NOT = { has_cosmetic_tag = GRE_byz_republic }
+			NOT = { has_country_flag = GRE_byz_unified_flag }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_FP # "Grecs" (1)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_cosmetic_tag = GRE_stalinist
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_FP # "Grecs" (2)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = { has_country_flag = GRE_dem_monarchy_flag has_cosmetic_tag = GRE_byz_republic }
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_FP # "Grecs" (3)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_GREATER_GREECE_flag
+			has_government = neutrality
+		}
+		localization_key = FRLOC_GRE_NEUTRALITY_COMMUNISM_ADJ_FP # "Grecs" (4)
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = communism }
+		}
+		localization_key = FRLOC_GRE_GREATER_GREECE_communism_ADJ_FP # "Égéens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_byz_unified_flag
+		}
+		localization_key = FRLOC_BYZ_UNIFIED_ADJ_FP # "Byzantins"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			has_government = communism
+		}
+		localization_key = FRLOC_MAE_COMMUNISM_ADJ_P # "Argéades"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			has_country_flag = GRE_mae_flag
+			OR = { has_government = fascism has_government = democratic has_government = neutrality }
+		}
+		localization_key = FRLOC_MAE_NOT_COMMUNISM_ADJ_FP # "Macédoniens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = GRE original_tag = GRE }
+			OR = {
+				has_country_flag = GRE_com_independent_flag
+				AND = { has_country_flag = GRE_GREATER_GREECE_flag has_government = democratic }
+			}
+		}
+		localization_key = FRLOC_GRE_com_independent_communism_ADJ_P # "Hellènes" (Hellade)
 	}
 	text = {
 		trigger = { OR = { tag = GUA original_tag = GUA } }
@@ -7188,8 +8360,12 @@ defined_text = {
 		localization_key = FRLOC_HON_ADJ_FP
 	}
 	text = {
-		trigger = { OR = { tag = HUN original_tag = HUN } }
+		trigger = { OR = { tag = HUN original_tag = HUN } NOT = { has_cosmetic_tag = vojvodina } }
 		localization_key = FRLOC_HUN_ADJ_FP
+	}
+	text = {
+		trigger = { has_cosmetic_tag = vojvodina }
+		localization_key = FRLOC_vojvodina_ADJ_FP
 	}
 	text = {
 		trigger = { OR = { tag = ICE original_tag = ICE } }
@@ -7264,6 +8440,18 @@ defined_text = {
 		localization_key = FRLOC_KOR_ADJ_FP
 	}
 	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } NOT = { has_government = fascism } }
+		localization_key = FRLOC_KOS_ADJ_FP
+	}
+	text = {
+		trigger = { OR = { tag = KOS original_tag = KOS } has_government = fascism }
+		localization_key = FRLOC_KOS_FASCISM_ADJ_FP
+	}
+	text = {
+		trigger = { OR = { tag = KUR original_tag = KUR } }
+		localization_key = FRLOC_KUR_ADJ_P
+	}
+	text = {
 		trigger = { OR = { tag = KUW original_tag = KUW } }
 		localization_key = FRLOC_KUW_ADJ_FP
 	}
@@ -7303,8 +8491,18 @@ defined_text = {
 		localization_key = FRLOC_LUX_ADJ_FP
 	}
 	text = {
-		trigger = { OR = { tag = MAC original_tag = MAC } }
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MAC_ADJ_FP
+	}
+	text = {
+		trigger = {
+			OR = { tag = MAC original_tag = MAC }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MAC_YUG_subject_ADJ_FP
 	}
 	text = {
 		trigger = {
@@ -7385,8 +8583,18 @@ defined_text = {
 		localization_key = FRLOC_MLW_ADJ_P
 	}
 	text = {
-		trigger = { OR = { tag = MNT original_tag = MNT } }
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_MNT_ADJ_FP
+	}
+	text = {
+		trigger = {
+			OR = { tag = MNT original_tag = MNT }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_MNT_YUG_subject_ADJ_FP
 	}
 	text = {
 		trigger = {
@@ -7533,6 +8741,20 @@ defined_text = {
 		localization_key = FRLOC_NZL_ADJ_FP_ENG_imperialist_new_zealand_fascism_neutrality
 	}
 	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			has_government = neutrality
+		}
+		localization_key = FRLOC_OCC_neutrality_ADJ_FP
+	}
+	text = {
+		trigger = {
+			OR = { tag = OCC original_tag = OCC }
+			NOT = { has_government = neutrality }
+		}
+		localization_key = FRLOC_OCC_ADJ_FP
+	}
+	text = {
 		trigger = { OR = { tag = OMA original_tag = OMA } }
 		localization_key = FRLOC_OMA_ADJ_FP
 	}
@@ -7636,8 +8858,16 @@ defined_text = {
 		localization_key = FRLOC_RCG_ADJ_FP
 	}
 	text = {
-		trigger = { OR = { tag = ROM original_tag = ROM } }
+		trigger = { OR = { tag = ROM original_tag = ROM } NOT = { has_cosmetic_tag = transylvania } }
 		localization_key = FRLOC_ROM_ADJ_FP
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania NOT = { has_government = communism } }
+		localization_key = FRLOC_transylvania_ADJ_FP
+	}
+	text = {
+		trigger = { has_cosmetic_tag = transylvania has_government = communism }
+		localization_key = FRLOC_transylvania_communism_ADJ_P
 	}
 	text = {
 		trigger = { OR = { tag = RWA original_tag = RWA } }
@@ -7714,7 +8944,7 @@ defined_text = {
 		localization_key = FRLOC_SEN_ADJ_P_NEUTRALITY
 	}
 	text = {
-		trigger = { OR = { tag = SER original_tag = SER } }
+		trigger = { OR = { tag = SER original_tag = SER has_cosmetic_tag = SER } }
 		localization_key = FRLOC_SER_ADJ_P
 	}
 	text = {
@@ -7752,8 +8982,18 @@ defined_text = {
 		localization_key = FRLOC_SLO_ADJ_P
 	}
 	text = {
-		trigger = { OR = { tag = SLV original_tag = SLV } }
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			NOT = { is_subject_of = YUG }
+		}
 		localization_key = FRLOC_SLV_ADJ_P
+	}
+	text = {
+		trigger = {
+			OR = { tag = SLV original_tag = SLV }
+			is_subject_of = YUG
+		}
+		localization_key = FRLOC_SLV_YUG_subject_ADJ_FP
 	}
 	text = {
 		trigger = {
@@ -7800,7 +9040,10 @@ defined_text = {
 		localization_key = SOV_russia_communism_ADJ_p_frloc
 	}
 	text = {
-		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } }
+		trigger = {
+			OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD }
+			NOT = { has_cosmetic_tag = SPR_castille }
+		}
 		localization_key = FRLOC_SPR_ADJ_FP
 	}
 	text = {
@@ -7810,6 +9053,10 @@ defined_text = {
 	text = {
 		trigger = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD original_tag = SPR original_tag = SPA original_tag = SPB original_tag = SPC original_tag = SPD } has_cosmetic_tag = SPC_global_defense_council has_government = neutrality }
 		localization_key = FRLOC_SPR_SPA_SPB_SPC_SPD_global_defense_council_ADJ_P
+	}
+	text = {
+		trigger = { OR = { tag = SPR original_tag = SPR } has_cosmetic_tag = SPR_castille }
+		localization_key = FRLOC_SPR_castille_ADJ_FP
 	}
 	text = {
 		trigger = {
@@ -7927,6 +9174,20 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			OR = { NOT = { has_government = communism } is_subject_of = YUG }
+		}
+		localization_key = FRLOC_TRA_ADJ_FP
+	}
+	text = {
+		trigger = {
+			OR = { tag = TRA original_tag = TRA }
+			AND = { has_government = communism NOT = { is_subject_of = YUG } }
+		}
+		localization_key = FRLOC_TRA_communism_ADJ_P
+	}
+	text = {
+		trigger = {
 			OR = { tag = TRI original_tag = TRI }
 			NOT = { has_government = fascism has_government = communism }
 		}
@@ -7963,8 +9224,33 @@ defined_text = {
 		localization_key = FRLOC_TUN_ADJ_P_FASCISM
 	}
 	text = {
-		trigger = { OR = { tag = TUR original_tag = TUR } }
-		localization_key = FRLOC_TUR_ADJ_FP
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			NOT = { has_country_flag = TUR_trn_flag }
+			NOT = { has_country_flag = TUR_PROVISIONARY_flag }
+		}
+		localization_key = FRLOC_TUR_ADJ_FP # "Turcs"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			has_country_flag = TUR_PROVISIONARY_flag
+		}
+		localization_key = FRLOC_TUR_PROVISIONARY_ADJ_FS # "Anatoliens"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag has_government = communism }
+		}
+		localization_key = FRLOC_TRN_COMMUNISM_ADJ_P # "Turciques"
+	}
+	text = {
+		trigger = {
+			OR = { tag = TUR original_tag = TUR }
+			AND = { has_country_flag = TUR_trn_flag NOT = { has_government = communism } }
+		}
+		localization_key = FRLOC_TRN_NOT_COMMUNISM_ADJ_FP # "Touraniens"
 	}
 	text = {
 		trigger = { OR = { tag = TZN original_tag = TZN } }
@@ -9497,7 +10783,9 @@ defined_text = {
 	### Usual Nation Names, Dynamic Countries & Collaboration Governements
 	text = {
 		trigger = {
-			frloc_tags_sg_masc_cons_le_du_au_01a = yes		frloc_collabgov_sg_masc_cons_au_01 = yes
+			OR = {
+				frloc_tags_sg_masc_cons_le_du_au_01a = yes		frloc_collabgov_sg_masc_cons_au_01 = yes
+			}
 		}
 		localization_key = FRLOC_AU
 	}
@@ -9629,7 +10917,9 @@ defined_text = {
 	### Usual Nation Names, Dynamic Countries & Collaboration Governements
 	text = {
 		trigger = {
-			frloc_tags_sg_masc_cons_le_du_au_01a = yes		frloc_collabgov_sg_masc_cons_au_01 = yes
+			OR = {
+				frloc_tags_sg_masc_cons_le_du_au_01a = yes		frloc_collabgov_sg_masc_cons_au_01 = yes
+			}
 		}
 		localization_key = FRLOC_AU_CAP
 	}
@@ -13419,6 +14709,76 @@ defined_text = {
 
 
 
+### Ex. "Japan/USA takes back their own." => "Le Japon repren[d] ce qui lui appartient. / Les États-Unis repren[nent] ce qui leur appartient." (lower case / minuscule)
+defined_text = {
+	name = GetDNentNP
+	### Cosmetic Nation Names
+	text = {
+		trigger = {
+			OR = {
+				frloc_cosmtags_sg_masc_cons_dansle_01 = yes
+				frloc_cosmtags_sg_masc_cons_au_02 = yes
+				frloc_cosmtags_sg_masc_vow_dansl_03 = yes
+				frloc_cosmtags_sg_fem_cons_dansla_de_04 = yes
+				frloc_cosmtags_sg_fem_cons_dansla_dela_05 = yes
+				frloc_cosmtags_sg_fem_cons_en_de_06 = yes
+				frloc_cosmtags_sg_fem_cons_en_dela_07 = yes
+				frloc_cosmtags_sg_fem_vow_en_d_08 = yes
+				frloc_cosmtags_sg_fem_vow_en_del_09 = yes
+				frloc_cosmtags_sg_fem_vow_dansl_del_10 = yes
+				frloc_cosmtags_sg_fem_vow_noarticle_13 = yes
+				frloc_cosmtags_sg_masc_vow_noarticle_14 = yes
+			}
+		}
+		localization_key = FRLOC_D2
+	}
+	text = {
+		trigger = {
+			OR = {
+				frloc_cosmtags_pl_masc_11 = yes
+				frloc_cosmtags_pl_fem_12 = yes
+			}
+		}
+		localization_key = FRLOC_NENT
+	}
+	### Usual Nation Names
+	text = {
+		trigger = {
+			OR = {
+				frloc_tags_sg_masc_cons_le_du_au_01a = yes		frloc_collabgov_sg_masc_cons_au_01 = yes
+				frloc_tags_sg_masc_cons_le_du_dansle_01b = yes
+				frloc_tags_sg_masc_vow_l_del_dansl_02a = yes
+				frloc_tags_sg_masc_vow_l_d_dansl_02b = yes
+				frloc_tags_sg_masc_vow_l_d_en_02c = yes		frloc_collabgov_sg_masc_vow_02 = yes
+				frloc_tags_sg_fem_cons_la_de_en_03a = yes		frloc_collabgov_sg_fem_cons_en_03 = yes
+				frloc_tags_sg_fem_cons_la_dela_dansla_03b = yes
+				frloc_tags_sg_fem_cons_la_dela_en_03c = yes
+				frloc_tags_sg_fem_vow_l_d_en_04a = yes		frloc_collabgov_sg_fem_vow_04 = yes
+				frloc_tags_sg_fem_vow_l_del_dansl_04b = yes
+				frloc_tags_sg_fem_vow_l_del_en_04c = yes
+				frloc_tags_noart_sg_masc_x_de_a_07a = yes
+				frloc_tags_noart_sg_masc_x_d_a_07b = yes
+				frloc_tags_noart_sg_masc_x_d_en_07c = yes
+				frloc_tags_noart_sg_fem_x_de_a_08a = yes
+			}
+		}
+		localization_key = FRLOC_D2
+	}
+	text = {
+		trigger = {
+			OR = {
+				frloc_tags_pl_masc_les_des_dansles_05a = yes		frloc_collabgov_pl_masc_05 = yes
+				frloc_tags_pl_masc_les_des_aux_05b = yes
+				frloc_tags_pl_fem_les_des_dansles_06a = yes		frloc_collabgov_pl_fem_06 = yes
+				frloc_tags_pl_fem_les_des_aux_06b = yes
+			}
+		}
+		localization_key = FRLOC_NENT
+	}
+}
+
+
+
 ### Ex. "Even Japan/USA recognize this truth." => "Même le Japon adme[t] cette vérité. / Même les États-Unis adme[ttent] cette vérité." (lower case / minuscule)
 defined_text = {
 	name = GetTTtentNP
@@ -13557,6 +14917,74 @@ defined_text = {
 	}
 }
 
+### Ex. "Japan/USA produce..." => "Le Japon produi[t]... / Les États-Unis produi[sent]..." (lower case / minuscule)
+defined_text = {
+	name = GetTSentNP
+	### Cosmetic Nation Names
+	text = {
+		trigger = {
+			OR = {
+				frloc_cosmtags_sg_masc_cons_dansle_01 = yes
+				frloc_cosmtags_sg_masc_cons_au_02 = yes
+				frloc_cosmtags_sg_masc_vow_dansl_03 = yes
+				frloc_cosmtags_sg_fem_cons_dansla_de_04 = yes
+				frloc_cosmtags_sg_fem_cons_dansla_dela_05 = yes
+				frloc_cosmtags_sg_fem_cons_en_de_06 = yes
+				frloc_cosmtags_sg_fem_cons_en_dela_07 = yes
+				frloc_cosmtags_sg_fem_vow_en_d_08 = yes
+				frloc_cosmtags_sg_fem_vow_en_del_09 = yes
+				frloc_cosmtags_sg_fem_vow_dansl_del_10 = yes
+				frloc_cosmtags_sg_fem_vow_noarticle_13 = yes
+				frloc_cosmtags_sg_masc_vow_noarticle_14 = yes
+			}
+		}
+		localization_key = FRLOC_T
+	}
+	text = {
+		trigger = {
+			OR = {
+				frloc_cosmtags_pl_masc_11 = yes
+				frloc_cosmtags_pl_fem_12 = yes
+			}
+		}
+		localization_key = FRLOC_SENT
+	}
+	### Usual Nation Names
+	text = {
+		trigger = {
+			OR = {
+				frloc_tags_sg_masc_cons_le_du_au_01a = yes		frloc_collabgov_sg_masc_cons_au_01 = yes
+				frloc_tags_sg_masc_cons_le_du_dansle_01b = yes
+				frloc_tags_sg_masc_vow_l_del_dansl_02a = yes
+				frloc_tags_sg_masc_vow_l_d_dansl_02b = yes
+				frloc_tags_sg_masc_vow_l_d_en_02c = yes		frloc_collabgov_sg_masc_vow_02 = yes
+				frloc_tags_sg_fem_cons_la_de_en_03a = yes		frloc_collabgov_sg_fem_cons_en_03 = yes
+				frloc_tags_sg_fem_cons_la_dela_dansla_03b = yes
+				frloc_tags_sg_fem_cons_la_dela_en_03c = yes
+				frloc_tags_sg_fem_vow_l_d_en_04a = yes		frloc_collabgov_sg_fem_vow_04 = yes
+				frloc_tags_sg_fem_vow_l_del_dansl_04b = yes
+				frloc_tags_sg_fem_vow_l_del_en_04c = yes
+				frloc_tags_noart_sg_masc_x_de_a_07a = yes
+				frloc_tags_noart_sg_masc_x_d_a_07b = yes
+				frloc_tags_noart_sg_masc_x_d_en_07c = yes
+				frloc_tags_noart_sg_fem_x_de_a_08a = yes
+			}
+		}
+		localization_key = FRLOC_T
+	}
+	text = {
+		trigger = {
+			OR = {
+				frloc_tags_pl_masc_les_des_dansles_05a = yes		frloc_collabgov_pl_masc_05 = yes
+				frloc_tags_pl_masc_les_des_aux_05b = yes
+				frloc_tags_pl_fem_les_des_dansles_06a = yes		frloc_collabgov_pl_fem_06 = yes
+				frloc_tags_pl_fem_les_des_aux_06b = yes
+			}
+		}
+		localization_key = FRLOC_SENT
+	}
+}
+
 
 
 #################################
@@ -13660,6 +15088,7 @@ defined_text = {
 			OR = {
 				has_government = fascism
 				has_government = communism
+				has_government = monarchist
 			}
 		}
 		localization_key = FRLOC_DU
@@ -13682,6 +15111,7 @@ defined_text = {
 			OR = {
 				has_government = fascism
 				has_government = communism
+				has_government = monarchist
 			}
 		}
 		localization_key = FRLOC_DU_CAP
@@ -13707,6 +15137,7 @@ defined_text = {
 			OR = {
 				has_government = fascism
 				has_government = communism
+				has_government = monarchist
 			}
 		}
 		localization_key = FRLOC_AU
@@ -13729,6 +15160,7 @@ defined_text = {
 			OR = {
 				has_government = fascism
 				has_government = communism
+				has_government = monarchist
 			}
 		}
 		localization_key = FRLOC_AU_CAP
@@ -18550,6 +19982,75 @@ defined_text = {
 
 
 
+### Ex. "It's obvious [that] Adolf Hitler/Charles de Gaulle/Federal Council/Military Junta is crazy!" => "Il est évident que [cet] Adolf Hitler / [ce] Charles de Gaulle / [ce] Conseil fédéral / [cet] Imam Yahya / [cette] Junte militaire est malade !" (lower case / minuscule)
+defined_text = {
+	name = GetCeCetCetteDir
+	text = {
+		trigger = {
+			frloc_ruler_with_title_cons = yes
+		}
+		localization_key = FRLOC_CE
+	}
+	text = {
+		trigger = {
+			OR = {
+				frloc_ruler_with_title_vow = yes
+				frloc_ruler_name_male_vow = yes
+			}
+		}
+		localization_key = FRLOC_CET
+	}
+	text = {
+		trigger = {
+			OR = {
+				frloc_ruler_name_female_cons = yes
+				frloc_ruler_name_female_vow = yes
+				frloc_ruler_female_with_title_cons = yes
+			}
+		}
+		localization_key = FRLOC_CETTE
+	}
+	text = { # FALLBACK
+		trigger = {}
+		localization_key = FRLOC_CE
+	}
+}
+### Ex. "[That] Adolf Hitler/Charles de Gaulle/Federal Council/Military Junta is crazy!" => "[Cet] Adolf Hitler / [Ce] Charles de Gaulle / [Ce] Conseil fédéral / [Cet] Imam Yahya / [Cette] Junte militaire est malade !" (upper case / majuscule)
+defined_text = {
+	name = GetCeCetCetteDirCap
+	text = {
+		trigger = {
+			frloc_ruler_with_title_cons = yes
+		}
+		localization_key = FRLOC_CE_CAP
+	}
+	text = {
+		trigger = {
+			OR = {
+				frloc_ruler_with_title_vow = yes
+				frloc_ruler_name_male_vow = yes
+			}
+		}
+		localization_key = FRLOC_CET_CAP
+	}
+	text = {
+		trigger = {
+			OR = {
+				frloc_ruler_name_female_cons = yes
+				frloc_ruler_name_female_vow = yes
+				frloc_ruler_female_with_title_cons = yes
+			}
+		}
+		localization_key = FRLOC_CETTE_CAP
+	}
+	text = { # FALLBACK
+		trigger = {}
+		localization_key = FRLOC_CE_CAP
+	}
+}
+
+
+
 ### Ex. "The letter has been given [to] Adolf Hitler/Charles de Gaulle / [to the] Federal Council." => "La lettre a été remise [à] Adolf Hitler/Charles de Gaulle / [au] Conseil fédéral / [à la] Junte militaire." (lower case / minuscule)
 defined_text = {
 	name = GetAuAlaAlDir
@@ -19062,6 +20563,27 @@ defined_text = {
 
 
 
+### Ex. "The [Prime Minister]" => "Le Premi[er] Ministre / La Premi[ère] ministre" (lower case / minuscule)
+defined_text = {
+	name = GetErEreDir
+	text = {
+		trigger = {
+			OR = {
+				frloc_ruler_name_female_cons = yes
+				frloc_ruler_name_female_vow = yes
+				frloc_ruler_female_with_title_cons = yes
+			}
+		}
+		localization_key = FRLOC_ERE
+	}
+	text = { # FALLBACK
+		trigger = {}
+		localization_key = FRLOC_ER
+	}
+}
+
+
+
 ### Ex. "Please say, [what] (wo)man may do this?" => "Dites, [quel/quelle] homme/femme peut faire cela ?" (lower case / minuscule)
 defined_text = {
 	name = GetQuelQuelleDir
@@ -19161,6 +20683,27 @@ defined_text = {
 
 
 
+### Ex. "He/She's kept silent." => "Il/Elle est silenci[eux/euse] sur la question." (lower case / minuscule)
+defined_text = {
+	name = GetEuxEuseDir
+	text = {
+		trigger = {
+			OR = {
+				frloc_ruler_name_female_cons = yes
+				frloc_ruler_name_female_vow = yes
+				frloc_ruler_female_with_title_cons = yes
+			}
+		}
+		localization_key = FRLOC_EUSE
+	}
+	text = { # FALLBACK
+		trigger = {}
+		localization_key = FRLOC_EUX
+	}
+}
+
+
+
 
 ####################################
 ###   Characters / Personnages   ###
@@ -19169,7 +20712,7 @@ defined_text = {
 defined_text = {
 	name = GetIlEllePers
 	text = {
-		trigger = { is_female = no }
+		trigger = { NOT = { is_female = yes } }
 		localization_key = FRLOC_IL
 	}
 	text = {
@@ -19181,7 +20724,7 @@ defined_text = {
 defined_text = {
 	name = GetIlEllePersCap
 	text = {
-		trigger = { is_female = no }
+		trigger = { NOT = { is_female = yes } }
 		localization_key = FRLOC_IL_CAP
 	}
 	text = {
@@ -19196,7 +20739,7 @@ defined_text = {
 defined_text = {
 	name = GetLeLaFPers
 	text = {
-		trigger = { is_female = no }
+		trigger = { NOT = { is_female = yes } }
 		localization_key = FRLOC_LE
 	}
 	text = {
@@ -19208,7 +20751,7 @@ defined_text = {
 defined_text = {
 	name = GetLeLaFPersCap
 	text = {
-		trigger = { is_female = no }
+		trigger = { NOT = { is_female = yes } }
 		localization_key = FRLOC_LE_CAP
 	}
 	text = {
@@ -19223,7 +20766,7 @@ defined_text = {
 defined_text = {
 	name = GetSilSiellePers
 	text = {
-		trigger = { is_female = no }
+		trigger = { NOT = { is_female = yes } }
 		localization_key = FRLOC_SIL
 	}
 	text = {
@@ -19235,7 +20778,7 @@ defined_text = {
 defined_text = {
 	name = GetSilSiellePersCap
 	text = {
-		trigger = { is_female = no }
+		trigger = { NOT = { is_female = yes } }
 		localization_key = FRLOC_SIL_CAP
 	}
 	text = {
@@ -19250,7 +20793,7 @@ defined_text = {
 defined_text = {
 	name = GetXEPers
 	text = {
-		trigger = { is_female = no }
+		trigger = { NOT = { is_female = yes } }
 		localization_key = FRLOC_X
 	}
 	text = {
@@ -19261,11 +20804,26 @@ defined_text = {
 
 
 
+### Ex. "This is a foreign operative." => "C'est un[ø/e] agent étrang[er/ère]" (lower case / minuscule)
+defined_text = {
+	name = GetErErePers
+	text = {
+		trigger = { NOT = { is_female = yes } }
+		localization_key = FRLOC_ER
+	}
+	text = {
+		trigger = { is_female = yes }
+		localization_key = FRLOC_ERE
+	}
+}
+
+
+
 ### Ex. "He died a [hero]." => "Il est mort en [héro]./Elle est morte en [héroïne]." (lower case / minuscule)
 defined_text = {
 	name = GetHerosHeroinePers
 	text = {
-		trigger = { is_female = no }
+		trigger = { NOT = { is_female = yes } }
 		localization_key = FRLOC_HEROS
 	}
 	text = {
@@ -19292,6 +20850,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -19318,6 +20877,7 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 			}
@@ -19329,6 +20889,7 @@ defined_text = {
 			OR = {
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -19340,6 +20901,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 			}
 		}
@@ -19348,7 +20914,10 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction																																	   
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_the_south_west_pacific_initiative } } # south_west_pacific_initiative
@@ -19365,8 +20934,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
 			}
@@ -19415,6 +20987,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -19441,6 +21014,7 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 			}
@@ -19452,6 +21026,7 @@ defined_text = {
 			OR = {
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -19463,6 +21038,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 			}
 		}
@@ -19471,7 +21051,10 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction																																	   
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_the_south_west_pacific_initiative } } # south_west_pacific_initiative
@@ -19488,8 +21071,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
 			}
@@ -19541,6 +21127,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -19567,6 +21154,7 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 			}
@@ -19578,6 +21166,7 @@ defined_text = {
 			OR = {
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -19589,6 +21178,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 			}
 		}
@@ -19597,7 +21191,10 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction																																	   
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_the_south_west_pacific_initiative } } # south_west_pacific_initiative
@@ -19614,8 +21211,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
 			}
@@ -19664,6 +21264,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -19690,6 +21291,7 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 			}
@@ -19701,6 +21303,7 @@ defined_text = {
 			OR = {
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -19712,6 +21315,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 			}
 		}
@@ -19720,7 +21328,10 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_the_south_west_pacific_initiative } } # south_west_pacific_initiative
@@ -19737,8 +21348,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
 			}
@@ -19790,6 +21404,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -19816,6 +21431,7 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 			}
@@ -19827,6 +21443,7 @@ defined_text = {
 			OR = {
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -19838,6 +21455,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 			}
 		}
@@ -19846,7 +21468,10 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction																															   
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_the_south_west_pacific_initiative } } # south_west_pacific_initiative
@@ -19863,8 +21488,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
 			}
@@ -19913,6 +21541,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -19939,6 +21568,7 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 			}
@@ -19950,6 +21580,7 @@ defined_text = {
 			OR = {
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -19961,6 +21592,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 			}
 		}
@@ -19969,7 +21605,10 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction																															   
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_the_south_west_pacific_initiative } } # south_west_pacific_initiative
@@ -19986,8 +21625,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
 			}
@@ -20033,12 +21675,14 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction																																															
 				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } OR = { ITA = { has_completed_focus = ITA_italy_first } GER = { has_completed_focus = GER_demand_slovenia } } } # italy_empire_faction
 				AND = { is_in_faction_with = CHI CHI = { is_faction_leader = yes } CHI = { has_completed_focus = CHI_united_front } } # chinese_united_front
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_coalition_government } } # chinese_united_front
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -20065,7 +21709,10 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
@@ -20078,6 +21725,7 @@ defined_text = {
 			OR = {
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -20089,6 +21737,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
@@ -20106,8 +21759,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 			}
 		}
 		localization_key = FRLOC_E
@@ -20150,6 +21806,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -20176,9 +21833,13 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -20190,6 +21851,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
@@ -20207,8 +21873,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
@@ -20254,6 +21923,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -20280,9 +21950,13 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -20294,6 +21968,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
@@ -20311,8 +21990,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
@@ -20358,6 +22040,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -20384,9 +22067,13 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -20398,6 +22085,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
@@ -20415,8 +22107,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
@@ -20462,6 +22157,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -20488,9 +22184,13 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -20502,6 +22202,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
@@ -20519,8 +22224,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
@@ -20566,6 +22274,7 @@ defined_text = {
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_the_balkan_pact } } # HUN_BALKAN_FACTION
 				AND = { is_in_faction_with = HUN HUN = { is_faction_leader = yes } HUN = { has_completed_focus = HUN_alliance_with_italy } } # HUN_PACT_OF_ROME_FACTION
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_slavic_workers_congress } } # panslavic_workers_congress
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_pan_balkan_workers_congress } } # panbalkan_workers_congress
 				AND = { is_in_faction_with = ROM ROM = { is_faction_leader = yes } ROM = { has_completed_focus = ROM_the_cordon_sanitaire } } # ROM_CORDON_SANITAIRE_FACTION
 				AND = { is_in_faction_with = PRC PRC = { is_faction_leader = yes } PRC = { has_completed_focus = PRC_government_of_national_defense } } # PRC_government_of_national_defense
 				AND = { is_in_faction_with = YUN YUN = { is_faction_leader = yes } YUN = { has_completed_focus = CHI_join_the_chinese_soviet } } # CHI_the_peoples_front/YUN
@@ -20592,9 +22301,13 @@ defined_text = {
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_popular_front_bloc } } # POR_popular_front_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPA_the_latin_bloc } SPA = { has_completed_focus = SPA_the_latin_bloc } SPB = { has_completed_focus = SPA_the_latin_bloc } SPC = { has_completed_focus = SPA_the_latin_bloc } SPD = { has_completed_focus = SPA_the_latin_bloc } } } # SPA_latin_bloc
 				AND = { OR = { is_in_faction_with = SPR is_in_faction_with = SPA is_in_faction_with = SPB is_in_faction_with = SPC is_in_faction_with = SPD } OR = { SPR = { is_faction_leader = yes } SPA = { is_faction_leader = yes } SPB = { is_faction_leader = yes } SPC = { is_faction_leader = yes } SPD = { is_faction_leader = yes } } OR = { SPR = { has_completed_focus = SPR_unify_the_london_bureau } SPA = { has_completed_focus = SPR_unify_the_london_bureau } SPB = { has_completed_focus = SPR_unify_the_london_bureau } SPC = { has_completed_focus = SPR_unify_the_london_bureau } SPD = { has_completed_focus = SPR_unify_the_london_bureau } } } # SPC_international_bureau_of_revolutionary_socialist_unity
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } has_global_flag = greek_turkish_friendship } # the_smyrna_friendship_pact
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } GER = { has_idea = soviet_german_friendship } } # the_berlin_moscow_axis
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc } } # TUR_anti_bolshevik_accord
+				AND = { is_in_faction_with = ITA ITA = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_greece_and_turkey_in_the_axis } } # spazio_vitale
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } has_government = fascism FRA = { has_completed_focus = FRA_woo_italy } } # domination_francaise
 				AND = { is_in_faction_with = JAP JAP = { is_faction_leader = yes } has_government = fascism JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere } } # daitoa_kyoeiken
+				AND = { is_in_faction_with = POL POL = { is_faction_leader = yes } POL = { has_completed_focus = POL_keep_the_intermarius } } # miedzymorze_faction
 				AND = { is_in_faction_with = SWE is_in_faction_with = HUN OR = { HUN = { is_faction_leader = yes } SWE = { is_faction_leader = yes } } HUN = { has_idea = HUN_dynastic_ties } } # SWE_HUN_ALLIANCE
 				AND = { is_in_faction_with = AST AST = { is_faction_leader = yes } AST = { has_completed_focus = AST_a_deal_with_japan } } # western_pacific_sphere
 				AND = { is_in_faction_with = CAN CAN = { is_faction_leader = yes } has_government = fascism CAN = { has_completed_focus = CAN_skewer_the_eagle } } # northern_sovereignty_coalition
@@ -20606,6 +22319,11 @@ defined_text = {
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
+				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
+				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_balkan_federation_of_socialist_republics } } # BUL_balkan_federation_of_socialist_republics
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_ally_tito } } # GRE_corfu_cooperative
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # FRA_little_entente
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_strengthen_the_little_entente } } # french_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } } # french_entente_alliance
@@ -20623,8 +22341,11 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_two_countries_two_crowns } } # FRA_legitimist_faction
+				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
+				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
+				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_the_mediterranean_entente } } # TUR_covenant_of_the_mediterranean
 				# LOWER PRIORITY
 				AND = { is_in_faction_with = SOV SOV = { is_faction_leader = yes } has_government = communism } # Comintern
 				AND = { is_in_faction_with = GER GER = { is_faction_leader = yes } has_government = fascism } # Axis
@@ -21247,3 +22968,37 @@ defined_text = {
 		localization_key = FRLOC_ENG_INHAB
 	}
 }
+
+
+### From GetAlliesName in common/scripted_localization/DOD_yugo_infiltration_localisation.txt
+defined_text = {
+	name = GetAlliesName_FR
+	text = {
+		trigger = {			
+			event_target:yugoslavia_wedding_partner = { original_tag = ITA }
+		}
+		localization_key = FRLOC_FACTION_NAME_GER_fascism
+	}
+	text = {
+		trigger = {			
+			event_target:yugoslavia_wedding_partner = { original_tag = GER }
+		}
+		localization_key = FRLOC_GER_central_powers_faction
+	}
+	text = {
+		trigger = {			
+			event_target:yugoslavia_wedding_partner = { original_tag = HUN }
+		}
+		localization_key = FRLOC_GER_central_powers_faction
+	}
+	text = {
+		trigger = {			
+			event_target:yugoslavia_wedding_partner = { original_tag = SPR }
+		}
+		localization_key = FRLOC_carlist_text
+	}
+	text = {
+		localization_key = FRLOC_Allies
+	}
+}
+

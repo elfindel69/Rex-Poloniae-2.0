@@ -68,6 +68,15 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Emir Ahmad Al-Sabah"
+	picture = "gfx/leaders/Monarchs/Portrait_JBS_Al_Jaber.tga"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}
+
 #create_country_leader = {
 #	
 #	name = "Jonas Lote"

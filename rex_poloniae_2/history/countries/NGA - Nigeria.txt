@@ -76,3 +76,12 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Sultan Siddiq Abubakar III"
+	picture = "gfx/leaders/Monarchs/Siddiq_Abubakar.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}

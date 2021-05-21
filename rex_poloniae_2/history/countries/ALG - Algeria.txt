@@ -96,6 +96,16 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Mohammed Ben Aarafa"
+	picture = "gfx/leaders/Monarchs/Mohammed_Ben_Aarafa.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		nationalist_symbol 
+	}
+}
+
+create_country_leader = {
 	name = "Ahmed Ben Bella"
 	desc = ""
 	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"

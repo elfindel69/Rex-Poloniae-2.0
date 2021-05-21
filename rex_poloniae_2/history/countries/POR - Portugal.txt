@@ -281,7 +281,27 @@ if = {
 		}
 	}
 	
+	create_country_leader = {
+		name = "Dona Amélia de Portugal"
+		picture = "gfx/leaders/Monarchs/Portrait_Amelie_Portugal.tga"
+		expire = "1981.1.1"
+		ideology = paternalism
+		traits = {
+			grieving_mother
+			queen_mother
+		}
+	}
 	
+	create_country_leader = {
+		name = "Dom Duarte Nuno"
+		desc = "POLITICS_DOM_DUARTE_NUNO_DESC"
+		picture = "gfx/leaders/POR/portrait_por_duarte_nuno.dds"
+		expire = "1976.12.24"
+		ideology = paternalism
+		traits = { 
+			constitutional_monarch_minor
+		}
+	}
 	
 	create_field_marshal = {
 		name = "José Vicente de Freitas"
@@ -365,6 +385,17 @@ if = {
 		ideology = paternalism
 		traits = {
 			#
+		}
+	}
+	
+	create_country_leader = {
+		name = "Dom Duarte Nuno"
+		desc = "POLITICS_DOM_DUARTE_NUNO_DESC"
+		picture = "gfx/leaders/POR/portrait_por_duarte_nuno.dds"
+		expire = "1976.12.24"
+		ideology = paternalism
+		traits = { 
+			constitutional_monarch_minor
 		}
 	}
 	

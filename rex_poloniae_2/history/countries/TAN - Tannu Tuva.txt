@@ -84,3 +84,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Khan Yagaan Noyon"
+	picture = "gfx/leaders/Monarchs/Yagaan_noyon.tga"
+	expire = "1989.1.1"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}

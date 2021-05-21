@@ -111,6 +111,15 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "King Idris I"
+	picture = "gfx/leaders/Monarchs/Portrait_LBA_Idris_i.tga"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
 	name = "Hassan as-Senussi"
 	desc = ""
 	picture = "Portrait_Arabia_Generic_communism1.dds"

@@ -147,6 +147,16 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "King Rama VIII"
+	picture = "gfx/leaders/Monarchs/Portrait_SIA_Rama_VIII.tga"
+	expire = "1987.1.1"
+	ideology = absolutism
+	traits = {
+		inexperienced_monarch 
+	}
+}
+
 1939.1.1 = {
 	set_politics = {
 		ruling_party = fascism

@@ -493,7 +493,6 @@ GER_LTINF_01 =
 		
 	}
 }
-
 GER_MOT_01 = 
 {
 	name = "Motorized Divisions"
@@ -510,7 +509,7 @@ GER_MOT_01 =
 
 	division_types = { "motorized"  }
 
-	fallback_name = "%d. Infanterie-Division (mot)"
+	fallback_name = "%d. Infanterie-Division (mot.)"
 
 	link_numbering_with = { GER_Inf_01 }
 
@@ -997,7 +996,6 @@ GER_SS_01 =
 
 	}
 }
-
 GER_MONINF_01 = 
 {
 	name = "Monarchist Infantry Divisions"

@@ -406,7 +406,18 @@ create_country_leader = {
 	traits = {
 		#
 	}
-}	   
+}	
+
+create_country_leader = {
+	name = "Abdulmejid II"
+	desc = "POLITICS_ABDULMEJID_II_DESC"
+	picture = "GFX_portrait_tur_abdulmejid_ii"
+	expire = "1965.1.1"
+	ideology = absolutism
+	traits = {
+		gentle_scholar
+	}
+}   
 
 if = {
 	limit = { has_dlc = "Battle for the Bosporus" }

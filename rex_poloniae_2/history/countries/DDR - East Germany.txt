@@ -173,6 +173,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "King Wilhelm III"
+	desc = "POLITICS_WILHELM_III_DESC"
+	picture = "gfx/leaders/GER/r56_portrait_GER_Prince_Wilhelm.dds"
+	expire = "1965.1.1"
+	ideology = paternalism
+	traits = {
+		popular_figurehead2
+	}
+}
+
 #create_country_leader = {
 #	name = "Dennis Fredauer"
 #	desc = ""
@@ -186,7 +197,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Wilhelm Pieck"
 	desc = "POLITICS_WILHELM_PIECK_DESC"	 
-	picture = gfx/leaders/GER/Portrait_Germany_Wilhelm_Pieck.dds
+	picture = "gfx/leaders/GER/Portrait_Germany_Wilhelm_Pieck.dds"
 	expire = "1965.1.1"
 	ideology = stalinism
 	traits = {

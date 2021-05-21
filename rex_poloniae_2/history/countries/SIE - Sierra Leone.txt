@@ -76,3 +76,12 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Fula Mansa Gbanka"
+	picture = "gfx/leaders/Monarchs/Portrait_Ethiopia_Kassa_Haile_Darge.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = { 
+	}
+}

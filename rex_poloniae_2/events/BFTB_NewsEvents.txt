@@ -1206,8 +1206,7 @@ news_event = {
 			}
 		}
 	}
-}
-
+} 
 #The Greek Civil War
 news_event = {
 	id = bftb_news.301

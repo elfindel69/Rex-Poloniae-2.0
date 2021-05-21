@@ -1,0 +1,144 @@
+add_namespace = ENG_POL_faction
+
+#Poland asks to join the Allies
+country_event = {
+	id = ENG_POL_faction.1
+	title = ENG_POL_faction.1.t
+	desc = ENG_POL_faction.1.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+		
+	option = {
+		name = ENG_POL_faction.1.a
+		ENG = { add_to_faction = POL }
+		POL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+			}
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = ENG_POL_faction_news.1 }
+		}
+	}
+	option = {
+		name = ENG_POL_faction.1.b
+		ai_chance = { factor = 0 }
+		POL = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = POL_join_ENG_reject
+			}
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = ENG_POL_faction_news.2 }
+		}
+	}
+}
+
+add_namespace = ENG_POL_faction_news
+
+#Poland Joins the [From.GetFaction] (Germany)
+news_event = {
+	id = ENG_POL_faction_news.1
+	title = ENG_POL_faction_news.1.t
+	desc = ENG_POL_faction_news.1.d
+	picture = GFX_news_event_french_parade
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		POL = {
+			save_event_target_as = Poland		
+		}
+	}
+
+	#Nothing can threaten the [From.GetFaction]!
+	option = {
+		name = ENG_POL_faction_news.1.a
+		trigger = {
+			is_in_faction_with = ENG
+		}
+	}
+
+	#The new [From.GetName] looms over Europe.
+	option = {
+		name = ENG_POL_faction_news.1.b
+		trigger = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+			is_in_faction = yes
+			NOT = {
+				tag = ENG
+			}
+		}
+	}
+
+	#European diplomacy realigns along the Warsaw-Berlin Axis.
+	option = {
+		name = ENG_POL_faction_news.1.c
+		trigger = {
+			NOT = {
+				is_in_faction = yes
+			}
+		}
+	}
+
+	option = {
+		name = ENG_POL_faction_news.1.e
+		trigger = {
+			tag = ENG
+		}
+	}
+}
+
+news_event = {
+	id = ENG_POL_faction_news.2
+	title = ENG_POL_faction_news.2.t
+	desc = ENG_POL_faction_news.2.d
+	picture = GFX_news_event_french_parade
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		POL = {
+			save_event_target_as = Poland		
+		}
+	}
+
+	#How dare they!
+	option = {
+		name = ENG_POL_faction_news.2.a
+		trigger = {
+			tag = POL
+		}
+	}
+
+	#We can live with them as our enemies.
+	option = {
+		name = ENG_POL_faction_news.2.b
+		trigger = {
+			tag = ENG
+		}
+	}
+
+	#As long as they are busy fighting each other...
+	option = {
+		name = ENG_POL_faction_news.2.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = POL
+					tag = ENG
+				}
+			}
+		}
+	}
+}

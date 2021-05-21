@@ -56,6 +56,17 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Emperor Yi Un"
+	picture = "gfx/leaders/Monarchs/r56_portrait_KOR_Yi_Un.tga"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}
+			
+			
 create_country_leader = {
 	name = "Kim Il-sung"
 	desc = ""

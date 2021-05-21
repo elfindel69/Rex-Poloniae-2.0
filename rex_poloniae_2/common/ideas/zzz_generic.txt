@@ -98,10 +98,8 @@ ideas = {
 			}
 		}
 	}
-
 	# Special ones that can be applied on other countries through focus system.
 	country = {
-	
 		nationalism = {
 			
 			allowed = {
@@ -119,9 +117,9 @@ ideas = {
 			
 			modifier = {
 				fascism_drift = 0.1
+							  
 			}
 		}
-		
 		MTG_TEST_NAVAL_IDEA = { #MTG_TODO_GABRIEL: remove before shipping
 			
 			allowed = {
@@ -238,90 +236,6 @@ ideas = {
 				neutrality_acceptance = 85
 			}
 		}
-		monarchist_influence = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = monarchist
-			}
-
-			removal_cost = -1
-
-			picture = generic_pp_unity_bonus
-			
-			modifier = {
-				monarchist_drift = 0.1
-				monarchist_acceptance = 85
-			}
-		}
-		
-		monarchist_ethos_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = monarchist
-			}
-			
-			removal_cost = -1
-
-			picture = HUN_hungarian_monarchy
-	
-			modifier = {
-				monarchist_drift = +0.1
-			}
-		}
-		
-		strong_army_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = monarchist
-			}
-			
-			removal_cost = -1
-
-			picture = generic_manpower_bonus
-	
-			modifier = {
-				conscription = 0.05
-				resistance_damage_to_garrison = -0.1 
-			}
-		}
-		
-		strong_nation_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_pp_unity_bonus
-	
-			rule = {
-				can_create_factions = yes
-			}
-	
-			modifier = {
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
-			}
-		}
 		
 		soviet_german_friendship = {
 			allowed = {
@@ -371,6 +285,7 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
+							   
 				communism_drift = 0.1
 			}
 		}
@@ -651,6 +566,185 @@ ideas = {
 			}
 		}
 	
+		monarchist_influence = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchist
+			}
+
+			removal_cost = -1
+
+			picture = generic_monarchist_uprising
+			
+			modifier = {
+				monarchist_drift = 0.1
+				monarchist_acceptance = 85
+			}
+		}
+		
+		monarchist_diplomacy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchist
+			}
+
+			removal_cost = -1
+
+			picture = generic_monarchist_uprising
+			
+			modifier = {
+				monarchist_acceptance = 10
+			}
+		}
+		
+		anti_monarchist_diplomacy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchist
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				monarchist_acceptance = -20
+			}
+		}
+		
+		pro_communist_diplomacy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				monarchist_acceptance = -20
+				communism_acceptance = 20
+			}
+		}
+		
+		pro_fascist_diplomacy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				monarchist_acceptance = -20
+				fascism_acceptance = 20
+			}
+		}
+		
+		pro_democratic_diplomacy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				monarchist_acceptance = -20
+				democratic_acceptance = 20
+			}
+		}
+		
+		monarchist_ethos_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchist
+			}
+			
+			removal_cost = -1
+
+			picture = HUN_hungarian_monarchy
+	
+			modifier = {
+				monarchist_drift = +0.1
+			}
+		}
+		
+		strong_army_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchist
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = 0.05
+				resistance_damage_to_garrison = -0.1 
+			}
+		}
+		
+		strong_nation_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+	
 		neutrality_idea = {
 			
 			
@@ -680,7 +774,7 @@ ideas = {
 				monarchist_drift = +0.05
 			}
 		}
-	
+		
 		deterrence = {
 			
 			
@@ -893,6 +987,7 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = -0.2
+						   
 			}
 		}
 
@@ -931,6 +1026,7 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = -0.4
+							  
 			}
 		}
 
@@ -1181,6 +1277,12 @@ ideas = {
 				production_cost_max_ship_hull_cruiser = 6500
 				production_cost_max_ship_hull_heavy = 14000
 				production_cost_max_ship_hull_carrier = 10750
+								  
+						   
+																		  
+									
+							
+							
 			}
 		}
 	}
@@ -1189,6 +1291,8 @@ ideas = {
 		# POLITICAL	
 		
 		generic_monarchist_booster = {
+		
+			picture = generic_political_advisor_europe_1
 			
 			allowed = {
 				NOT = {
@@ -1208,7 +1312,11 @@ ideas = {
 				factor = 0
 			}
 		}
+		
 		generic_communist_revolutionary = {
+								
+  
+											   
 			
 			allowed = {
 				NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR } }
@@ -1315,7 +1423,6 @@ ideas = {
 					limit = { has_dlc = "Battle for the Bosporus" }
 					NOT = { tag = TUR tag = GRE }
 				}
-
 			}
 			
 			available = {
@@ -1348,7 +1455,7 @@ ideas = {
 				factor = 0
 			}
 		}
-		
+
 		generic_head_of_intelligence = {
 			allowed = { 
 				has_dlc = "La Resistance"
@@ -1393,7 +1500,8 @@ ideas = {
 					has_intelligence_agency = no
 					factor = 0
 				}
-			}					  
+			}
+
 		}
 	}
 		
@@ -1785,7 +1893,7 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 				}
-		   NOT = {
+				NOT = {
 					AND = {
 						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
 						has_dlc = "La Resistance"
@@ -2046,7 +2154,7 @@ ideas = {
 	high_command = {
 
 		generic_army_art = {
-			ledger = army	
+			ledger = army
 			
 			allowed = {
 				OR = { original_tag = KOR original_tag = SER original_tag = ICE original_tag = SYR original_tag = LEB original_tag = EGY original_tag = JOR original_tag = CRO original_tag = LBA original_tag = INS original_tag = MAL original_tag = AZR original_tag = UKR original_tag = GEO original_tag = ARM original_tag = VIN original_tag = CAM original_tag = MNT original_tag = LIB original_tag = LAO original_tag = PAL }
@@ -2056,7 +2164,7 @@ ideas = {
 		}
 		
 		generic_army_log = {
-			ledger = army	
+			ledger = army
 
 			allowed = {
 				OR = { original_tag = KOR original_tag = SER original_tag = ICE original_tag = SYR original_tag = LEB original_tag = EGY original_tag = JOR original_tag = CRO original_tag = LBA original_tag = INS original_tag = MAL original_tag = AZR original_tag = UKR original_tag = GEO original_tag = ARM original_tag = VIN original_tag = CAM original_tag = MNT original_tag = LIB original_tag = LAO original_tag = PAL }
@@ -2066,7 +2174,7 @@ ideas = {
 		}
 
 		generic_navy_fleet_log = {
-			ledger = navy	
+			ledger = navy
 
 			allowed = {
 				OR = { original_tag = KOR original_tag = SER original_tag = ICE original_tag = SYR original_tag = LEB original_tag = EGY original_tag = JOR original_tag = CRO original_tag = LBA original_tag = INS original_tag = MAL original_tag = AZR original_tag = UKR original_tag = GEO original_tag = ARM original_tag = VIN original_tag = CAM original_tag = MNT original_tag = LIB original_tag = LAO original_tag = PAL }
@@ -2076,7 +2184,7 @@ ideas = {
 		}
 
 		generic_air_air_combat_trainer = {
-			ledger = air   
+			ledger = air
 
 			allowed = {
 				OR = { original_tag = KOR original_tag = SER original_tag = ICE original_tag = SYR original_tag = LEB original_tag = EGY original_tag = JOR original_tag = CRO original_tag = LBA original_tag = INS original_tag = MAL original_tag = AZR original_tag = UKR original_tag = GEO original_tag = ARM original_tag = VIN original_tag = CAM original_tag = MNT original_tag = LIB original_tag = LAO original_tag = PAL }
@@ -2089,7 +2197,7 @@ ideas = {
 	theorist = {
 
 		generic_military_theorist = {
-			ledger = army	
+			ledger = army
 			
 			allowed = {
 				OR = { original_tag = KOR original_tag = SER original_tag = ICE original_tag = SYR original_tag = LEB original_tag = EGY original_tag = JOR original_tag = CRO original_tag = LBA original_tag = INS original_tag = MAL original_tag = AZR original_tag = UKR original_tag = GEO original_tag = ARM original_tag = VIN original_tag = CAM original_tag = MNT original_tag = LIB original_tag = LAO original_tag = PAL }
@@ -2103,7 +2211,7 @@ ideas = {
 		}
 	
 		generic_naval_theorist = {
-			ledger = navy	
+			ledger = navy
 			
 			allowed = {
 				OR = { original_tag = KOR original_tag = SER original_tag = ICE original_tag = SYR original_tag = LEB original_tag = EGY original_tag = JOR original_tag = CRO original_tag = LBA original_tag = INS original_tag = MAL original_tag = AZR original_tag = UKR original_tag = GEO original_tag = ARM original_tag = VIN original_tag = CAM original_tag = MNT original_tag = LIB original_tag = LAO original_tag = PAL }
@@ -2117,7 +2225,7 @@ ideas = {
 		}
 
 		generic_air_warfare_theorist = {
-			ledger = air   
+			ledger = air
 			
 			allowed = {
 				OR = { original_tag = KOR original_tag = SER original_tag = ICE original_tag = SYR original_tag = LEB original_tag = EGY original_tag = JOR original_tag = CRO original_tag = LBA original_tag = INS original_tag = MAL original_tag = AZR original_tag = UKR original_tag = GEO original_tag = ARM original_tag = VIN original_tag = CAM original_tag = MNT original_tag = LIB original_tag = LAO original_tag = PAL }

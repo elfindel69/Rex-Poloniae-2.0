@@ -49,9 +49,6 @@ ideas = {
 				generate_wargoal_tension = -0.5
 			}
 		}
-
-		
-
 		HUN_hungarian_monarchy = {
 
 			allowed_civil_war = {
@@ -142,7 +139,6 @@ ideas = {
 				stability_factor = 0.1
 			}
 		}
-
 		HUN_habsburg_restored = {
 
 			picture = HUN_hungarian_monarchy_habsburg
@@ -369,6 +365,12 @@ ideas = {
 			allowed = {
 				original_tag = HUN
 				has_dlc = "Death or Dishonor"
+			}
+
+			visible = {
+				NOT = {
+					has_cosmetic_tag = vojvodina
+				}
 			}
 			
 			available = {

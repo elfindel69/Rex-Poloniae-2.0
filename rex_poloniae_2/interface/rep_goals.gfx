@@ -1,0 +1,6 @@
+spriteTypes = {	
+	SpriteType = { 
+		name = "monarchist"
+		texturefile = "gfx/interface/goals/ideologies/monarchist.dds"
+	}
+}

@@ -274,12 +274,37 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Yuan Keding"
+	picture = "gfx/leaders/Monarchs/Yuan_Keding_China.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+		imperial_sanction warrior_code
+	}
+}
+
+create_country_leader = {
+	name = "Prince Chung"
+	picture = "gfx/leaders/Monarchs/Portrait_CHI_Price_Chung.tga"
+	expire = "1987.1.1"
+	ideology = monarchism
+	traits = {
+		regent
+	}
+}
+
 add_opinion_modifier = { target = PRC modifier = hostile_status }
 
 create_field_marshal = {
 	name = "Tu Yu-ming"
 	gfx = "GFX_portrait_chi_du_yuming"
-	traits = { defensive_doctrine trait_cautious armor_officer harsh_leader }
+	traits = { 
+		defensive_doctrine
+		trait_cautious
+		armor_officer
+		harsh_leader
+	}
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4
@@ -290,7 +315,12 @@ create_field_marshal = {
 create_field_marshal = {
 	name = "Hsueh Yueh"
 	gfx = "GFX_portrait_chi_xue_yue"
-	traits = { offensive_doctrine trait_reckless brilliant_strategist war_hero }
+	traits = { 
+		offensive_doctrine 
+		trait_reckless 
+		brilliant_strategist 
+		war_hero 
+	}
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3

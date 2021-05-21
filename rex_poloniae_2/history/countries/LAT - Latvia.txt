@@ -162,7 +162,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Aksels Priede"
 	desc = ""
-	picture = "portrait_europe_generic_6.dds"
+	picture = "gfx/leaders/Europe/portrait_europe_generic_6.dds"
 	expire = "1965.1.1"
 	ideology = paternalism
 	traits = {
@@ -179,6 +179,15 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
+}
+
+create_country_leader = {
+	name = "Martins Penikis"
+	picture = "gfx/leaders/Monarchs/Portrait_LAT_Martins_Penikis.tga"
+	ideology = absolutism
+	traits = {
+		#
+	}
 }
 
 ### VARIANTS ###

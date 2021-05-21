@@ -86,3 +86,12 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "King Tribhuvan I"
+	picture = "gfx/leaders/Monarchs/Portrait_NEP_Tribhuvan_I.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = { 
+	}
+}

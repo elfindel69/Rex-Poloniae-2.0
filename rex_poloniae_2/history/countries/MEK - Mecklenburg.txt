@@ -143,6 +143,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Friedrich Franz of Mecklenburg-Schwerin"
+	desc = "POLITICS_FRIEDRICH_FRANZ_OF_MECKLENBURG-SCHWERIN_DESC"
+	picture = "gfx/leaders/Monarchs/Portrait_friedrich_franz.tga"
+	expire = "1965.1.1"
+	ideology = monarchism
+	traits = {
+		fascist_sympathies
+	}
+	id = 501 #Neutral Franz
+}
 
 #create_country_leader = {
 #	name = "Dennis Fredauer"

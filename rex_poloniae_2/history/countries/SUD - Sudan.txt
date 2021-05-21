@@ -75,3 +75,13 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Adam walad al-Jayli"
+	picture = "gfx/leaders/Monarchs/Portrait_Generic_Africa_despotism_2.tga"
+	expire = "1981.1.1"
+	ideology = absolutism
+	traits = {
+	}
+}
+				

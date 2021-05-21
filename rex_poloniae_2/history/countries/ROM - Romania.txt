@@ -291,6 +291,19 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "King Carol II"
+	desc = "POLITICS_CAROL_II_DESC"
+	picture = "gfx/leaders/Monarchs/Portrait_romania_Carol_II.tga"
+	expire = "1989.1.1"
+	ideology = monarchism
+	traits = {
+		hedonist
+	}
+}
+
+
 1936.01.01 = {
 	
 	set_politics = {
@@ -373,6 +386,17 @@ create_country_leader = {
 			#
 		}
 	}
+	
+	create_country_leader = {
+	name = "King Carol II"
+	desc = "POLITICS_CAROL_II_DESC"
+	picture = "gfx/leaders/Monarchs/Portrait_romania_Carol_II.tga"
+	expire = "1989.1.1"
+	ideology = monarchism
+	traits = {
+		hedonist
+	}
+}
 }
 
 1939.1.1 = {
