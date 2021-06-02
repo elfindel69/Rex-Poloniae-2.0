@@ -1,7 +1,7 @@
 
 music = {
 	name = "POL_main"
-	file = "FuneralMarch.ogg"
+	file = "Chopin-Polonez_A-dur-Greiss.ogg"
 	volume = 1.1
 }
 
@@ -15,6 +15,12 @@ music = {
 	name = "POL_peace1"
 	file = "Prince_Jozef_Poniatowski.ogg"
 	volume = 1.0
+}
+
+music = {
+	name = "POL_peace2s"
+	file = "FuneralMarch.ogg"
+	volume = 1.1
 }
 
 music = {

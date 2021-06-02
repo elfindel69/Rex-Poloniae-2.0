@@ -3,6 +3,39 @@ music_station = "HPL_radio"
 music = {
 	song = "POL_main"
 	chance = {
+		factor = 1.45
+		modifier = {
+			factor = 0
+			NOT = {
+				tag = POL
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+		modifier = {
+			factor = 0
+			date > 1940.01.01
+		}
+		modifier = {
+			factor = 1.5
+			date < 1937.09.02
+		}
+		modifier = {
+			factor = 0.5
+			date > 1938.01.01
+		}
+		modifier = {
+			factor = 2
+			has_government = monarchist
+		}
+	}
+}
+
+music = {
+	song = "POL_peace2"
+	chance = {
 		factor = 1.5
 		modifier = {
 			factor = 0
