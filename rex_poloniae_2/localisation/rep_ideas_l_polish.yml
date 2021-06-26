@@ -1,14 +1,16 @@
 ﻿l_polish:
  ITA_monarchism_focus:0 "Naród i król!"
  
- FRA_monarchism_focus:0 "Niech żyje Król!"
- FRA_king_rules_focus:0 "królewska bezpośrednia kontrola"
+ FRA_national_integralism:0 "Narodowy Integralizm"
+ FRA_camelots:0 "Camelots du Roi"
+ FRA_decentralised_state:0 "Państwo Zdecentralizowane"
+ 
  
  SOV_democracy_focus:0 "Wzrost demokracji"
  SOV_democracy_prop_focus:0 "Demokratyczna propaganda"
  
  POL_monarchism_focus:0 "Niech żyje Król!"
- POL_king_rules_focus:0 "królewska bezpośrednia kontrola"
+ POL_king_rules_focus:0 "Królewska Bezpośrednia Kontrola"
  
  RUS_liberty_ethos_focus:0 "Wzrost wolności"
  RUS_neutrality_idea:0 "Polityka zagraniczna neutralna"
@@ -19,7 +21,15 @@
  UKR_monarchism_focus:0 "Król dla Ukrainy?"
  
  generic_monarchist_booster:0 "Monarchistyczny doradca"
+ monarchist_booster:0 "Wzrost Monarchii"
  POL_generic_monarchist_booster:0 "Paweł Nowak"
+ RA_generic_monarchist_booster:0 "Lionel Chevalier"
+ GER_generic_monarchist_booster:0 "Björn Hengstler"
+ USA_generic_monarchist_booster:0 "Ewan Chambers"
+ ENG_generic_monarchist_booster:0 "Seth Stevens"
+ SOV_generic_monarchist_booster:0 "Dmitriy Koptsev"
+ ITA_generic_monarchist_booster:0 "Gianmaria Menna"
+ CHI_generic_monarchist_booster:0 "Kong Gang"
  
  monarchist_influence:0 "Wpływ monarchistów"
  monarchist_influence_desc:0 "Zewnętrzny nacisk pcha nasz kraj w stronę monarchizmu i innych państw o zbliżonej ideologii."
@@ -49,3 +59,40 @@
  
  POL_exiled_royal_family:0 "Polska Rodzina królewska wygnana"
  POL_confiscated_royal_wealth:0 "Konfiskata królewskiego majątku"
+ 
+ GER_exiled_royal_family:0 "Niemecka Rodzina królewska wygnana"
+ GER_confiscated_royal_wealth:0 "Konfiskata królewskiego majątku"
+ 
+ GER_long_live_the_kaiserreich:0 "Niech żyje Kaiserreich"
+ GER_long_live_the_kaiserreich2:0 "Niech żyje Kaiserreich"
+ GER_boost_the_economy:0 "Pobudzić gospodarkę"
+ GER_a_new_constitution:0 "Przygotować nową konstytucję"
+ GER_relegalize_communism_idea:0 "Zalegalizować komunizm"
+ GER_world_revolution_idea:0 "Dom światowej rewolucji"
+ GER_progress_cult_idea:0 "Kult Postępu"
+ GER_establish_stasi_idea:0 "Założenie Stasi"
+ GER_recruit_grenztruppen_idea:0 "Rekrutacja Grenztruppen"
+ GER_rehabilitate_military_idea:0 "Rehabilitowane Wojsko"
+ GER_establish_NVA_idea:0 "Założenie Nationale Volksarmee"
+ GER_production_effort_idea:0 "Wysiłek Industrializacji"
+ GER_collectivize_industry_idea:0 "Przemysł Skolektywizowany"
+ GER_abwehr_contacts:0 "Kontakty z [ROOT.GetAgency]"
+ 
+ generic_dogvisor:0 "Ron z Yorku"
+ generic_dogvisor_desc:0 "Wspaniały Ron z Yorku, władca psów"
+ stability_boost:0 "Wzmacniacz stabilności"
+ 
+ generic_catvisor:0 "Potter von Miau"
+ generic_catvisor_desc:0 "Wspaniały Potter von Miau, władca kotów"
+ daily_pp_boost:0 "Codzienny wzrost PP"
+ 
+ generic_neutrality_booster:0 "Autorytarny Baron Biznesu"
+ neutrality_booster:0 "Wzrost Autorytaryzmu" 
+ POL_generic_neutrality_booster: "Jan Kowalski"
+ FRA_generic_neutrality_booster:0 "Paulin Baume"
+ GER_generic_neutrality_booster:0 "Luca Stanger"
+ USA_generic_neutrality_booster:0 "Bradley Clark"
+ ENG_generic_neutrality_booster:0 "Christopher Kelly"
+ SOV_generic_neutrality_booster:0 "Leonid Novichkov"
+ ITA_generic_neutrality_booster:0 "Casimiro Rodi"
+ CHI_generic_neutrality_booster:0 "Zhang Zhelan" 

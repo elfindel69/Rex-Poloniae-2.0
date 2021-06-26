@@ -1545,7 +1545,7 @@ focus_tree = {
 		
 		x = 29
 		y = 0
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1858,6 +1858,7 @@ focus_tree = {
 				NOT = { has_war_with = POL }
 			}
 		}
+		
 		x = 0
 		y = 1
 		relative_position_id = POL_seek_accommodation_with_france
@@ -1868,6 +1869,13 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
+		
+		bypass = {
+			FRA = {
+				is_in_faction_with = POL
+			}
+		
+		}
 
 		completion_reward = {
 			add_opinion_modifier = { target = FRA modifier = POL_seek_accommodation_with_france }

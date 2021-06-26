@@ -2625,7 +2625,6 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		available = {
 			is_puppet = no
-			has_government = fascism
 		}
 		x = 25
 		y = 0
@@ -3174,7 +3173,6 @@ focus_tree = {
 		prerequisite = { focus = GER_anschluss }
 		available = { 
 			is_puppet = no
-			has_government = fascism
 		}
 		x = 1
 		y = 1
@@ -3689,7 +3687,6 @@ focus_tree = {
 		will_lead_to_war_with = FRA
 		available = {
 			is_puppet = no
-			has_government = fascism
 			has_army_manpower = { size > 749999 } #80 div		
 			NOT = {
 				AND = {
@@ -4837,7 +4834,6 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_weserubung }
 
 		available = {
-			has_government = fascism
 			country_exists = DEN
 			NOT = {
 				has_war_with = DEN
@@ -4909,7 +4905,6 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = GER_denmark_friend }
 		available = {
-			has_government = fascism
 			NOT = { has_war_with = NOR }
 			NOR = {
 				custom_trigger_tooltip = {
@@ -4985,7 +4980,6 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = GER_denmark_friend }
 		available = {
-			has_government = fascism
 			NOT = { has_war_with = HOL }
 			HOL = {
 				custom_trigger_tooltip = {
@@ -5055,7 +5049,6 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = GER_norway_friend }
 		available = {
-			has_government = fascism
 			NOT = { has_war_with = SWE }
 			SWE = {
 				custom_trigger_tooltip = {
@@ -5663,87 +5656,62 @@ focus_tree = {
 		}
 	}
 	
+	##########################
+	####  POLITICAL FOCUS ####
+	##########################
+	
 	focus = {
-		id = GER_secure_the_new_state
-		icon = GFX_focus_generic_support_the_left_right
-		available = {
-			is_puppet = no
-			has_war = no
-			NOT = {
-				any_country = {
-					original_tag = GER
-					has_government = fascism
-				}
-			}
-		}
-		x = 47
+		id = GER_political_sphere
+		icon = GFX_goal_generic_focus_generic_political
+		cost = 1.00
+		x = 55
 		y = 0
-		cost = 10
 		ai_will_do = {
-			factor = 7
-		}
-		
-		completion_reward = {
-			effect_tooltip = {
-					GER_remove_mefo_bills = yes
-				}
-			42 = { set_demilitarized_zone = no }
-			51 = { set_demilitarized_zone = no }
-			add_stability = 0.1
-			add_political_power = 120
-			add_timed_idea = {
-				idea = GER_clamp_down_on_fascism
-				days = 720
+				factor = 75
 			}
-		}
+		completion_reward = {
+				add_political_power = 25
+			}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
-		id = GER_revive_the_kaiserreich
+		id = GER_long_live_the_kaiserreich
 		icon = GFX_focus_ger_revive_kaiserreich
-		prerequisite = { focus = GER_secure_the_new_state }
-		mutually_exclusive = { focus = GER_reestablish_free_elections }
-		bypass = {
-			has_country_flag = GER_mackensen_dead
-			NOT = { has_government = democratic }
-		}
+		prerequisite = { focus = GER_political_sphere }
+		mutually_exclusive = { focus = GER_a_new_constitution focus = GER_relegalize_communism}
 		available = {
 			is_puppet = no
 		}
-		x = -1
+		x = -8
 		y = 1
-		relative_position_id = GER_secure_the_new_state
+		relative_position_id = GER_political_sphere
 		cost = 10
 		ai_will_do = {
 			factor = 3
 		}
 		
 		completion_reward = {
-			add_ideas = GER_revive_the_kaiserreich
-			custom_effect_tooltip = GER_revive_the_kaiserreich_tt
-			hidden_effect = { set_cosmetic_tag = GER_german_empire }
-			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
-			set_rule = { can_send_volunteers = yes }
-			add_named_threat = { threat = 5 name = GER_revive_the_kaiserreich }
+			add_ideas = GER_long_live_the_kaiserreich
 		}
 	}
 
 	focus = {
-		id = GER_rebuild_the_nation
+		id = GER_boost_the_economy
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = GER_revive_the_kaiserreich focus = GER_reestablish_free_elections }
+		prerequisite = { focus = GER_long_live_the_kaiserreich focus = GER_a_new_constitution }
 		available = {
 		}
 		x = 1
 		y = 1
-		relative_position_id = GER_revive_the_kaiserreich
+		relative_position_id = GER_long_live_the_kaiserreich
 		cost = 10
 		ai_will_do = {
 			factor = 9
 		}
 		
 		completion_reward = {
-			add_timed_idea = { idea = GER_rebuild_the_nation days = 365 }
+			add_timed_idea = { idea = GER_boost_the_economy days = 365 }
 			add_ideas = GER_national_revitalization
 		}
 	}
@@ -5751,12 +5719,12 @@ focus_tree = {
 	focus = {
 		id = GER_fan_the_prussian_militarism
 		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = GER_rebuild_the_nation }
+		prerequisite = { focus = GER_boost_the_economy }
 		available = {
 		}
 		x = -1
 		y = 1
-		relative_position_id = GER_rebuild_the_nation
+		relative_position_id = GER_boost_the_economy
 		cost = 5
 		ai_will_do = {
 			factor = 8
@@ -5799,14 +5767,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_a_new_and_better_germany
+		id = GER_a_better_germany
 		icon = GFX_goal_generic_construction
-		prerequisite = { focus = GER_rebuild_the_nation }
+		prerequisite = { focus = GER_boost_the_economy }
 		available = {
 		}
 		x = 1
 		y = 1
-		relative_position_id = GER_rebuild_the_nation
+		relative_position_id = GER_boost_the_economy
 		cost = 5
 		ai_will_do = {
 			factor = 8
@@ -5852,7 +5820,7 @@ focus_tree = {
 		id = GER_bulwark_against_bolshevism
 		icon = GFX_focus_ger_bulwark_against_bolshevism
 		prerequisite = { focus = GER_fan_the_prussian_militarism }
-		prerequisite = { focus = GER_a_new_and_better_germany }
+		prerequisite = { focus = GER_a_better_germany }
 		available = {
 			is_puppet = no
 		}
@@ -5876,7 +5844,7 @@ focus_tree = {
 	focus = {
 		id = GER_focus_on_the_true_enemy
 		icon = GFX_goal_generic_occupy_states_coastal
-		prerequisite = { focus = GER_revive_the_kaiserreich }
+		prerequisite = { focus = GER_long_live_the_kaiserreich }
 		prerequisite = { focus = GER_naval_effort }
 		mutually_exclusive = { focus = GER_expatriate_the_communists }
 		available = {
@@ -5884,7 +5852,7 @@ focus_tree = {
 		}
 		x = -6
 		y = 1
-		relative_position_id = GER_revive_the_kaiserreich
+		relative_position_id = GER_long_live_the_kaiserreich
 		cost = 10
 		ai_will_do = {
 			factor = 3
@@ -5894,8 +5862,8 @@ focus_tree = {
 			add_war_support = 0.05
 			add_named_threat = { threat = 5 name = GER_focus_on_the_true_enemy }
 			swap_ideas = {
-				remove_idea = GER_revive_the_kaiserreich
-				add_idea = GER_revive_the_kaiserreich2
+				remove_idea = GER_long_live_the_kaiserreich
+				add_idea = GER_long_live_the_kaiserreich2
 			}
 		}
 	}
@@ -6663,7 +6631,7 @@ focus_tree = {
 	focus = {
 		id = GER_expatriate_the_communists
 		icon = GFX_goal_anti_comintern_pact
-		prerequisite = { focus = GER_revive_the_kaiserreich }
+		prerequisite = { focus = GER_long_live_the_kaiserreich }
 		mutually_exclusive = { focus = GER_focus_on_the_true_enemy }
 		available = {
 			is_puppet = no
@@ -6672,7 +6640,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		x = -4
 		y = 1
-		relative_position_id = GER_revive_the_kaiserreich
+		relative_position_id = GER_long_live_the_kaiserreich
 		cost = 10
 		ai_will_do = {
 			factor = 0.5
@@ -6885,7 +6853,7 @@ focus_tree = {
 	focus = {
 		id = GER_see_to_the_eastern_front
 		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = GER_revive_the_kaiserreich }
+		prerequisite = { focus = GER_long_live_the_kaiserreich }
 		available = { 
 			is_puppet = no
 			has_full_control_of_state = 5
@@ -6893,7 +6861,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		x = -2
 		y = 1
-		relative_position_id = GER_revive_the_kaiserreich
+		relative_position_id = GER_long_live_the_kaiserreich
 		cost = 10
 		ai_will_do = {
 			factor = 5
@@ -7370,17 +7338,17 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_reestablish_free_elections
+		id = GER_a_new_constitution
 		icon = GFX_goal_support_democracy
-		prerequisite = { focus = GER_secure_the_new_state }
-		mutually_exclusive = { focus = GER_revive_the_kaiserreich }
+		prerequisite = { focus = GER_political_sphere }
+		mutually_exclusive = { focus = GER_long_live_the_kaiserreich focus = GER_relegalize_communism}
 		available = {
 			is_puppet = no
 		}
 		cancel_if_invalid = yes
-		x = 1
+		x = -6
 		y = 1
-		relative_position_id = GER_secure_the_new_state
+		relative_position_id = GER_political_sphere
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -7388,17 +7356,16 @@ focus_tree = {
 		
 		completion_reward = {
 			add_timed_idea = {
-				idea = GER_reestablish_free_elections
+				idea = GER_a_new_constitution
 				days = 720
 			}
-			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 		}
 	}
 
 	focus = {
 		id = GER_the_monarchy_compromise
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		prerequisite = { focus = GER_reestablish_free_elections }
+		prerequisite = { focus = GER_a_new_constitution }
 		available = {
 			is_puppet = no
 			democratic > 0.4
@@ -7406,7 +7373,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		x = 2
 		y = 1
-		relative_position_id = GER_reestablish_free_elections
+		relative_position_id = GER_a_new_constitution
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -8644,5 +8611,300 @@ focus_tree = {
 				}
 			}
 		}
+	}
+	
+	focus = {
+		id = GER_relegalize_communism
+		icon = GFX_goal_ger_kpd
+		cost = 10.00
+		prerequisite = {
+			focus = GER_political_sphere
+		}
+		mutually_exclusive = {
+			focus = GER_long_live_the_kaiserreich focus = GER_a_new_constitution
+		}
+		x = 7
+		y = 1
+		relative_position_id = GER_political_sphere
+		ai_will_do = {
+			factor = 50
+		}
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_relegalize_communism_idea
+				days = 730
+			}
+		}
+
+	}
+	focus = {
+		id = GER_world_revolution
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = GER_relegalize_communism
+		}
+		mutually_exclusive = {
+			focus = GER_alliance_with_soviets
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_relegalize_communism
+		ai_will_do = {
+				factor = 10
+			}
+		completion_reward = {
+			set_rule = {
+					can_create_factions = yes
+				}
+			set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			add_ideas = GER_world_revolution_idea
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+	}
+	focus = {
+		id = GER_alliance_with_soviets
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10.00
+		prerequisite = {
+			focus = GER_relegalize_communism
+		}
+		mutually_exclusive = {
+			focus = GER_world_revolution
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_relegalize_communism
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_puppet = no
+			SOV = {
+				NOT = {
+						has_war_with = GER
+					}
+				is_puppet = no
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+						is_faction_leader = yes
+					}
+				custom_effect_tooltip = ger_sov_buddies_tooltip_2
+			}
+			custom_effect_tooltip = ger_sov_buddies_tooltip
+			add_ideas = soviet_german_friendship
+			SOV = {
+				add_opinion_modifier = {
+						target = GER
+						modifier = ger_sov_alliance_focus
+					}
+				add_ideas = soviet_german_friendship
+				country_event = germany.89
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+	}
+	focus = {
+		id = GER_the_fate_of_the_royal_family
+		prerequisite = {
+			focus = GER_world_revolution
+			focus = GER_alliance_with_soviets
+		}
+		available = {
+			has_government = communism
+		}
+		icon = GFX_focus_rom_abdicate
+		x = 1
+		y = 1
+		relative_position_id = GER_world_revolution
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		completion_reward = {
+			add_political_power = 60
+			country_event = { id = GER_royals_events.1 }
+		}
+	}
+	focus = {
+		id = GER_establish_stasi
+		icon = GFX_goal_generic_secret_police
+		cost = 10.00
+		prerequisite = {
+			focus = GER_the_fate_of_the_royal_family
+		}
+		x = -2
+		y = 1
+		relative_position_id = GER_the_fate_of_the_royal_family
+			ai_will_do = {
+					factor = 10
+				}
+		completion_reward = {
+			add_ideas = GER_establish_stasi_idea
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				add_ideas = GER_abwehr_contacts
+			}
+							
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ESPIONAGE }
+	}
+	focus = {
+		id = GER_rehabilitate_military
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = GER_the_fate_of_the_royal_family
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_the_fate_of_the_royal_family
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = GER_rehabilitate_military_idea
+		}
+
+	}
+	focus = {
+		id = GER_production_effort
+		icon = GFX_focus_GRE_red_economy
+		cost = 10.00
+		prerequisite = {
+			focus = GER_the_fate_of_the_royal_family
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_the_fate_of_the_royal_family
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = GER_production_effort_idea
+		}
+
+	}
+	focus = {
+		id = GER_recruit_grenztruppen
+		icon = GFX_goal_focus_communist_army
+		cost = 10.00
+		prerequisite = {
+			focus = GER_establish_stasi
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_establish_stasi
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = GER_recruit_grenztruppen_idea
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+	}
+	focus = {
+		id = GER_establish_NVA
+		icon = GFX_goal_ger_nva
+		cost = 10.00
+		prerequisite = {
+			focus = GER_rehabilitate_military
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_rehabilitate_military
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = GER_establish_NVA_idea
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+	}
+	focus = {
+		id = GER_collectivize_industry
+		icon = GFX_goal_generic_commie_investments
+		cost = 10.00
+		prerequisite = {
+			focus = GER_production_effort
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_production_effort
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = GER_collectivize_industry_idea
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GER_soviet_scientists
+		icon = GFX_goal_research_silver_cooperation
+		cost = 10.00
+		prerequisite = {
+			focus = GER_recruit_grenztruppen
+		}
+		prerequisite = {
+			focus = GER_establish_NVA
+		}
+		prerequisite = {
+			focus = GER_collectivize_industry
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_recruit_grenztruppen
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+	}
+	focus = {
+		id = GER_progress_cult
+		icon = gfx_socialist_science
+		cost = 10.00
+		prerequisite = {
+			focus = GER_recruit_grenztruppen
+		}
+		prerequisite = {
+			focus = GER_establish_NVA
+		}
+		prerequisite = {
+			focus = GER_collectivize_industry
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_establish_NVA
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = GER_progress_cult_idea
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 }

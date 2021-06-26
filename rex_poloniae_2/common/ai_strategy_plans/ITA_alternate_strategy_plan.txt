@@ -4,7 +4,7 @@ ITA_alternate_plan_1 = {
 
 	enable = {
 		original_tag = ITA
-		GER = { has_completed_focus = GER_secure_the_new_state }
+		GER = { has_completed_focus = GER_political_sphere }
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = DEFAULT
@@ -12,7 +12,7 @@ ITA_alternate_plan_1 = {
 	}
 	abort = {
 		OR = {
-			GER = { has_completed_focus = GER_reestablish_free_elections }
+			GER = { has_completed_focus = GER_a_new_constitution }
 			GER = { has_completed_focus = GER_expatriate_the_communists }
 			GER = { has_completed_focus = GER_assassinate_mussolini }
 		}
@@ -160,7 +160,7 @@ ITA_alternate_plan_3 = {
 
 	enable = {
 		original_tag = ITA
-		GER = { has_completed_focus = GER_reestablish_free_elections }
+		GER = { has_completed_focus = GER_a_new_constitution }
 		has_game_rule = {
 			rule = ITA_ai_behavior
 			option = DEFAULT
@@ -238,7 +238,7 @@ ITA_alternate_plan_4 = {
 			option = DEFAULT
 		}
 		OR = {
-			GER = { has_completed_focus = GER_reestablish_free_elections }
+			GER = { has_completed_focus = GER_a_new_constitution }
 			GER = { has_completed_focus = GER_expatriate_the_communists }
 		}
 	}

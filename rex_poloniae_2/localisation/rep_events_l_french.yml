@@ -153,6 +153,27 @@
  POL_royals_news_events.2.b:0 "Ces socialistes n'ont décidément\naucun respect pour la vie humaine !"
  POL_royals_news_events.2.c:0 "Ils ont eu ce qu'ils méritaient"
  
+ GER_royals_events.1.t:0 "Le sort de la famille royale"
+ GER_royals_events.1.d:0 "Le Kaiser et sa famille sont assignés à résidence dans le luxueux Palais Royal, il est temps de discuter de leur sort."
+ GER_royals_events.1.a:0 "Exilons-la en Angleterre!"
+ GER_royals_events.1.b:0 "Elle doit être jugée et condamnée."
+ 
+ GER_royals_events.2.t:0 "Exil de la famille royale allemande"
+ GER_royals_events.2.d:0 "Notre gouvernement a accepté d'accueillir la famille royale allemande exilée. Il est de notre devoir de les accueillir et de les faire se sentir en sécurité dans notre pays."
+ GER_royals_events.2.a:0 "Elle est évidemment bienvenue"
+ 
+ GER_royals_news_events.1.t:0 "Bannissement de la famille royale [GER.GetAdjFS]"
+ GER_royals_news_events.1.desc:0 "\n« Par mesure de clémence », l'ensemble de la famille royale [GER.GetAdjFS] a été bannie hors du pays. Les porte-parole officiels du gouvernement n'ont fait aucun commentaire, non plus que les représentants de la famille elle-même.\n    Celle-ci est arrivée dans la journée [FRA.GetAuEnANP] [FRA.GetName], où elle a demandé l'asile – ce qui lui a été accordé."
+ GER_royals_news_events.1a:0 "Bon débarras !"
+ GER_royals_news_events.1.b:0 "Ainsi, tous peuvent constater\nla tyrannie des socialistes"
+ GER_royals_news_events.c:0 "C'est une magnifique victoire\ndans la lutte des classes"
+ 
+ GER_royals_news_events.2.t:0 "Disparition de la famille royale [GER.GetAdjFS]"
+ GER_royals_news_events.2.desc:0 "\nUne nouvelle semaine vient de s'écouler depuis la dernière apparition publique d'un membre de la famille royale [GER.GetAdjFS]. Les rumeurs ont commencé à circuler sur son sort le plus probable. Le gouvernement a quant à lui refusé de faire le moindre commentaire à ce propos, et a commencé à poursuivre les médias qui voudraient s'y intéresser.\n    Le silence du gouvernement est d'autant plus remarquable que certaines personnes restées anonymes mais prétendant avoir travaillé pour elle disent avoir vu « la famille royale être emmenée hors de Palais Royal par des hommes masqués », il y a de cela quelques semaines."
+ GER_royals_news_events.2.a:0 "Nous devions le faire"
+ GER_royals_news_events.2.b:0 "Ces socialistes n'ont décidément\naucun respect pour la vie humaine !"
+ GER_royals_news_events.2.c:0 "Ils ont eu ce qu'ils méritaient"
+ 
  RUS_BAL_news.1.t:0 "[RUS.GetLeLaLFPCap] [RUS.GetName] cherch[RUS.GetEEntNP]\nà se réconcilier avec [EST.GetLeLaLNP] [EST.GetName] et [LAT.GetLeLaLFSCap] [LAT.GetName]"
  RUS_BAL_news.1.d:0 "\n\nPendant des décennies, l'URSS et maintenant la Russie cherchent un port sûr dans la Baltique. [RUS.GetLeLaLFS] [RUS.GetName], [EST.GetLeLaLNP] [EST.GetName] et [LAT.GetLeLaLFS] [LAT.GetName] ont commencé à régler leurs désaccords.\n¤ ¤Dans le cadre d'un accord de coopération établi « pour le bien de l'ensemble de la région baltique », les autorités [RUS.GetAdjFP], [LAT.GetAdjFP] et [EST.GetAdjFP] se sont engagées à entretenir désormais des relations diplomatiques plus étroites qu'il n'y en avait jamais eu depuis la fondation de ces trois États modernes."
  RUS_BAL_news.1.a:0 "L'influence [RUS.GetAdjFS] s'accroît"
@@ -188,6 +209,10 @@
  UKR_POL_news.1.a:0 "L'influence [UKR.GetAdjFS] s'accroît"
  UKR_POL_news.1.b:0 "Comment peut-on avoir idée de « coopérer »\navec les [UKR.GetHabitants] ?"
  UKR_POL_news.1.c:0 "Un partenariat en Europe Centrale\n n'est pas dénué d'importance"
+ 
+ REP_political.1.title:0 "Les monarchistes exigent un référendum"
+ REP_political.1.desc:1 "En plein essor, la mouvance monarchiste [Root.GetAdjFS] n'a jamais prétendu devoir disposer du soutien de la majorité pour prendre le pouvoir, préférant instaurer l'unité du pays une fois arrivée au gouvernement. Toutefois, le soutien dans la population enfle rapidement, et nombreux sont les monarchistes qui accusent ouvertement [Root.GetLeLaLDir] [Root.GetLeader] d'hypocrisie, prétendant représenter la voix du peuple tout en refusant d'écouter les masses.\n\nJusqu'à présent, [Root.GetLeLaLPartiPouv] [Root.GetRulingParty] [Root.GetAOntPartiPouv] écarté les exigences des monarchistes, les qualifiant de tentatives ne visant qu'à déstabiliser le régime. L'avantage pourtant d'une telle mesure est qu'elle confinerait le débat dans le champ du politique ; or, si rien n'est fait très rapidement, les monarchistes pourraient bien songer à recourir à la force pour s'emparer du pouvoir."
+ REP_political.1.a:0 "Si telle est la volonté du peuple,\nnous devons organiser ce référendum"
 
 ####################
 ### TO BE ERASED ###

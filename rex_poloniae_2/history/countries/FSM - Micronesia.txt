@@ -75,5 +75,6 @@ create_country_leader = {
 	ideology = absolutism
 	traits = {
 	}
+	female = yes
 }
 				

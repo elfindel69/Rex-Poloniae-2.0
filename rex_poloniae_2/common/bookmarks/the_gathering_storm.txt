@@ -34,7 +34,7 @@ bookmarks = {
 			focuses = {
 				FRA_invite_communist_ministers
 				FRA_utilize_the_leagues
-				FRA_je_suis_la_deluge
+				FRA_consolidate_the_throne
 			}
 		}
 		"USA"={
@@ -106,7 +106,7 @@ bookmarks = {
 			focuses = {
 				GER_anschluss
 				GER_danzig_or_war
-				GER_revive_the_kaiserreich
+				GER_long_live_the_kaiserreich
 			}
 		}
 		"GER"={

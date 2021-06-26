@@ -291,7 +291,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Alexander Fyodorovich Kerensky"
-	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+	desc = "r56_portrait_SOV_Alexander_Kerensky.dds"
 	picture = "SOV_Portrait_Kerensky_D.dds"
 	expire = "1953.3.1"
 	ideology = socialism
@@ -303,7 +303,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Kirill Vladimirovich Romanov"
 	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
-	picture = "SOV_Portrait_Romanov_N.dds"
+	picture = "gfx/leaders/Monarchs/Portrait_SOV_Kirill_Vladimirovich_Romanov.tga"
 	expire = "1953.3.1"
 	ideology = paternalism
 	traits = {

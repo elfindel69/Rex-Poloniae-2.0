@@ -5534,7 +5534,7 @@ focus_tree = {
 				}
 				AND = {
 					NOT = { has_war_with = GER }
-					GER = { has_completed_focus = GER_revive_the_kaiserreich }
+					GER = { has_completed_focus = GER_long_live_the_kaiserreich }
 				}
 			}
 		}
@@ -5552,7 +5552,7 @@ focus_tree = {
 				limit = {
 					is_in_faction = yes
 					NOT = { has_war_with = GER }
-					GER = { has_completed_focus = GER_revive_the_kaiserreich }
+					GER = { has_completed_focus = GER_long_live_the_kaiserreich }
 				}
 				leave_faction = yes
 				GER = { country_event = { id = generic.2 } }
@@ -5561,7 +5561,7 @@ focus_tree = {
 				limit = {
 					is_in_faction = no
 					NOT = { has_war_with = GER }
-					GER = { has_completed_focus = GER_revive_the_kaiserreich }
+					GER = { has_completed_focus = GER_long_live_the_kaiserreich }
 				}
 				GER = { country_event = { id = generic.2 } }
 			}
@@ -5634,7 +5634,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = { has_war_with = GER }
-					NOT = { GER = { has_completed_focus = GER_revive_the_kaiserreich } }
+					NOT = { GER = { has_completed_focus = GER_long_live_the_kaiserreich } }
 				}
 				effect_tooltip = {
 					every_country = {

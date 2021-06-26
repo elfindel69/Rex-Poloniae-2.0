@@ -1806,7 +1806,7 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				OR = {
-					GER = { has_completed_focus = GER_reestablish_free_elections }
+					GER = { has_completed_focus = GER_a_new_constitution }
 					GER = { has_completed_focus = GER_expatriate_the_communists }
 				}
 			}

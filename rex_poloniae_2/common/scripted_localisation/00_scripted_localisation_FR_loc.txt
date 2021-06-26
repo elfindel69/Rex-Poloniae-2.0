@@ -2218,31 +2218,14 @@ defined_text = {
 			has_cosmetic_tag = USA_CSA
 			has_government = neutrality
 		}
-		localization_key = FRLOC_USA_CSA_ADJ_S_NEUTRALITY
+		localization_key = FRLOC_USA_CSA_ADJ_MS_NEUTRALITY
 	}
 	text = {
 		trigger = {
 			OR = { tag = USA original_tag = USA }
 			has_cosmetic_tag = USA_REBEL
-			OR = { has_government = fascism has_government = communism }
 		}
-		localization_key = FRLOC_USA_REBEL_ADJ_MS_FASCISM_COMMUNISM
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_cosmetic_tag = USA_REBEL
-			has_government = democratic
-		}
-		localization_key = FRLOC_USA_REBEL_ADJ_S_DEMOCRACY
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_cosmetic_tag = USA_REBEL
-			has_government = neutrality
-		}
-		localization_key = FRLOC_USA_REBEL_ADJ_S_NEUTRALITY
+		localization_key = FRLOC_USA_REBEL_ADJ_MS
 	}
 	text = {
 		trigger = { OR = { tag = CUB original_tag = CUB } }
@@ -3611,16 +3594,8 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = { tag = USA original_tag = USA }
-			NOT = { has_government = neutrality }
 		}
-		localization_key = FRLOC_USA_NOT_NEUTRALITY_ADJ_MS
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_government = neutrality
-		}
-		localization_key = FRLOC_USA_NEUTRALITY_ADJ_MS
+		localization_key = FRLOC_USA_ADJ_MS
 	}
 	text = {
 		trigger = { OR = { tag = USB original_tag = USB } }
@@ -4115,31 +4090,14 @@ defined_text = {
 			has_cosmetic_tag = USA_CSA
 			has_government = neutrality
 		}
-		localization_key = FRLOC_USA_CSA_ADJ_S_NEUTRALITY
+		localization_key = FRLOC_USA_CSA_ADJ_FS_NEUTRALITY
 	}
 	text = {
 		trigger = {
 			OR = { tag = USA original_tag = USA }
 			has_cosmetic_tag = USA_REBEL
-			OR = { has_government = fascism has_government = communism }
 		}
-		localization_key = FRLOC_USA_REBEL_ADJ_FS_FASCISM_COMMUNISM
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_cosmetic_tag = USA_REBEL
-			has_government = democratic
-		}
-		localization_key = FRLOC_USA_REBEL_ADJ_S_DEMOCRACY
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_cosmetic_tag = USA_REBEL
-			has_government = neutrality
-		}
-		localization_key = FRLOC_USA_REBEL_ADJ_S_NEUTRALITY
+		localization_key = FRLOC_USA_REBEL_ADJ_FS
 	}
 	text = {
 		trigger = { OR = { tag = CUB original_tag = CUB } }
@@ -5508,16 +5466,8 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = { tag = USA original_tag = USA }
-			NOT = { has_government = neutrality }
 		}
-		localization_key = FRLOC_USA_NOT_NEUTRALITY_ADJ_FS
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_government = neutrality
-		}
-		localization_key = FRLOC_USA_NEUTRALITY_ADJ_FS
+		localization_key = FRLOC_USA_ADJ_FS
 	}
 	text = {
 		trigger = { OR = { tag = USB original_tag = USB } }
@@ -6012,31 +5962,14 @@ defined_text = {
 			has_cosmetic_tag = USA_CSA
 			has_government = neutrality
 		}
-		localization_key = FRLOC_USA_CSA_ADJ_P_NEUTRALITY
+		localization_key = FRLOC_USA_CSA_ADJ_MP_NEUTRALITY
 	}
 	text = {
 		trigger = {
 			OR = { tag = USA original_tag = USA }
 			has_cosmetic_tag = USA_REBEL
-			OR = { has_government = fascism has_government = communism }
 		}
-		localization_key = FRLOC_USA_REBEL_ADJ_MP_FASCISM_COMMUNISM
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_cosmetic_tag = USA_REBEL
-			has_government = democratic
-		}
-		localization_key = FRLOC_USA_REBEL_ADJ_P_DEMOCRACY
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_cosmetic_tag = USA_REBEL
-			has_government = neutrality
-		}
-		localization_key = FRLOC_USA_REBEL_ADJ_P_NEUTRALITY
+		localization_key = FRLOC_USA_REBEL_ADJ_MP
 	}
 	text = {
 		trigger = { OR = { tag = CUB original_tag = CUB } }
@@ -7405,16 +7338,8 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = { tag = USA original_tag = USA }
-			NOT = { has_government = neutrality }
 		}
-		localization_key = FRLOC_USA_NOT_NEUTRALITY_ADJ_MP
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_government = neutrality
-		}
-		localization_key = FRLOC_USA_NEUTRALITY_ADJ_MP
+		localization_key = FRLOC_USA_ADJ_MP
 	}
 	text = {
 		trigger = { OR = { tag = USB original_tag = USB } }
@@ -7915,25 +7840,8 @@ defined_text = {
 		trigger = {
 			OR = { tag = USA original_tag = USA }
 			has_cosmetic_tag = USA_REBEL
-			OR = { has_government = fascism has_government = communism }
 		}
-		localization_key = FRLOC_USA_REBEL_ADJ_FP_FASCISM_COMMUNISM
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_cosmetic_tag = USA_REBEL
-			has_government = democratic
-		}
-		localization_key = FRLOC_USA_REBEL_ADJ_P_DEMOCRACY
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_cosmetic_tag = USA_REBEL
-			has_government = neutrality
-		}
-		localization_key = FRLOC_USA_REBEL_ADJ_P_NEUTRALITY
+		localization_key = FRLOC_USA_REBEL_ADJ_FP
 	}
 	text = {
 		trigger = { OR = { tag = CUB original_tag = CUB } }
@@ -9302,16 +9210,8 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = { tag = USA original_tag = USA }
-			NOT = { has_government = neutrality }
 		}
-		localization_key = FRLOC_USA_NOT_NEUTRALITY_ADJ_FP
-	}
-	text = {
-		trigger = {
-			OR = { tag = USA original_tag = USA }
-			has_government = neutrality
-		}
-		localization_key = FRLOC_USA_NEUTRALITY_ADJ_FP
+		localization_key = FRLOC_USA_ADJ_FP
 	}
 	text = {
 		trigger = { OR = { tag = USB original_tag = USB } }
@@ -20900,7 +20800,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -20934,7 +20833,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -21037,7 +20935,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -21071,7 +20968,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -21177,7 +21073,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -21211,7 +21106,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -21314,7 +21208,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -21348,7 +21241,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -21454,7 +21346,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -21488,7 +21379,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -21591,7 +21481,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -21625,7 +21514,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -21736,7 +21624,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -21759,7 +21646,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -21850,7 +21736,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -21873,7 +21758,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -21967,7 +21851,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -21990,7 +21873,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -22084,7 +21966,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -22107,7 +21988,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -22201,7 +22081,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -22224,7 +22103,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact
@@ -22318,7 +22196,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_smash_the_bureaucrats } } # faction_mexico_4th_international
 				AND = { OR = { CAN = { is_faction_leader = yes } SAF = { is_faction_leader = yes } RAJ = { is_faction_leader = yes } AST = { is_faction_leader = yes } NZL = { is_faction_leader = yes } } has_country_flag = ENG_decolonization_left_faction } # ENG_coalition_of_free_commonwealth_states
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_anti_fascist_coalition } } # FRA_anti_fascist_coalition
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_disunite_germany } } # FRA_confederation_of_the_rhine
 				AND = { is_in_faction_with = YUG YUG = { is_faction_leader = yes } YUG = { has_completed_focus = YUG_defence_league } } # YUGOSLAV_DEFENCE_LEAGUE
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_the_fate_of_the_balkans } } # BUL_greater_bulgarian_federation
 				AND = { is_in_faction_with = BUL BUL = { is_faction_leader = yes } BUL = { has_completed_focus = BUL_a_balkan_confederation } } # BUL_balkan_federation_democratic
@@ -22341,7 +22218,6 @@ defined_text = {
 				AND = { is_in_faction_with = MEX MEX = { is_faction_leader = yes } MEX = { has_completed_focus = MEX_focus_bolivarian_alliance } } # faction_mexico_bolivarian_alliance
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_loyalty_to_the_cause } } # FRA_communist_faction
 				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { has_completed_focus = FRA_latin_entente } } # FRA_latin_entente
-				AND = { is_in_faction_with = FRA FRA = { is_faction_leader = yes } FRA = { OR = { has_completed_focus = FRA_two_countries_two_crowns has_completed_focus = FRA_secure_the_crown_of_spain } } } # FRA_legitimist_faction
 				AND = { is_in_faction_with = POR POR = { is_faction_leader = yes } POR = { has_completed_focus = POR_the_royal_iberian_alliance } } # POR_royal_iberian_alliance
 				AND = { is_in_faction_with = GRE GRE = { is_faction_leader = yes } GRE = { has_completed_focus = GRE_realign_ourselves_with_the_central_powers } } # GRE_argos_alliance
 				AND = { is_in_faction_with = TUR TUR = { is_faction_leader = yes } TUR = { has_completed_focus = TUR_reaffirm_the_balkan_pact } } # TUR_balkan_pact

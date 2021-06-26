@@ -1290,9 +1290,72 @@ ideas = {
 	political_advisor = {
 		# POLITICAL	
 		
-		generic_monarchist_booster = {
+		generic_dogvisor = {
 		
-			picture = generic_political_advisor_europe_1
+			picture = dogvisor
+			
+			allowed = {
+				always = YES
+			}	
+			traits = { stability_boost }
+					
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		
+		
+		generic_catvisor = {
+		
+			picture = catvisor
+			
+			allowed = {
+				always = YES
+			}	
+			traits = { daily_pp_boost }
+					
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		
+		generic_neutrality_booster = {
+		
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = neutrality_booster limit = 1 }		#In order to prevent it from appearing alongside country-specific ones.
+				}
+			}	
+			traits = { neutrality_booster }
+					
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		
+		generic_monarchist_booster = {
 			
 			allowed = {
 				NOT = {
@@ -1309,7 +1372,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 0
+				factor = 0.5
 			}
 		}
 		

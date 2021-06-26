@@ -86,7 +86,7 @@ news_event = {
 	option = {
 		name = POL_royals_news_events.1.c
 		trigger = { 
-			NOT = { original_tag = ENG }
+			NOT = { original_tag = POL }
 			has_government = communism
 		}
 	}

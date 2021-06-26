@@ -11,7 +11,7 @@ FRA_alternate_plan_1 = {
 	}
 	abort = {
 		OR = {
-			GER = { has_completed_focus = GER_reestablish_free_elections }
+			GER = { has_completed_focus = GER_a_new_constitution }
 			GER = { has_completed_focus = GER_expatriate_the_communists }
 			GER = { has_completed_focus = GER_focus_on_the_true_enemy }
 		}
@@ -312,7 +312,7 @@ FRA_alternate_plan_4_regular = {
 
 	enable = {
 		original_tag = FRA
-		GER = { has_completed_focus = GER_reestablish_free_elections }
+		GER = { has_completed_focus = GER_a_new_constitution }
 		NOT = { has_dlc = "La Resistance" }
 		has_game_rule = {
 			rule = FRA_ai_behavior
@@ -355,7 +355,7 @@ FRA_alternate_plan_4_lar = {
 
 	enable = {
 		original_tag = FRA
-		GER = { has_completed_focus = GER_reestablish_free_elections }
+		GER = { has_completed_focus = GER_a_new_constitution }
 		has_dlc = "La Resistance"
 		has_game_rule = {
 			rule = FRA_ai_behavior

@@ -48,7 +48,7 @@ country_event = {
            
 			name = "Stanisław IV Poniatowski"
 			desc = "POLITICS_IGNACY_MOSCICKI_DESC"
-			picture = "Portrait_Germany_Generic_3.dds"
+			picture = "gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
 			expire = "1965.1.1"
 			ideology = paternalism
 			traits = {

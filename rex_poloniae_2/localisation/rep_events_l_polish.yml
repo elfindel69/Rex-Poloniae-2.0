@@ -153,6 +153,28 @@
  POL_royals_news_events.2.b:0 "Socjaliści nie szanują ludzkiego życia!"
  POL_royals_news_events.2.c:0 "Dostali to, na co zasłużyli!"
  
+ 
+ GER_royals_events.1.t:0 "Los rodziny królewskiej"
+ GER_royals_events.1.d:0 "Kaiser i jego rodzina przebywają w areszcie domowym w luksusowym Pałacu Królewskim, pora porozmawiać o ich losie."
+ GER_royals_events.1.a:0 "Wygnać ich do Anglii!"
+ GER_royals_events.1.b:0 "Zostaną osądzeni i skazani."
+ 
+ GER_royals_events.2.t:0 "Polska Rodzina królewska na uchodźstwie"
+ GER_royals_events.2.d:0 "Nasz rząd zgodził się przyjąć wygnaną polską rodzinę królewską. Naszym obowiązkiem jest ich przyjąć i sprawić, by czuli się bezpiecznie w naszym kraju."
+ GER_royals_events.2.a:0 "Są tu mile widziani."
+ 
+ GER_royals_news_events.1.t:0 "[GER.GetName] wydala rodzinę królewską"
+ GER_royals_news_events.1.desc:0 "Po rzekomo litościwej decyzji, cała [GER.GetAdjective] rodzina królewska została wygnana z kraju. Przedstawiciele rządu nie udzielili dalszych komentarzy, podobnie jak przedstawiciele rodziny królewskiej. W dniu dzisiejszym przybyła ona do [FRA.GetNameDef]. Wystąpiła o azyl, a jej wniosek został zaakceptowany."
+ GER_royals_news_events.1.a:0 "Wszystkiego dobrego na nowej drodze życia."
+ GER_royals_news_events.1.b:0 "Teraz wszyscy widzą na własne oczy socjalistyczną tyranię."
+ GER_royals_news_events.1.c:0 "To zwycięstwo w walce klas!"
+ 
+ GER_royals_news_events.2.t:0 "Zniknięcie [GER.GetAdjective] rodziny królewskiej"
+ GER_royals_news_events.2.desc:0 "Minął kolejny tydzień od ostatniego publicznego wystąpienia kogokolwiek z członków [GER.GetAdjective] rodziny królewskiej. Zaczynają krążyć plotki o jej prawdopodobnych losach. Rząd odmówił jakiegokolwiek komentarza w tej sprawie i zaczął dyscyplinować media, które podnoszą tę sprawę.\n\nMilczenie rządu jest tym bardziej wymowne w świetle anonimowych doniesień osób, które rzekomo pracowały w pałacu królewskim. Twierdzą one, że kilka tygodni temu "rodzina królewska została siłą zabrana z pałacu Królewskiego przez zamaskowanych ludzi"."
+ GER_royals_news_events.2.a:0 "To była konieczność."
+ GER_royals_news_events.2.b:0 "Socjaliści nie szanują ludzkiego życia!"
+ GER_royals_news_events.2.c:0 "Dostali to, na co zasłużyli!"
+ 
  RUS_BAL_news.1.t:0 "[RUS.GetName],[LAT.GetName] i [EST.GetName] szukają porozumienia"
  RUS_BAL_news.1.d:0 "\n\nPrzez dziesięciolecia ZSRR, a teraz Rosja szuka bezpiecznego portu na Bałtyku. [RUS.GetName], [LAT.GetName] i [EST.GetName] zaczynają zapominać o dawnych urazach.\n\nDzięki umowie o współpracy mającej "przynieść korzyści całemu rejonowi Bałtyckiego", [RUS.GetName], [LAT.GetName] and [EST.GetName] zobowiązały się do zacieśnienia relacji dyplomatycznych w stopniu, jakiego nie widziano w całej nowożytnej historii trzech krajów."
  RUS_BAL_news.1.a:0 "[RUS.GetName] zdobywa coraz większe wpływy"
@@ -188,3 +210,7 @@
  UKR_POL_news.1.a:0 "[UKR.GetName] zdobywa coraz większe wpływy"
  UKR_POL_news.1.b:0 "Dlaczego ktoś chce "współpracować" z takim krajem jak [UKR.GetAdjective]?"
  UKR_POL_news.1.c:0 "Partnerstwo w rejonie Środkowej Europy jest istotne"
+ 
+ REP_political.1.title:0 "Monarchiści żądają referendum"
+ REP_political.1.desc:1 "Monarchiści, którzy ostatnimi czasy stają się coraz popularniejsi, zawsze uważali, że zjednoczą cały kraj po przejęciu władzy, więc nie muszą mieć poparcia większości, by obalić rząd. Z czasem jednak zaczęli to poparcie zdobywać, co skłoniło ich do krytyki obecnych władz. Według moarchistów [Root.GetLeader] tylko rzekomo przemawia w imieniu ludu, a tak naprawdę ignoruje głosy obywateli pragnących poprowadzić kraj ku wielkości.\n\nWniosek o referendum został odrzucony jako próba zakłócenia funkcjonowania państwa, ale tym razem jeszcze była to metoda polityczna. Przy następnej okazji monarchiści mogą użyć siły. [Root.GetRulingParty] staje w obliczu utraty władzy."
+ REP_political.1.a:0 "Jeżeli ludzie chcą referendum, to je dostaną."

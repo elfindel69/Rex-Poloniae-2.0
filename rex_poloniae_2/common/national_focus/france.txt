@@ -4885,6 +4885,7 @@ focus_tree = {
 			OR = {
 				has_government = fascism
 				has_government = neutrality
+				has_government = monarchist
 			}
 		}
 
@@ -6309,7 +6310,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 10
-				GER = { has_completed_focus = GER_reestablish_free_elections }
+				GER = { has_completed_focus = GER_a_new_constitution }
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6514,7 +6515,7 @@ focus_tree = {
 				}
 	 			if = {
 	 				limit = {
-	 					GER = { has_completed_focus = GER_reestablish_free_elections }
+	 					GER = { has_completed_focus = GER_a_new_constitution }
 	 				}
 	 				random_other_country = {
 	 					limit = {
@@ -6676,8 +6677,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = FRA_repeal_the_law_of_exile
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		id = FRA_enact_the_law_of_exile
+		icon = GFX_focus_generic_monarchy_2
 		x = 0
 		y = 1
 		offset = {
@@ -6713,22 +6714,144 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = FRA_orleanist_restoration
-		icon = GFX_focus_focus_fra_orleans_restoration
+		id = FRA_national_integralism
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		prerequisite = {
+			focus = FRA_enact_the_law_of_exile
+		}
 		x = -3
+		y = 1
+		relative_position_id = FRA_enact_the_law_of_exile
+		mutually_exclusive = {
+			focus = FRA_consolidate_the_throne
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = FRA_national_integralism
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+	}
+	focus = {
+		id = FRA_camelots_roi
+		icon = GFX_goal_FRA_camelots_du_roi
+		cost = 10
+		prerequisite = {
+			focus = FRA_national_integralism
+		}
+		x = -2
+		y = 1
+		relative_position_id = FRA_national_integralism
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = FRA_camelots
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = FRA_social_nationalism
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = FRA_national_integralism
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_national_integralism
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = FRA_decentralise_the_state
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = FRA_social_nationalism
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_social_nationalism
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = FRA_decentralised_state
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = FRA_restore_ancient_reights
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = FRA_social_nationalism
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_social_nationalism
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_country_leader_trait = absolute_monarch
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = FRA_embrace_the_counter_revolution
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10
+		prerequisite = {
+			focus = FRA_decentralise_the_state
+		}
+		prerequisite = {
+			focus = FRA_restore_ancient_reights
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_decentralise_the_state
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 150
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = FRA_consolidate_the_throne
+		icon = GFX_focus_focus_fra_orleans_restoration
+		x = 3
 		y = 1
 		offset = {
 			x = 0
 			y = 0
 		}
 		prerequisite = {
-			focus = FRA_repeal_the_law_of_exile
+			focus = FRA_enact_the_law_of_exile
 		}
-		mutually_exclusive = { 
-			focus = FRA_the_legitimate_heir
-			focus = FRA_proclaim_the_third_empire
+		mutually_exclusive = {
+			focus = FRA_national_integralism
 		}
-		relative_position_id = FRA_repeal_the_law_of_exile
+		
+		relative_position_id = FRA_enact_the_law_of_exile
 		cost = 10
 
 		ai_will_do = {
@@ -6750,29 +6873,9 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = monarchist
-				popularity = 0.1
+				popularity = 0.15
 			}
 			add_stability = 0.1
-			create_country_leader = {
-				name = "Henri VI"
-				desc = "POLITICS_PHILIPPE_PÉTAIN_DESC"
-				picture = "Portrait_France_Henri_Orleans.dds"
-				expire = "1965.1.1"
-				ideology = paternalism
-				traits = {
-					count_of_paris
-				}
-			}
-			set_party_name = {
-				ideology = monarchist
-				long_name = FRA_orleanist_party_long
-				name = FRA_orleanist_party
-			}
-			set_politics = { ruling_party = monarchist }
-			set_cosmetic_tag = FRA_ORLEANS
-			hidden_effect = {
-				news_event = { id = lar_news.8 days = 3 random_days = 5 }
-			}
 		}
 	}
 	focus = {
@@ -6785,9 +6888,9 @@ focus_tree = {
 			y = 0
 		}
 		prerequisite = {
-			focus = FRA_orleanist_restoration
+			focus = FRA_consolidate_the_throne
 		}
-		relative_position_id = FRA_orleanist_restoration
+		relative_position_id = FRA_consolidate_the_throne
 		cost = 10
 
 		ai_will_do = {
@@ -6820,9 +6923,9 @@ focus_tree = {
 			y = 0
 		}
 		prerequisite = {
-			focus = FRA_orleanist_restoration
+			focus = FRA_consolidate_the_throne
 		}
-		relative_position_id = FRA_orleanist_restoration
+		relative_position_id = FRA_consolidate_the_throne
 		cost = 10
 
 		ai_will_do = {
@@ -7023,736 +7126,7 @@ focus_tree = {
 			add_stability = 0.1
 		}
 	}
-	focus = {
-		id = FRA_the_legitimate_heir
-		icon = GFX_focus_rom_royal_dictatorship
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_repeal_the_law_of_exile
-		}
-		mutually_exclusive = {
-			focus = FRA_orleanist_restoration
-			focus = FRA_proclaim_the_third_empire
-		}
-		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			if = {
-				limit = {
-					date < 1941.2.21 #TODO_GABRIEL: coordinate with Drikus for death events
-				}
-				create_country_leader = {
-					name = "Alphonse I"
-					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-					picture = GFX_portrait_SPA_alfonso_xiii
-					expire = "1965.1.1"
-					ideology = monarchism
-					traits = {
-						
-					}
-				}
-			}
-			else = {
-				create_country_leader = {
-					name = "Jacques II"
-					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-					picture = GFX_portrait_fra_infante_jaime
-					expire = "1965.1.1"
-					ideology = paternalism
-					traits = {
-						
-					}
-				}
-			}
-			set_party_name = {
-				ideology = monarchist
-				long_name = FRA_legitimist_party_long
-				name = FRA_legitimist_party
-			}
-			set_politics = { ruling_party = monarchist }
-			hidden_effect = {
-				news_event = { id = lar_news.8 days = 3 random_days = 5 }
-			}
-		}
-	}
-	focus = {
-		id = FRA_secure_the_crown_of_spain
-		icon = GFX_goal_generic_position_armies
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_the_legitimate_heir
-		}
-		relative_position_id = FRA_the_legitimate_heir
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_subject_of = SPB
-			}
-		}
-
-		available = {
-			is_subject = no
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			if = {
-				limit = {
-					country_exists = SPB
-				}
-				SPB = { country_event = generic.2 }
-			}
-			else = {
-				41 = {
-					OWNER = {
-						ROOT = {
-							create_wargoal = {
-								type = annex_everything
-								target = PREV
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = FRA_unite_the_crowns
-		icon = GFX_goal_generic_demand_territory
-		x = -1
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_secure_the_crown_of_spain
-		}
-		mutually_exclusive = { focus = FRA_two_countries_two_crowns }
-		relative_position_id = FRA_secure_the_crown_of_spain
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			country_exists = SPB
-			SPB = {
-				NOT = { has_war_with = SPA }
-				NOT = { has_war_with = SPC }
-				NOT = { has_war_with = SPD }
-				is_in_faction = no
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-			is_subject = no
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			annex_country = { target = SPB transfer_troops = yes }
-		}
-	}
-	focus = {
-		id = FRA_two_countries_two_crowns
-		icon = GFX_goal_tripartite_pact
-		x = 1
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_secure_the_crown_of_spain
-		}
-		mutually_exclusive = { focus = FRA_unite_the_crowns }
-		relative_position_id = FRA_secure_the_crown_of_spain
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			country_exists = SPB
-			SPB = {
-				is_in_faction = no
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			set_rule = { can_create_factions = yes }
-			create_faction = FRA_legitimist_faction
-			add_to_faction = SPB
-		}
-	}
-
-	focus = {
-		id = FRA_proclaim_the_third_empire
-		icon = GFX_focus_focus_fra_third_empire
-		x = 3
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_repeal_the_law_of_exile
-		}
-		mutually_exclusive = {
-			focus = FRA_orleanist_restoration
-			focus = FRA_the_legitimate_heir
-		}
-		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			create_country_leader = {
-				name = "Napoléon VI"
-				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-				picture = GFX_portraits_fra_napoleon_vi
-				expire = "1965.1.1"
-				ideology = absolutism
-				traits = {
-					
-				}
-			}
-			set_party_name = {
-				ideology = monarchist
-				long_name = FRA_bonepartist_party_long
-				name = FRA_bonepartist_party
-			}
-			set_politics = { ruling_party = monarchist }
-			hidden_effect = {
-				news_event = { id = lar_news.8 days = 3 random_days = 5 }
-			}
-			set_cosmetic_tag = FRA_THIRD_EMPIRE
-		}
-	}
-	focus = {
-		id = FRA_avenge_waterloo #you now have ABBA stuck in your head for the rest of the day
-		icon = GFX_focus_attack_britain
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_proclaim_the_third_empire
-		}
-		relative_position_id = FRA_proclaim_the_third_empire
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		will_lead_to_war_with = ENG
-		will_lead_to_war_with = BEL
-		will_lead_to_war_with = HOL
-		available = {
-			is_subject = no
-		}
-		
-		bypass = {
-			BEL = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
-			HOL = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
-			ENG = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			create_wargoal = {
-				target = BEL
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = HOL
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = ENG
-				type = annex_everything
-			}
-		}
-	}
-	focus = {
-		id = FRA_reorganize_the_dutch
-		icon = GFX_focus_CZE_german_puppet
-		x = 2
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_avenge_waterloo
-		}
-		relative_position_id = FRA_avenge_waterloo
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			OR = {
-				HOL = {
-					is_subject_of = ROOT
-				}
-				any_state = {
-					is_core_of = HOL
-					is_controlled_by = ROOT
-				}
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_relation_modifier = {
-				target = HOL
-				modifier = FRA_reorganized_departments
-			}
-		}
-	}
-	focus = {
-		id = FRA_retribution_for_sedan
-		icon = GFX_focus_attack_germany
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_avenge_waterloo
-		}
-		relative_position_id = FRA_avenge_waterloo
-		cost = 10
-		will_lead_to_war_with = GER
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-		}
-		
-		bypass = {
-			OR = {
-				is_in_faction_with = GER
-				has_war_with = GER
-
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			create_wargoal = { 
-				type = annex_everything
-				target = GER
-			}
-		}
-	}
-	focus = {
-		id = FRA_disunite_germany
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 2
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_retribution_for_sedan
-		}
-		relative_position_id = FRA_retribution_for_sedan
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			any_state = { 
-				is_core_of = GER
-				is_controlled_by = ROOT
-			}
-			GER = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-				}
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			set_rule = { can_create_factions = yes }
-			create_faction = FRA_confederation_of_the_rhine
-			if = {
-				limit = {
-					51 = {
-						is_controlled_by = ROOT
-					}
-				}
-				transfer_state = 51
-			}
-			if = {
-				limit = {
-					42 = {
-						is_controlled_by = ROOT
-					}
-				}
-				transfer_state = 42
-			}
-			if = {
-				limit = {
-					4 = { is_owned_or_subject_trigger = yes }
-					152 = { is_owned_or_subject_trigger = yes }
-					153 = { is_owned_or_subject_trigger = yes }
-				}
-				AUS = {
-					transfer_state = 4
-					transfer_state = 152
-					transfer_state = 153
-				}
-				puppet = AUS
-			}
-			if = { #set up Wurtemberg puppet
-				limit = {
-					50 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				WUR = {
-					transfer_state = 50
-					add_state_core = 50
-				}
-				puppet = WUR
-			}
-			if = { #set up Saxony puppet
-				limit = {
-					65 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				SAX = {
-					transfer_state = 65
-					add_state_core = 65
-				}
-				puppet = SAX
-			}
-			if = { #set up Mecklenburg puppet
-				limit = {
-					61 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				MEK = {
-					transfer_state = 61
-					add_state_core = 61
-				}
-				puppet = MEK
-			}
-			if = { #set up Schleswig-Holstein puppet
-				limit = {
-					58 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				SHL = {
-					transfer_state = 58
-					add_state_core = 58
-				}
-				puppet = SHL
-			}
-			if = { #set up Bavaria puppet
-				limit = {
-					52 = {
-						is_owned_or_subject_trigger = yes
-					}
-					53 = {
-						is_owned_or_subject_trigger = yes
-					}
-					54 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				BAY = {
-					transfer_state = 52
-					transfer_state = 53
-					transfer_state = 54
-					add_state_core = 52
-					add_state_core = 53
-					add_state_core = 54
-				}
-				puppet = BAY
-			}
-			if = { #set up Hanover puppet
-				limit = {
-					59 = {
-						is_owned_or_subject_trigger = yes
-					}
-					56 = {
-						is_owned_or_subject_trigger = yes
-					}
-					57 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				HAN = {
-					transfer_state = 59
-					transfer_state = 56
-					transfer_state = 57
-					add_state_core = 59
-					add_state_core = 56
-					add_state_core = 57
-				}
-				puppet = HAN
-			}
-			if = {
-				limit = {
-					CZE = { exists = yes }
-					NOT = { has_war_with = CZE }
-				}
-				every_state = {
-					limit = { 
-						is_core_of = CZE 
-						is_owned_or_subject_trigger = yes
-					}
-					CZE = { transfer_state = PREV }
-				}
-			}
-			else = {
-				every_state = {
-					limit = { 
-						is_core_of = CZE 
-						is_owned_or_subject_trigger = yes
-					}
-					CZE = { transfer_state = PREV }
-				}
-				puppet = CZE
-			}
-			every_state = {
-				limit = { 
-					is_core_of = GER 
-					is_owned_or_subject_trigger = yes
-					CONTROLLER = {
-						NOT = {
-							OR = {
-								tag = BAY
-								tag = MEK
-								tag = SAX
-								tag = HAN
-								tag = SHL
-								tag = WUR
-								tag = CZE
-							}
-						}
-					}
-					NOT = {
-						state = 42
-						state = 51
-					}
-				}
-				PRE = {
-					transfer_state = PREV
-					add_state_core = PREV
-				}
-			}
-			if = {
-				limit = {
-					country_exists = PRE
-				}
-				puppet = PRE
-			}
-		}
-	}
-	focus = {
-		id = FRA_return_to_borodino
-		icon = GFX_focus_attack_soviet
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_retribution_for_sedan
-		}
-		relative_position_id = FRA_retribution_for_sedan
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		will_lead_to_war_with = SOV
-		available = {
-			is_subject = no
-		}
-		
-		bypass = {
-			has_war_with = SOV
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			create_wargoal = {
-				target = SOV
-				type = annex_everything
-			}
-		}
-	}
-	focus = {
-		id = FRA_je_suis_la_deluge
-		icon = GFX_focus_fra_le_deluge
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_return_to_borodino
-		}
-		relative_position_id = FRA_return_to_borodino
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			add_ideas = { FRA_la_deluge }
-		}
-	}
+	
 
 
 	##### END ###########
@@ -7760,7 +7134,7 @@ focus_tree = {
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 70
+		x = 75
 		y = 0
 		cost = 10
 
@@ -8246,7 +7620,7 @@ focus_tree = {
 	focus = {
 		id = FRA_air_focus
 		icon = GFX_goal_generic_build_airforce
-		x = 80
+		x = 85
 		y = 0
 		cost = 10
 

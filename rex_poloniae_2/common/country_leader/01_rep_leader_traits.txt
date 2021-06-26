@@ -1,12 +1,38 @@
 leader_traits = {
 
+	stability_boost = {
+		stability_factor = 0.15
+		
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	daily_pp_boost = {
+		political_power_factor = 0.05
+		
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	
+	neutrality_booster  = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.1
+		
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	
 	monarchist_booster = {
 		random = no
 		sprite = 13
 		monarchist_drift = 0.1
 		
 		ai_will_do = {
-			factor = 0
+			factor = 0.5
 		}
 	}
 	
@@ -29,6 +55,14 @@ leader_traits = {
 	duke_of_orleans = {
 		random = no
 		monarchist_drift = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	absolute_monarch = {
+		random = no
+		political_power_factor = 0.25
 		ai_will_do = {
 			factor = 1
 		}

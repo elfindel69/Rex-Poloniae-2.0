@@ -2162,7 +2162,7 @@ focus_tree = {
 				}
 				AND = { 
 					GER = { 
-						has_completed_focus = GER_revive_the_kaiserreich 
+						has_completed_focus = GER_long_live_the_kaiserreich 
 						is_in_faction = yes
 						is_faction_leader = yes
 					}
@@ -2209,7 +2209,7 @@ focus_tree = {
 			else_if = {
 				limit = { 
 					GER = { 
-						has_completed_focus = GER_revive_the_kaiserreich 
+						has_completed_focus = GER_long_live_the_kaiserreich 
 						is_faction_leader = no
 					}
 				}
@@ -2237,7 +2237,7 @@ focus_tree = {
 					}
 					GER = { 
 						NOT = { 
-							has_completed_focus = GER_revive_the_kaiserreich
+							has_completed_focus = GER_long_live_the_kaiserreich
 						}
 					}
 				}

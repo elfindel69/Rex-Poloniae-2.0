@@ -17,9 +17,9 @@ German_alternate_kaiser = {
 	}
 
 	ai_national_focuses = {
-		GER_secure_the_new_state
-		GER_revive_the_kaiserreich
-		GER_rebuild_the_nation
+		GER_political_sphere
+		GER_long_live_the_kaiserreich
+		GER_boost_the_economy
 		GER_fan_the_prussian_militarism
 		GER_four_year_plan
 		GER_army_innovation
@@ -29,7 +29,7 @@ German_alternate_kaiser = {
 		GER_kdf_wagen
 		GER_extra_tech_slot
 		GER_autobahn
-		GER_a_new_and_better_germany
+		GER_a_better_germany
 		GER_german_war_economy
 		GER_bulwark_against_bolshevism
 		GER_see_to_the_eastern_front
@@ -105,9 +105,9 @@ German_alternate_democratic = {
 	}
 
 	ai_national_focuses = {
-		GER_secure_the_new_state
-		GER_reestablish_free_elections
-		GER_rebuild_the_nation
+		GER_political_sphere
+		GER_a_new_constitution
+		GER_boost_the_economy
 		GER_fan_the_prussian_militarism
 		GER_army_innovation
 		GER_soviet_treaty
@@ -119,7 +119,7 @@ German_alternate_democratic = {
 		GER_hermann_goring_werke
 		GER_kdf_wagen
 		GER_extra_tech_slot
-		GER_a_new_and_better_germany
+		GER_a_better_germany
 		GER_autobahn
 		GER_bulwark_against_bolshevism
 		GER_the_great_red_menace
