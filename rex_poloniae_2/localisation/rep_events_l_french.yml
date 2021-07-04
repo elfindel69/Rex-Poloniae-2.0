@@ -9,13 +9,13 @@
  POL_king_dies_news.1.c:0 "Sincères condoléances à la Pologne."
  POL_king_dies_news.1.e:0 "la Pologne a un nouveau roi."
 
- POL_FRA_faction.1.t:0 "[FRA.GetLeLaLMSCap] [FRA.GetName] demand[FRA.GetEEntNP] [FRA.GetSonLeurNP] adhesion a l'Intermarius."
- POL_FRA_faction.1.d:0 "Nos camarades du Parti Royaliste Français ont fait de réels progrès. [FRA.GetLeLaLMSCap] [FRA.GetName] [FRA.GetEstSontNS] prêt désormais à intégrer l'Intermarius."
+ POL_FRA_faction.1.t:0 "[FRA.GetLeLaLMSCap] [FRA.GetName] demand[FRA.GetEEntNP] [FRA.GetSonLeurNP] adhesion a l'Intermarium."
+ POL_FRA_faction.1.d:0 "Nos camarades du Parti Royaliste Français ont fait de réels progrès. [FRA.GetLeLaLMSCap] [FRA.GetName] [FRA.GetEstSontNS] prêt désormais à intégrer l'Intermarium."
  POL_FRA_faction.1.a:0 "Tant mieux!"
  POL_FRA_faction.1.b:0 "Jamais!"
  
  POL_FRA_faction_news.1.t:0 "[France.GetLeLaLMSCap] [France.GetName] intègr[France.GetEEntNP] [From.GetLeLaLFaction] [From.GetFactionName]"
- POL_FRA_faction_news.1.d:0 "[POL.GetLeader] a annoncé que les longues négociations avec [France.GetLeLaLMSCap] [FRA.GetName] étaient terminées. \n Il est heureux d'annoncer que [France.GetLeLaLMSCap] [FRA.GetName] a toutes les qualités pour rejoindre l'Intermarius et les accueille à bras ouverts."
+ POL_FRA_faction_news.1.d:0 "[POL.GetLeader] a annoncé que les longues négociations avec [France.GetLeLaLMSCap] [FRA.GetName] étaient terminées. \n Il est heureux d'annoncer que [France.GetLeLaLMSCap] [FRA.GetName] a toutes les qualités pour rejoindre l'Intermarium et les accueille à bras ouverts."
  POL_FRA_faction_news.1.a:0 "Un nouvel ennemi de la révolution mondiale !"
  POL_FRA_faction_news.1.b:0 "Leur belle alliance ne tardera pas à s'effondrer"
  POL_FRA_faction_news.1.c:0 "Bienvenue aux alliés de la démocratie"
@@ -23,17 +23,17 @@
  POL_FRA_faction_news.1.f:0 "[France.GetLeLaLNPCap] [France.GetName] [France.GetAOntNP] choisi [France.GetSonLeurNP] camp"
  
  POL_FRA_faction_news.2.t:0 "la Pologne rejette l'alliance avec la France!"
- POL_FRA_faction_news.2.d:0 "[POL.GetLeader] a rejeté la demande française d'adhérer à l'Intermarius \n Il dit que l'heure n'est pas encore venue d'un tel besoin et que la monarchie française n'est pas une stable comme il le semble."
+ POL_FRA_faction_news.2.d:0 "[POL.GetLeader] a rejeté la demande française d'adhérer à l'Intermarium \n Il dit que l'heure n'est pas encore venue d'un tel besoin et que la monarchie française n'est pas une stable comme il le semble."
  POL_FRA_faction_news.2.a:0 "C'est dommage!"
  POL_FRA_faction_news.2.b:0 "Ils n'étaent pas prêts"
  POL_FRA_faction_news.2.c:0 "Une opportunité manquée"
  
- FRA_POL_faction.1.t:0 "[France.GetLeLaLMSCap] [FRA.GetName] est invitée à rejoindre l'Intermarius"
- FRA_POL_faction.1.d:0 "Nos camarades de Polska Partia Monarchiczna nous ont fait une demande d'alliance.\n Ils veulent que nous rejoignions leur faction, l'Intermarius.\n Sommes-nous d'accord?"
+ FRA_POL_faction.1.t:0 "[France.GetLeLaLMSCap] [FRA.GetName] est invitée à rejoindre l'Intermarium"
+ FRA_POL_faction.1.d:0 "Nos camarades de Polska Partia Monarchiczna nous ont fait une demande d'alliance.\n Ils veulent que nous rejoignions leur faction, l'Intermarium.\n Sommes-nous d'accord?"
  FRA_POL_faction.1.a:0 "Bien sur que oui !"
  FRA_POL_faction.1.b:0 "No, nous préférons rester seuls!"
  
- FRA_POL_faction_news.1.t:0 "[FRA.GetLeLaLMSCap] [FRA.GetName] est accueillie dans l'Intermarius"
+ FRA_POL_faction_news.1.t:0 "[FRA.GetLeLaLMSCap] [FRA.GetName] est accueillie dans l'Intermarium"
  FRA_POL_faction_news.1.d:0 "Suite au basculement vers le monarchisme, non seulement de la population [France.GetAdjFS], mais aussi du pouvoir, [France.GetLeLaLMS] [France.GetName] [France.GetAOntNP] publiquement annoncé [France.GetSonLeurNP] intention d'intégrer [POL.GetLeLaLFaction] [POL.GetFactionName].\n¤ ¤[POL.GetLeLaLMSCap] [POL.GetName] y [POL.GetAOntNP] répondu immédiatement, montrant que des négociations ont certainement été menées en coulisses depuis des semaines. [POL.GetLeader] a longuement parlé de la nécessité pour les peuples du monde entier de s'unir pour sauvegarder la paix.\n¤ ¤[France.GetLeader], quant à [France.GetLuiElleDir], a approuvé ce point de vue, sans omettre de menacer sans détour « tous ceux qui ont la moindre raison de craindre [POL.GetLeLaLFaction] [POL.GetFactionName] »."
  FRA_POL_faction_news.1.a:0 "Un nouvel ennemi de la révolution mondiale !"
  FRA_POL_faction_news.1.b:0 "Leur belle alliance ne tardera pas à s'effondrer"
@@ -41,8 +41,8 @@
  FRA_POL_faction_news.1.e:0 "Une nouvelle victoire pour la cause monarchiste !"
  FRA_POL_faction_news.1.f:0 "[France.GetLeLaLFSCap] [France.GetName] [France.GetAOntNS] choisi [France.GetSonLeurNS] camp"
  
- FRA_POL_faction_news.2.t:0 "[France.GetLeLaLNPCap] [FRA.GetName] a rejeté l'offre de rejoindre l'Intermarius"
- FRA_POL_faction_news.2.d:0 "Plus tard hier soir après un long rassemblement, nos amis du Parti Monarchiste Français ont décliné notre belle offre de rejoindre l'Intermarius. \n C'est dommage!"
+ FRA_POL_faction_news.2.t:0 "[France.GetLeLaLNPCap] [FRA.GetName] a rejeté l'offre de rejoindre l'Intermarium"
+ FRA_POL_faction_news.2.d:0 "Plus tard hier soir après un long rassemblement, nos amis du Parti Monarchiste Français ont décliné notre belle offre de rejoindre l'Intermarium. \n C'est dommage!"
  FRA_POL_faction_news.2.a:0 "C'est dommage!"
  FRA_POL_faction_news.2.b:0 "Ils n'étaient pas encore prêts"
  FRA_POL_faction_news.2.c:0 "Une autre occasion manquée"
@@ -60,11 +60,11 @@
  ITA_POL_news.1.c:0 "Un partenariat européen\n n'est pas dénué d'importance"
  
  POL_ITA_faction.1.t:0 "[ITA.GetLeLaLNPCap] [ITA.GetName] intègr[ITA.GetEEntNP] [From.GetLeLaLFaction] [From.GetFactionName]"
- POL_ITA_faction.1.d:0 "Nos camarades du Partito Nationale Monarchico [ITA.GetLeLaLNPCap] [ITA.GetName] [ITA.GetEstSontNP] prêt[ITA.GetXENP] désormais à intégrer l'Intermarius.."
+ POL_ITA_faction.1.d:0 "Nos camarades du Partito Nationale Monarchico [ITA.GetLeLaLNPCap] [ITA.GetName] [ITA.GetEstSontNP] prêt[ITA.GetXENP] désormais à intégrer l'Intermarium.."
  POL_ITA_faction.1.a:0 "Tant mieux!"
  POL_ITA_faction.1.b:0 "Jamais!"
  
- POL_ITA_faction_news.1.t:0 "[ITA.GetLeLaLNPCap] [ITA.GetName] est accueillie dans l'Intermarius"
+ POL_ITA_faction_news.1.t:0 "[ITA.GetLeLaLNPCap] [ITA.GetName] est accueillie dans l'Intermarium"
  POL_ITA_faction_news.1.d:0 "Suite au basculement vers le monarchisme, non seulement de la population [ITA.GetAdjFS], mais aussi du pouvoir, [ITA.GetLeLaLNP] [ITA.GetName] [ITA.GetAOntNP] publiquement annoncé [Italy.GetSonLeurNP] intention d'intégrer [From.GetLeLaLFaction] [From.GetFactionName].\n¤ ¤[From.GetLeLaLNPCap] [From.GetName] y [From.GetAOntNP] répondu immédiatement, montrant que des négociations ont certainement été menées en coulisses depuis des semaines. [From.GetLeLaLDirCap] [From.GetLeader] a longuement parlé de la nécessité pour les peuples du monde entier de s'unir pour sauvegarder la paix.\n¤ ¤[ITA.GetLeLaLDirCap] [ITA.GetLeader], quant à [ITA.GetLuiElleDir], a approuvé ce point de vue, sans omettre de menacer sans détour « tous ceux qui ont la moindre raison de craindre [From.GetLeLaLFaction] [From.GetFactionName] »."
  POL_ITA_faction_news.1.a:0 "Un nouvel ennemi de la révolution mondiale !"
  POL_ITA_faction_news.1.b:0 "Leur belle alliance ne tardera pas à s'effondrer"
@@ -73,7 +73,7 @@
  POL_ITA_faction_news.1.e:0 "[ITA.GetLeLaLNPCap] [ITA.GetName] a choisi son camp."
  
  POL_ITA_faction_news.2.t:0 "[From.GetLeLaLMSCap] [From.GetName] refus[From.GetEEntNS]\nune alliance avec [ITA.GetLeLaLMS] [ITA.GetName]"
- POL_ITA_faction_news.2.d:0 "[POL.GetLeader] a rejeté la demande italienne de rejoindre l'Intermarius \n Il dit que le moment n'est pas encore venu d'un tel besoin et que la monarchie italienne n'est pas une aussi stable qu'il le semble."
+ POL_ITA_faction_news.2.d:0 "[POL.GetLeader] a rejeté la demande italienne de rejoindre l'Intermarium \n Il dit que le moment n'est pas encore venu d'un tel besoin et que la monarchie italienne n'est pas une aussi stable qu'il le semble."
  POL_ITA_faction_news.2.a:0 "C'est dommage!"
  POL_ITA_faction_news.2.b:0 "Ils n'étaient pas encore prêts"
  POL_ITA_faction_news.2.c:0 "Une autre occasion manquée"
@@ -127,7 +127,7 @@
  SOV_POL_faction_news.1.e:0 "Un allié bienvenu."
  
  SOV_POL_faction_news.2.t:0 "[From.GetLeLaLNSCap] [From.GetName] refus[From.GetEEntNS]\nune alliance avec [POL.GetLeLaLNP] [POL.GetName]"
- SOV_POL_faction_news.2.d:0 "[SOV.GetLeader] a rejeté la demande polonaise de rejoindre les Komintern \n Il dit que le moment n'est pas encore venu d'un tel besoin et que le communisme polonais n'est pas une aussi stable qu'il le semble."
+ SOV_POL_faction_news.2.d:0 "[SOV.GetLeader] a rejeté la demande polonaise de rejoindre le Komintern \n Il dit que le moment n'est pas encore venu d'un tel besoin et que le communisme polonais n'est pas une aussi stable qu'il le semble."
  SOV_POL_faction_news.2.a:0 "C'est dommage!"
  SOV_POL_faction_news.2.b:0 "Ils n'étaent pas prêts"
  SOV_POL_faction_news.2.c:0 "Une opportunité manquée"
