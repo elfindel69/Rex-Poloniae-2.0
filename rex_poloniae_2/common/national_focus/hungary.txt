@@ -1165,7 +1165,6 @@ focus_tree = {
 					traits = {
 						fascist_sympathies
 					}
-					id = 501 #Neutral Franz
 				}
 				hidden_effect = {
 					create_country_leader = {
@@ -1176,7 +1175,6 @@ focus_tree = {
 						ideology = nazism
 						traits = {
 						}
-						id = 502 #Nazi Franz
 					}
 				}
 				else = {
@@ -1188,7 +1186,6 @@ focus_tree = {
 						ideology = nazism
 						traits = {
 						}
-						id = 502 #Nazi Franz
 					}
 				}
 			}

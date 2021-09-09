@@ -4,4 +4,4 @@ tags={
 	"Sound"
 }
 name="Rex Poloniae Jukebox"
-supported_version="1.10.5"
+supported_version="1.10.7"

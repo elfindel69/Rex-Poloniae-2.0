@@ -98,6 +98,8 @@ units = {
 
 	##### Oberkommando des Heeres #####
 	### 1. Armee (Wehrmacht-Gruppenkommando) ###
+	# II. Armeekorps
+			 
 	# III. Armeekorps
 	division= {	
 		division_name = {

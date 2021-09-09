@@ -215,7 +215,7 @@ set_popularities = {
 }
 
 give_guarantee = UKR
-create_faction = Intermarius
+create_faction = Intermarium
 add_to_faction = POL
 
 set_autonomy = {
@@ -236,6 +236,16 @@ autonomous_state = autonomy_integrated_puppet
 set_autonomy = {
 target = LAT
 autonomous_state = autonomy_integrated_puppet
+}
+
+1936.1.1 = { 
+	set_cosmetic_tag = PLC_UNIFIED
+	set_global_flag = form_commonwealth_flag
+}
+
+1939.1.1 = { 
+	set_cosmetic_tag = PLC_UNIFIED 
+	set_global_flag = form_commonwealth_flag
 }
 
 add_ideas = {
