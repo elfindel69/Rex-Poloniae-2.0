@@ -57,6 +57,18 @@ news_event = {
 					ROOT = { has_government = communism }
 					FROM.FROM = { has_government = communism }
 				}
+				AND = {
+					ROOT = { has_government = democratic }
+					FROM.FROM = { has_government = democratic }
+				}
+				AND = {
+					ROOT = { has_government = neutrality }
+					FROM.FROM = { has_government = neutrality }
+				}
+				AND = {
+					ROOT = { has_government = monarchist }
+					FROM.FROM = { has_government = monarchist }
+				}
 			}
 			FROM.FROM = {
 				has_collaboration = {

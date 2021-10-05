@@ -592,12 +592,6 @@ news_event = {
 			num_subjects > 1
 		}
 	}
-	option = {
-		name = mtg_news.14.c
-		trigger = {
-			has_government = monarchist
-		}
-	}
 }
 
 # UK Decolonization

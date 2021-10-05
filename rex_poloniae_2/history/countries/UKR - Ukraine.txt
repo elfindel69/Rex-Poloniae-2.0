@@ -69,7 +69,10 @@ set_politics = {
 	elections_allowed = no
 }
 
-set_popularities = {	democratic = 20	fascism = 10	communism = 10
+set_popularities = {
+	democratic = 20
+	fascism = 10
+	communism = 10
 	monarchist = 55
 	neutrality = 5
 }
@@ -81,7 +84,7 @@ create_country_leader = {
 	expire = "1953.3.1"
 	ideology = conservatism
 	traits = {
-		
+		#
 	}
 }
 
@@ -92,7 +95,7 @@ create_country_leader = {
 	expire = "1953.3.1"
 	ideology = marxism
 	traits = {
-		
+		#
 	}
 }
 
@@ -103,7 +106,7 @@ create_country_leader = {
 	expire = "1953.3.1"
 	ideology = fascism_ideology
 	traits = {
-		
+		#
 	}
 }
 
@@ -136,13 +139,24 @@ create_country_leader = {
 	expire = "1953.3.1"
 	ideology = despotism
 	traits = {
-		
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Vitaliy Primakov"
+	desc = ""
+	picture = "UKR_Vitaliy_Primakov_N.tga"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+		warrior_code
 	}
 }
 
 create_field_marshal = {
 	name = "Tymofij Ponomarenko"
-	gfx = "GFX_Portrait_Europe_Generic_land_4"
+	picture = "Portrait_Europe_Generic_land_4.dds"
 	traits = {  offensive_doctrine }
 	skill = 3
 	attack_skill = 3
@@ -153,7 +167,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Bohdan Oleksyuk"
-	gfx = "GFX_Portrait_Europe_Generic_land_3"
+	picture = "Portrait_Europe_Generic_land_3.dds"
 	traits = {  armor_officer }
 	skill = 4
 	attack_skill = 4

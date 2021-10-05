@@ -657,7 +657,7 @@ UKR_ai_behavior = {
 		desc = "RULE_FASCIST_CZE_AI_DESC"
 	}
 	option = {
-		name = DEMOCRATIC_HISTORICAL
+		name = MONARCHIST_HISTORICAL
 		text = "RULE_OPTION_HISTORICAL"
 		desc = "RULE_HISTORICAL_CZE_AI_DESC"
 		allow_achievements = yes

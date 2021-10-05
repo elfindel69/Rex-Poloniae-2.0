@@ -15,7 +15,7 @@ UKR_historical = {
 			has_country_flag = UKR_AI_RANDOM_NEUTRALITY_HISTORICAL 
 			has_game_rule = {
 				rule = UKR_ai_behavior
-				option = DEMOCRATIC_HISTORICAL
+				option = MONARCHIST_HISTORICAL
 			}
 		}
 	}
@@ -26,28 +26,28 @@ UKR_historical = {
 	ai_national_focuses = {
 		UKR_army_effort		
 		UKR_industrial_effort	
-		UKR_political_effort		
+		UKR_open_political_sphere		
 		UKR_equipment_effort
-		UKR_poland_friend
+		UKR_a_model_ukraine
 		UKR_production_effort
 		UKR_construction_effort 
 		UKR_doctrine_effort
 		UKR_aviation_effort
 		UKR_naval_effort
-		UKR_monarchy_rise
-		UKR_liberty_ethos
+		UKR_rule_of_the_hetman
+		UKR_a_nation_and_a_king
 		UKR_construction_effort_2
 		UKR_production_effort_2
 		UKR_neutrality_focus
 		UKR_infrastructure_effort
 		UKR_fighter_focus
 		UKR_large_navy
-		UKR_monarchism
+		UKR_a_model_army
 		UKR_deterrence
 		UKR_equipment_effort_2
 		UKR_mechanization_effort
 		UKR_infrastructure_effort_2
-		UKR_extra_tech_slot		
+		UKR_kiev_academy_of_science	
 	}
 
 	research = {
