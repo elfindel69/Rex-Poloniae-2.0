@@ -84,7 +84,7 @@ bookmarks = {
 		
 		ITA = {
 			history = ITA_BLITZKRIEG_DESC
-			ideology = neutrality
+			ideology = monarchist
 			ideas={
 				vittoria_mutilata
 				ITA_monarchism_focus

@@ -49,8 +49,6 @@ division_template = {
 		recon = { x = 0 y = 0 }     
 	}
 }
-
-
 division_template = {
 	name = "Brygada Motorowej"
 	division_names_group = POL_MOT_01
@@ -79,6 +77,8 @@ division_template = {
 		engineer = { x = 0 y = 0 } 
 	}
 }
+
+
 
 units = {
 	######## Sztab Generalny Wojska Polskiego ########
@@ -553,7 +553,6 @@ units = {
 		start_equipment_factor = 0.7
 
 	}
-	
 	###Brygada Litewska
 	division = { # "I. Dywizja Litewska"
 		division_name = {
@@ -586,8 +585,6 @@ units = {
 
 	}
 }
-
-
 
 ##### Wojska Lotnicze i Obrony Powietrzne #####
 air_wings = {

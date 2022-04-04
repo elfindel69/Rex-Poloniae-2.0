@@ -38,4 +38,5 @@ ideas = {
 				communism_acceptance = -50
 			}
 		}
+	}
 }

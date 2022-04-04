@@ -1,4 +1,5 @@
-﻿capital = 10
+﻿
+capital = 10
 
 oob = "POL_1936"
 if = {
@@ -9,25 +10,42 @@ if = {
 	}
 }
 
-set_research_slots = 4
+set_research_slots = 3
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_mountaineers = 1
-	motorised_infantry = 1
 	tech_support = 1		
 	tech_engineers = 1
 	tech_recon = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	gwtank = 1
-	basic_light_tank = 1
 	early_fighter = 1
 	early_bomber = 1
 	CAS1 = 1
 	trench_warfare = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	basic_train = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -49,52 +67,75 @@ if = {
 		basic_depth_charges = 1
 	}
 }
-
-add_ideas = {
-		#laws
-		limited_conscription
-		partial_economic_mobilisation
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_variable = {
+		var = pol_peasant_democracy
+		value = 30
 	}
+	set_variable = {
+		var = pol_peasant_communism
+		value = 30
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Poland: United and Ready"
+	}
+	add_ideas = {
+		uncontrolled_exports
+		POL_april_constitution_1
+		POL_looming_peasants_strike
+		POL_sanation_left_opposition_1
+		POL_sanation_right_opposition_1
+	}
+}
+
+
+85 = {
+	add_dynamic_modifier = { modifier = international_city }
+}
+
 1939.1.1 = {
 	
 	if = {
 		limit = {
 			has_dlc = "Poland: United and Ready"
 		}
+
 		complete_national_focus = POL_central_region_strategy
 		complete_national_focus = POL_expansion_of_new_towns
 		complete_national_focus = POL_start_central_industrial_region
 		complete_national_focus = POL_fill_the_railways_gaps
-
+		complete_national_focus = POL_plan_west
+		complete_national_focus = POL_new_military_academy
 		unlock_national_focus = POL_the_four_year_plan
 		complete_national_focus = POL_national_defence_fund
 		complete_national_focus = POL_warsaw_main_railway_station
 		complete_national_focus = POL_invest_in_the_old_polish_region
 		complete_national_focus = POL_additional_research_slot1
-														
-															
-											   
-
+		complete_national_focus = POL_army_modernisation
+		complete_national_focus = POL_modernize_congressional_factories
 		unlock_national_focus = POL_prepare_for_the_next_war
-													
 		unlock_national_focus = POL_standardisation_of_equipment
 		unlock_national_focus = POL_modernising_the_cavalry
-														 
-															 
-  
-		unlock_national_focus = POL_the_defence_of_poland
-		unlock_national_focus = POL_romanian_bridgehead_strategy
+
 		complete_national_focus = POL_hel_fortified_area
 		complete_national_focus = POL_silesia_fortified_area
 
-		complete_national_focus = POL_air_base_expansion
-		complete_national_focus = POL_develop_polish_ship_building
+		complete_national_focus = POL_air_base_expansion 
+		complete_national_focus = POL_develop_polish_ship_building 
 
-		unlock_national_focus = POL_strengthen_the_polish_state
-		complete_national_focus = POL_defensive_focus
+		complete_national_focus = POL_complete_april_constitution
+		complete_national_focus = POL_polish_militarism
+		complete_national_focus = POL_consolidate_sanation_government
+
+		remove_ideas = POL_looming_peasants_strike
 	}
 
 	add_political_power = 1198
+	add_command_power = 100
 	
 	#generic focuses
 	complete_national_focus = army_effort
@@ -107,13 +148,24 @@ add_ideas = {
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
 
+
 	add_ideas = {
 		#laws
 		limited_conscription
 		partial_economic_mobilisation
 	}
-		  
-    oob = "POL_1939"
+	if = {
+		limit = {
+			NOT = { has_dlc = "Poland: United and Ready" }
+		}
+		add_ideas = {
+			#laws
+			limited_exports
+		}
+	}
+
+
+	
 	if = {
 		limit = { has_dlc = "Man the Guns" }
 			set_naval_oob = "POL_1939_naval_mtg"
@@ -123,7 +175,6 @@ add_ideas = {
 	}
 
 	set_technology = {
-		basic_light_tank = 1
 		tactical_bomber1 = 1
 		motorised_infantry = 1
 		support_weapons = 1
@@ -160,6 +211,28 @@ add_ideas = {
 		concentrated_industry2 = 1
 		concentrated_industry3 = 1
 		concentrated_industry4 = 1
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_dlc = "No Step Back"
+			}
+		}
+		set_technology = {
+			basic_light_tank = 1
+		}
+		set_oob = "POL_1939"
+	}
+	if = {
+		limit = {
+			
+			has_dlc = "No Step Back"
+			
+		}
+		set_technology = {
+			basic_light_tank_chassis = 1
+		}
+		set_oob = "POL_1939_nsb"
 	}
 	if = {
 		limit = { not = { has_dlc = "Man the Guns" } }
@@ -254,450 +327,85 @@ add_ideas = {
 		#laws
 		POL_SEPEWE
 	}
-create_country_leader = {
-	name = "Władysław Sikorski"
-	desc = "POLITICS_WLADYSLAW_SIKORSKI_DESC"
-	picture = "Portrait_Poland_Wladyslaw_Sikorski.dds"
-	expire = "1965.1.1"
-	ideology = oligarchism
-	traits = {
-		#
+
+recruit_character = POL_stanislas_iii_poniatowski
+recruit_character = POL_stanislas_iv_poniatowski
+recruit_character = POL_ignacy_moscicki
+recruit_character = POL_wladyslaw_sikorski
+recruit_character = POL_boleslaw_wieniawa_glugoszowski
+recruit_character = POL_wladyslaw_gomulka
+recruit_character = POL_maria_koszutska
+recruit_character = POL_stanislaw_mikolajczyk
+recruit_character = POL_wincenty_witos
+recruit_character = POL_wladyslaw_raczkiewicz
+recruit_character = POL_boleslaw_piasecki
+recruit_character = POL_edward_rydzsmigly
+recruit_character = POL_wladyslaw_bortnowski
+recruit_character = POL_stanislaw_kopanski
+recruit_character = POL_marian_kukiel
+recruit_character = POL_jozef_haller
+recruit_character = POL_stanislaw_sosabowski
+recruit_character = POL_lucjan_zeligowski
+recruit_character = POL_kazimierz_sosnkowski
+recruit_character = POL_tadeusz_kutrzeba
+recruit_character = POL_wladyslaw_anders
+recruit_character = POL_roman_abraham
+recruit_character = POL_wincenty_kowalski
+recruit_character = POL_stefan_frankowski
+recruit_character = POL_karol_korytowski
+recruit_character = POL_jozef_unrug
+recruit_character = POL_xawery_czernicki
+recruit_character = POL_jozef_zajac
+recruit_character = POL_ludomil_rayski
+recruit_character = POL_stanislaw_pawluc
+recruit_character = POL_stanislav_maczek
+recruit_character = POL_wladyslaw_kalkus
+recruit_character = POL_kazimierz_switalski
+recruit_character = POL_wanda_wasilewska
+recruit_character = POL_tomislaw_lupaszko
+recruit_character = POL_zygmunt_buhusz_szysko
+recruit_character = POL_roman_dmowski
+recruit_character = POL_witold_pilecki
+recruit_character = POL_irena_anders
+recruit_character = POL_mieczyslaw_michalowicz
+recruit_character = POL_boleslaw_bierut
+recruit_character = POL_edward_osobka_morawski
+recruit_character = POL_jozef_beck
+recruit_character = POL_zdzislaw_lubomirski
+recruit_character = POL_aleksander_kakowski
+recruit_character = POL_stanislaw_radkiewicz
+recruit_character = POL_jan_kowalewski
+recruit_character = POL_eugeniusz_kwiatkowiski
+recruit_character = POL_marian_rejewski
+recruit_character = POL_jerzy_rutkowski
+recruit_character = POL_karl_albrecht
+recruit_character = POL_pavel_bermondt_avalov
+recruit_character = POL_anna_andersson
+recruit_character = POL_friedrich_christian
+recruit_character = POL_rudinger_von_der_goltz
+recruit_character = POL_vladislav_korchits
+recruit_character = POL_wojtek
+
+if = {
+	limit = {
+		OR = {
+			has_dlc = "No Step Back"
+			has_dlc = "Poland: United and Ready"
+		}
 	}
+	recruit_character = POL_walery_slawek
+	recruit_character = POL_jan_mosdorf
+	recruit_character = POL_tadeusz_bielecki
+	recruit_character = POL_joachim_stefan_bartoszewicz
+	recruit_character = POL_stanislaw_wojciechowski
 }
 
-create_country_leader = {
-	name = "Ignacy Mościcki"
-	desc = "POLITICS_IGNACY_MOSCICKI_DESC"
-	picture = "Portrait_Poland_Ignacy_Moscicki.dds"
-	expire = "1965.1.1"
-	ideology = oligarchism
-	traits = {
-		#
+if = {
+	limit = {
+		has_dlc = "No Step Back"
 	}
-}
-
-create_country_leader = {
-	name = "Stanisław IV Poniatowski"
-	desc = "POLITICS_IGNACY_MOSCICKI_DESC"
-	picture = "gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
-	expire = "1965.1.1"
-	ideology = absolutism
-	traits = {
-		great_war_hero
-	}
-}
-
-create_country_leader = {
-	name = "Stanisław III Poniatowski"
-	desc = "POLITICS_IGNACY_MOSCICKI_DESC"
-	picture = "generic7.dds"
-	expire = "1937.10.1"
-	ideology = paternalism
-	traits = {
-		imperial_connections
-	}
-}
-
-create_country_leader = {
-	name = "Władysław Gomułka"
-	desc = "POLITICS_WLADYSLAW_GOMULKA_DESC"
-	picture = "Portrait_Poland_Wladyslaw_Gomulka.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Wincenty Witos"
-	desc = "POLITICS_WINCENTY_WITOS_DESC"
-	picture = "r56_portrait_POL_Wincenty_Witos.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Bolesław Piasecki"
-	desc = "POLITICS_BOLESLAW_PIASECKI_DESC"
-	picture = "GFX_POL_boleslaw_piasecki"
-	expire = "1965.1.1"
-	ideology = falangism
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Władysław Sikorski"
-	picture = "Portrait_Poland_Wladyslaw_Sikorski.dds"
-	traits = { defensive_doctrine }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Władysław Bortnowski"
-	gfx = "GFX_POL_wladyslaw_bortnowski"
-	traits = {  thorough_planner }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Stanisław Kopański"
-	gfx = "GFX_POL_stanislav_kopanski"
-	traits = {  offensive_doctrine }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "August Pajak"
-	picture = "Portrait_Europe_Generic_land_5.dds"
-	traits = {  offensive_doctrine }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Hugo Jaglowski"
-	picture = "Portrait_Europe_Generic_land_4.dds"
-	traits = {  offensive_doctrine }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Edward Rydz-Śmigły"
-	picture = "r56_portrait_POL_Rydz_Smigly_General.dds"
-	traits = { war_hero media_personality trait_reckless inspirational_leader expert_delegator }
-	id = 3128
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_field_marshal = {
-	name = "Juliusz Rómmel"
-	picture = "r56_portrait_POL_Juliusz_Rommel.dds"
-	traits = { old_guard war_hero trait_cautious cavalry_officer cavalry_leader cavalry_expert thorough_planner }
-	id = 3129
-	skill = 2
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_field_marshal = {
-	name = "Kazimierz Sosnkowski"
-	picture = "r56_portrait_POL_Kazimierz_Sosnkowski.dds"
-	traits = { brilliant_strategist aggressive_assaulter organisational_leader }
-	id = 3130
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Władysław Anders"
-	gfx = "GFX_POL_wladislaw_anders"
-	traits = {  armor_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Roman Abraham"
-	gfx = "GFX_POL_roman_abraham"
-	traits = {  }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Franciszek Kleeberg"
-	picture = "r56_portrait_POL_Franciszek_Kleeberg.dds"
-	traits = { career_officer trickster swamp_fox trait_engineer scavenger }
-	id = 3137
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Wiktor Thommée"
-	picture = "r56_portrait_POL_Wiktor_Thommee.dds"
-	traits = { career_officer skilled_staffer }
-	id = 3138
-	skill = 4
-	attack_skill = 3
-	defense_skill = 5
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Stanisław Grzmot-Skotnicki"
-	picture = "r56_portrait_POL_Stanislaw_Grzmot_Skotnicki.dds"
-	traits = { war_hero cavalry_officer cavalry_leader cavalry_expert skirmisher }
-	id = 3139
-	skill = 4
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Wilhelm Orlik-Rückemann"
-	picture = "r56_portrait_POL_Wilhelm_Orlik_Ruckemann.dds"
-	traits = { career_officer armor_officer commando skirmisher }
-	id = 3140
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Emil Krukowicz-Przedrzymirski"
-	picture = "r56_portrait_POL_Emil_Krukowicz_Przedrzymirski.dds"
-	traits = { inflexible_strategist organizer }
-	id = 3148
-	skill = 3
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Wincenty Kowalski"
-	gfx = "GFX_POL_wincenty_kowalski"
-	traits = { trickster }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Kamil Jach"
-	picture = "Portrait_Europe_Generic_land_3.dds"
-	traits = { trickster }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Andrzej Zeitlin"
-	picture = "portrait_europe_generic_land_19.dds"
-	traits = { trickster }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Michał Tokarzewski-Karaszewicz"
-	picture = "r56_portrait_POL_Michal_Tokarzewski_Karaszewicz.dds"
-	id = 3142
-	traits = { infantry_expert guerilla_fighter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Walerian Czuma"
-	picture = "r56_portrait_POL_Walerian_Czuma.dds"
-	traits = { urban_assault_specialist }
-	id = 3143
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Czesław Młot-Fijałkowski"
-	picture = "r56_portrait_POL_Czeslaw_Mlot_Fijalkowski.dds"
-	traits = { inflexible_strategist skirmisher }
-	id = 3144
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Władysław Langner"
-	picture = "r56_portrait_POL_Wladyslaw_Langner.dds"
-	traits = { infantry_officer inflexible_strategist harsh_leader }
-	id = 3145
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Franciszek Wład"
-	picture = "r56_portrait_POL_Franciszek_Wlad.dds"
-	traits = { ambusher }
-	id = 3146
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Mieczysław Boruta-Spiechowicz"
-	picture = "r56_portrait_POL_Mieczyslaw_Boruta_Spiechowicz_Portrait.dds"
-	traits = { trait_mountaineer }
-	id = 3147
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Edmund Knoll-Kownacki"
-	picture = "r56_portrait_POL_Edmund_Knoll_Kownacki.dds"
-	traits = { trait_cautious }
-	id = 3149
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Gustaw Orlicz-Dreszer"
-	picture = "r56_portrait_POL_Gustaw_Orlicz_Dreszer.dds"
-	traits = { politically_connected media_personality cavalry_officer naval_liason }
-	id = 3127
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Kazimierz Fabrycy"
-	picture = "r56_portrait_POL_Kazimierz_Fabrycy.dds"
-	traits = { politically_connected }
-	id = 3150
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_navy_leader = {
-	name = "Janusz Dana"
-	picture = "Portrait_Europe_Generic_navy_1.dds"
-	traits = { old_guard_navy bold}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Arnold Grzelak"
-	picture = "Portrait_Europe_Generic_navy_2.dds"
-	traits = { craven superior_tactician }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Józef Unrug"
-	picture = "r56_portrait_POL_Jozef_Unrug.dds"
-	traits = { navy_career_officer spotter mine_layer seawolf }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Adam Mohuczy"
-	picture = "r56_portrait_POL_Adam_Mohuczy.dds"
-	traits = { old_guard_navy seawolf lancer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Stanisław Hryniewiecki"
-	picture = "r56_portrait_POL_Stanislaw_Hryniewiecki.dds"
-	traits = { naval_lineage blockade_runner }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 4
-	coordination_skill = 3
+	recruit_character = POL_henryk_floyar_rajchman
+	recruit_character = POL_sejmik_regency
 }
 
 if = {
@@ -722,26 +430,7 @@ if = {
 		female = yes
 		nationalities = { POL }
 	}
-	create_operative_leader = {
-		name = "Halina Szymańska"
-		portrait_path = gfx/leaders/Europe/portrait_europe_generic_operative_female_8.dds 
-		traits = { operative_natural_orator }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { POL }
-	}
-	create_operative_leader = {
-		name = "Witold Pilecki"
-		portrait_path = gfx/leaders/Europe/portrait_europe_generic_operative_male_7.dds 
-		traits = { operative_escape_artist }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { POL }
-	}							
 }
-
 
 create_equipment_variant = {
 	name = "PZL P.24"
@@ -756,6 +445,70 @@ create_equipment_variant = {
 
 ### VARIANTS ###
 # 1936 Start #
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "TKS"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade = 1
+			tank_nsb_engine_upgrade = 1
+		}
+		obsolete = yes #used for oob
+		icon = "GFX_POL_basic_light_tank"
+	}
+	create_equipment_variant = {
+		name = "7TP dw"
+		type = light_tank_chassis_0
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = secondary_turret_hmg
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade = 2
+			tank_nsb_engine_upgrade = 2
+		}
+		icon = "GFX_POL_imp_light_tank"
+	}
+	create_equipment_variant = {
+		name = "7TP jw"
+		type = light_tank_chassis_0
+		parent_version = 2
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = empty
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade = 2
+			tank_nsb_engine_upgrade = 2
+		}
+		icon = "GFX_POL_imp_light_tank"
+	}
+#	add_equipment_to_stockpile = {
+#		type = light_tank_chassis_0
+#		amount = 550
+#		variant_name = "TKS"
+#	}
+}
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###
@@ -848,3 +601,4 @@ if = {
 		}
 	}
 }
+

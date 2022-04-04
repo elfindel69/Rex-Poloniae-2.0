@@ -16,10 +16,7 @@ set_technology = {
 	motorised_infantry = 1
 	paratroopers = 1
 	gw_artillery = 1
-	gwtank = 1
-	basic_light_tank = 1  # PLACEHOLDER
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
+
 	early_fighter = 1
 	fighter1 = 1
 	early_bomber = 1
@@ -28,6 +25,29 @@ set_technology = {
 	
 	mass_assault = 1
 	fleet_in_being = 1
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1 
+	}
+}
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1 
+	}
 }
 
 if = {
@@ -61,64 +81,19 @@ if = {
 	}
 }
 
-set_popularities = {	fascism = 34
+recruit_character = ARM_dramastat_kanayan
+recruit_character = ARM_grigor_harutyunyan
+recruit_character = ARM_hovhannes_kajaznuni
+recruit_character = ARM_mesrob_sandruni
+recruit_character = ARM_hakob_bragatuni
+
+
+set_popularities = {
+	fascism = 34
 	democratic = 30
 	communism = 36
 }
 
-create_country_leader = {
-	name = "Drastamat Kanayan"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1953.3.1"
-	ideology = fascism_ideology
-	traits = {
-		
-	}
-}
 
-create_country_leader = {
-	name = "Hovhannes Kajaznuni"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mesrob Sandruni"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = monarchism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-		name = "Hakob_Bragatuni"
-		picture = "gfx/leaders/Monarchs/Portrait_Armenia_Hakob_Bragatuni.tga"
-		expire = "1987.1.1"
-		ideology = paternalism
-		traits = {
-			constitutional_monarch
-		}
-	}
-}
-
-create_country_leader = {
-	name = "Grigor Harutyunyan"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	expire = "1953.3.1"
-	ideology = stalinism
-	traits = {
-		
-	}
-}
 
 

@@ -1,0 +1,15 @@
+characters={
+	BOS_bakir_kopanja={
+		name="Bakir Kopanja"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		country_leader={
+			ideology=monarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -67,22 +67,5 @@ set_popularities = {
 	monarchist = 5
 }
 
-create_country_leader = {
-	name = "Eric Gallego"
-	desc = "POLITICS_ALFRED_KLAHR_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = paternalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Emir Mohammed Ben Aarafa"
-	picture = "gfx/leaders/Monarchs/Mohammed_Ben_Aarafa.tga"
-	expire = "1987.1.1"
-	ideology = absolutism
-	traits = {
-	}
-}	
+recruit_character = ADU_eric_gallego
+recruit_character = ABK_mohammed_ben_aarafa

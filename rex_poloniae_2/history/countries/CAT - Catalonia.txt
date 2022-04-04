@@ -66,37 +66,9 @@ set_popularities = {
 	monarchist = 3
 }
 
-create_country_leader = {
-	name = "Andreu Nin i Pérez"
-	picture = "gfx//leaders//Europe//Portrait_Europe_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-}
+recruit_character = CAT_andreu_nin_i_perez
+recruit_character = CAT_lluis_companys_i_jover
+recruit_character = CAT_daniel_cardona_i_civit
+recruit_character = CAT_lluc_isarch
+recruit_character = CAT_francesc_cambo_i_battle
 
-create_country_leader = {
-	name = "Lluís Companys i Jover"
-	picture = "gfx//leaders//Europe//portrait_europe_generic_5.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-}
-
-create_country_leader = {
-	name = "Daniel Cardona i Civit"
-	picture = "gfx//leaders//Europe//portrait_europe_generic_5.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-}
-
-create_country_leader = {
-	name = "Lluc Isarch"
-	picture = "gfx//leaders//Europe//portrait_europe_generic_5.dds"
-	expire = "1965.1.1"
-	ideology = paternalism
-}
-
-create_country_leader = {
-	name = "Francesc Cambó i Batlle"
-	picture = "gfx//leaders//Europe//portrait_europe_generic_6.dds"
-	expire = "1965.1.1"
-	ideology = centrism
-}

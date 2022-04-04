@@ -43,6 +43,9 @@ set_convoys = 5
 		dispersed_industry2 = 1
 	}
 }
+
+recruit_character = BEL_hubert_pierlot
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1936.1.1"
@@ -56,29 +59,6 @@ set_popularities = {
 	neutrality = 20
 	monarchist = 3
 }
-#create_country_leader = {
-#	
-#	name = "Jonas Lote"
-#	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_2.dds"
-#	expire = "1965.1.1"
-#	ideology = centrism
-#	traits = {
-#		#
-#	}
-#}
-
-
-create_country_leader = {
-	name = "Kai Willis"
-	desc = "POLITICS_SALVADOR_ABASCAL_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
-	expire = "1965.1.1"
-	ideology = paternalism
-	traits = {
-		#
-	}
-}
-
 
 1939.1.1 = {
 	set_politics = {

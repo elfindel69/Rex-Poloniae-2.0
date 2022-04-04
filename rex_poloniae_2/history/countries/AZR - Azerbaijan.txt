@@ -16,10 +16,6 @@ set_technology = {
 	motorised_infantry = 1
 	paratroopers = 1
 	gw_artillery = 1
-	gwtank = 1
-	basic_light_tank = 1  # PLACEHOLDER
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
 	early_fighter = 1
 	fighter1 = 1
 	early_bomber = 1
@@ -29,6 +25,28 @@ set_technology = {
 	fleet_in_being = 1
 }
 
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		basic_light_tank = 1
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		basic_light_tank_chassis = 1
+		gwtank_chassis = 1
+	}
+}
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns" }
@@ -59,65 +77,17 @@ if = {
 		basic_torpedo = 1
 	}
 }
-
-set_popularities = {	democratic = 30	communism = 40	neutrality = 27
+set_popularities = {
+	democratic = 30
+	communism = 40
+	neutrality = 27
 	monarchist = 3
 }
 
-create_country_leader = {
-	name = "Mir Jafar Baghirov"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1953.3.1"
-	ideology = stalinism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mammad Amin Rasulzade"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Kamil Gasimov"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = monarchism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-		name = "Hassan Mirza Qajar"
-		picture = "gfx/leaders/Monarchs/Portrait_Persia_Hassan_Mirza_Qajar.tga"
-		expire = "1987.1.1"
-		ideology = absolutism
-		traits = {
-			unpopular_monarch
-		}
-	}
-}
-
-create_country_leader = {
-	name = "Gara Garabeyov"
-	desc = ""
-	picture = "gfx/leaders/SOV/Portrait_Soviet_Generic_3.dds"
-	expire = "1953.3.1"
-	ideology = moderatism
-	traits = {
-		
-	}
-}
-
+recruit_character = AZR_mir_jafar_baghirov
+recruit_character = AZR_mammad_amin_rasuladze
+recruit_character = AZR_kamil_gasimov
+recruit_character = AZR_hassan_mirza_qajar
+recruit_character = AZR_gara_garayebov
 
 

@@ -90,6 +90,22 @@ country_event = {
 					limit = { POL = { owns_state = 784 controls_state = 784 } }
 					transfer_state = 784
 				}
+				if = {
+					limit = { POL = { owns_state = 194 controls_state = 194 } }
+					transfer_state = 194
+				}
+				if = {
+					limit = { POL = { owns_state = 204 controls_state = 204 } }
+					transfer_state = 204
+				}
+				if = {
+					limit = { POL = { owns_state = 206 controls_state = 206 } }
+					transfer_state = 206
+				}
+				if = {
+					limit = { POL = { owns_state = 207 controls_state = 207 } }
+					transfer_state = 207
+				}
 			}
 		}
 		SOV = {country_event = { id = poland.3} }

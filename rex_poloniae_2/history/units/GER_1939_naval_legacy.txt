@@ -59,7 +59,7 @@ units = {
 		}
 		task_force = {
 			name = "Ostseeflotte"	# CO: Albrecht
-			location = 6332  	# Konigsberg
+			location = 6389  	# Konigsberg
 			ship = { name = "Schleswig-Holstein" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
 			ship = { name = "Schlesien" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
 			# 1. Zerstörer Flottille

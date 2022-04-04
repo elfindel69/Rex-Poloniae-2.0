@@ -5,6 +5,31 @@ set_technology = {
 	infantry_weapons = 1
 }
 
+recruit_character = ALG_ar
+recruit_character = ALG_acr
+recruit_character = ALG_mt
+recruit_character = ALG_stc
+recruit_character = ALG_aa2
+recruit_character = ALG_acgs
+recruit_character = ALG_ncm
+recruit_character = ALG_nccr
+recruit_character = ALG_coi
+recruit_character = ALG_democratic_guy
+recruit_character = ALG_acd2
+recruit_character = ALG_acas
+recruit_character = ALG_communist_guy
+recruit_character = ALG_ncs
+recruit_character = ALG_awt
+recruit_character = ALG_pot
+recruit_character = ALG_fascist_guy
+recruit_character = ALG_ai2
+recruit_character = ALG_nt
+recruit_character = ALG_aco2
+recruit_character = ALG_baqer_bennabi 
+recruit_character = ALG_ahmed_ben_bella
+recruit_character = ALG_mohammed_ben_aarafa
+
+
 set_convoys = 20
 
 1939.1.1 = {
@@ -60,13 +85,6 @@ set_politics = {
 	elections_allowed = no
 }
 
-set_popularities = {
-	democratic = 25
-	fascism = 20
-	communism = 5
-	neutrality = 45
-	monarchist = 5
-}
 
 1939.1.1 = {
 	set_politics = {
@@ -81,36 +99,5 @@ set_popularities = {
 		communism = 5
 		neutrality = 45
 		monarchist = 5
-	}
-}
-
-
-create_country_leader = {
-	name = "Baqer Bennabi"
-	desc = ""
-	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
-	ideology = monarchism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mohammed Ben Aarafa"
-	picture = "gfx/leaders/Monarchs/Mohammed_Ben_Aarafa.tga"
-	expire = "1981.1.1"
-	ideology = absolutism
-	traits = {
-		nationalist_symbol 
-	}
-}
-
-create_country_leader = {
-	name = "Ahmed Ben Bella"
-	desc = ""
-	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
-	ideology = despotism
-	traits = {
-		#
 	}
 }

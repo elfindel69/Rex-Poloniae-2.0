@@ -68,8 +68,6 @@ division_template = {
 	regiments = {
 		motorized = { x = 0 y = 0 }
 	    motorized = { x = 0 y = 1 }
-		motorized = { x = 1 y = 0 }
-	    motorized = { x = 1 y = 1 }
 	}
 	support = {
         recon = { x = 0 y = 0 }
@@ -78,29 +76,13 @@ division_template = {
 }
 division_template = {
 	name = "Grupa Pancerna"				# represents reserve armor assets (FT-17s and some R-35s)
-	division_names_group = POL_ARM_01
+	division_names_group = POL_CAV_01
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
-		light_armor = { x = 1 y = 0 }
-	    light_armor = { x = 1 y = 1 }
 	}
 	support = {
 		engineer = { x = 0 y = 0 } 
-	}
-}
-
-division_template = {
-	name = "Brygada Kawalerii" 
-	division_names_group = POL_CAV_01
-
-	regiments = {
-		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-	}
-	support = {
-		recon = { x = 0 y = 0 }     
 	}
 }
 division_template = {
@@ -774,80 +756,37 @@ units = {
 
 }
 
-	##### Armia Litewska #####
-	division = { # "I. Dywizja Litewska"
-		division_name = {
-			is_name_ordered = yes
-		}
-		location = 6296
-		division_template = "Dywizja Piechoty"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division = { # "II. Dywizja Litewska"
-		division_name = {
-			is_name_ordered = yes
-		}
-		location = 6296
-		division_template = "Dywizja Piechoty"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "LIT" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division = { # "III. Dywizja Litewska"
-		division_name = {
-			is_name_ordered = yes
-		}
-		location = 6296
-		division_template = "Dywizja Piechoty"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "LIT" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division = {
-		name = "Litewska B.K."
-		location = 6296
-		division_template = "Brygada Kawalerii"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "LIT" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-
 ##### Wojska Lotnicze i Obrony Powietrzne (CO: Zajec) #####
 air_wings = {
 	10 = { 																			# Warsaw
 		### Brygada Poscigowa (CO: Pawlikowski) ###
-		fighter_equipment_0 =  { owner = "POL" amount = 54 }						# III/1. Dywizjon Mysliwski -- P.11c
-								# IV/1. Dywizjon Mysliwski -- P.11c
+		fighter_equipment_0 =  { owner = "POL" amount = 54 }						# III/1. Dywizjon Myśliwski -- P.11c
+								# IV/1. Dywizjon Myśliwski -- P.11c
 	}
 	92 = { 																			# Lublin
 		### Brygada Bombowy (CO: Haller) ###
 		tac_bomber_equipment_1 =  { owner = "POL" amount = 36 }						# X-XV Dywizjon Bombowy -- P.37 Los
 		CAS_equipment_1 =  { owner = "POL" amount = 50 }							# II-VI Dywizjon Bombowy -- P.23 Karas
 	}
-	85 = { 																			# Danzig
+	807 = { 																			# Danzig
 		### Lotnictwo Armii Pomorze (CO: Stachon) ###
-		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/4. Dywizjon Mysliwski -- P.11c
+		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/4. Dywizjon Myśliwski -- P.11c
 	}
 	86 = { 																			# Poznan
 		### Lotnictwo Armii Poznan (CO: Kuzminski) ###
-		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/3. Dywizjon Mysliwski -- P.11c
+		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/3. Dywizjon Myśliwski -- P.11c
 	}
 	87 = { 																			# Lodz
 		### Lotnictwo Armii Lodz (CO: Iwaszkiewscz) ###
-		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/6. Dywizjon Mysliwski -- P.11c
+		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/6. Dywizjon Myśliwski -- P.11c
 	}
 	88 = { 																			# Krakow
 		### Lotnictwo Armii Krakow (CO: Szylling) ###
-		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/2. Dywizjon Mysliwski -- P.11c
+		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/2. Dywizjon Myśliwski -- P.11c
 	}
 	97 = { 																			# Bialystok
 		### Lotnictwo Armii Modlin (CO: Prauss) ###
-		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/5. Dywizjon Mysliwski -- P.7
+		fighter_equipment_0 =  { owner = "POL" amount = 22 }						# III/5. Dywizjon Myśliwski -- P.7
 	}
 }
 

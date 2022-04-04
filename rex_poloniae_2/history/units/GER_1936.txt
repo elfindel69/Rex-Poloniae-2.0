@@ -34,7 +34,7 @@ division_template = {
         motorized = { x = 2 y = 1 }
 	}
 	support = {
-        recon = { x = 0 y = 0 }
+        mot_recon = { x = 0 y = 0 }
         engineer = { x = 0 y = 1 }
         artillery = { x = 0 y = 2 }
 	}
@@ -58,7 +58,7 @@ division_template = {
 		motorized = { x = 2 y = 2 }
 	}
 	support = {
-        recon = { x = 0 y = 0 }
+        mot_recon = { x = 0 y = 0 }
 	 	engineer = { x = 0 y = 1 }
         artillery = { x = 0 y = 2 }
 	}
@@ -99,7 +99,24 @@ units = {
 	##### Oberkommando des Heeres #####
 	### 1. Armee (Wehrmacht-Gruppenkommando) ###
 	# II. Armeekorps
-			 
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 349
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 12
+		}
+		location = 3207
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
 	# III. Armeekorps
 	division= {	
 		division_name = {
@@ -160,6 +177,91 @@ units = {
 		division_template = "Infanterie-Division (mot.)"
 		start_experience_factor = 0.3
 	}
+
+	### 3. Armee (Wehrmacht-Gruppenkommando) ###
+	# IV. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 9535
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 14
+		}
+		location = 9535
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 24
+		}
+		location = 9535
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	# VIII. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 8
+		}
+		location = 514
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 18
+		}
+		location = 514
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+
+	# I. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 6521
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 11
+		}
+		location = 321
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 21
+		}
+		location = 375
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kavallerie-Kommando Insterburg" 
+		location = 9496
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.3
+	}
+
 
 	### 2. Armee (Wehrmacht-Gruppenkommando) ###
 	division= {	
@@ -287,9 +389,16 @@ units = {
 
 ### Air oob
 air_wings = {
+	
+	
 
 	### II. Luftkreiskommando -- Berlin ###
 	64 = { 
+		fighter_equipment_0 =  {		# He 51
+			owner = "GER" 
+			amount = 40
+		}
+		name = "Jagdgeschwader 232"
 		# Jagdgeschwader 132 'Richtofen'		
 		fighter_equipment_0 =  {		# Ar 68
 			owner = "GER" 
@@ -321,7 +430,21 @@ air_wings = {
 		}
 	}
 
-	
+	### III. Luftkreiskommando -- Breslau ###
+	66 = { 
+		# Kampfgeschwader 253 'General Wever'		
+		tac_bomber_equipment_0 = {		# He 45 or Do 23 ?
+			owner = "GER" 
+			amount = 120
+		}
+		name = "Kampfgeschwader 253"
+		# Sturzkampfgeschwader 162		
+		CAS_equipment_1 =  {			# Hs 123
+			owner = "GER" 
+			amount = 80
+		}
+		name = "Sturzkampfgeschwader 162"	
+	}
 
 	### IV. Luftkreiskommando -- Kassel ###
 	57 = { 

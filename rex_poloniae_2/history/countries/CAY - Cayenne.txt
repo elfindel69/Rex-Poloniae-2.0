@@ -58,24 +58,6 @@ set_popularities = {
 	monarchist = 3
 }
 
-create_country_leader = {
-	name = "Mathéo Trouvé"
-	desc = "POLITICS_AURELIO_MOSQUERA_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = paternalism
-	traits = {
-		#
-	}
-}
 
-#create_country_leader = {
-#	
-#	name = "Jonas Lote"
-#	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_2.dds"
-#	expire = "1965.1.1"
-#	ideology = centrism
-#	traits = {
-#		#
-#	}
-#}
+
+recruit_character = CAY_matheo_trouve
